@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Cup 2026 Tracker</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>World Cup 2026 Tracker</h1>
+      <nav>
+        <a href="index.html" aria-current="page">Schedule</a>
+        <a href="standings.html">Standings</a>
+        <a href="knockout.html">Knockout</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="controls">
+        <label for="timezone">Timezone</label>
+        <select id="timezone"></select>
+      </section>
+
+      <section>
+        <h2>Team filter</h2>
+        <p class="hint">Select one or more teams to filter matches.</p>
+        <div id="team-filter" class="chip-list"></div>
+      </section>
+
+      <section>
+        <h2>Schedule</h2>
+        <div id="schedule"></div>
+      </section>
+    </main>
+
+    <script type="module" src="js/schedule.js"></script>
+  </body>
+</html>

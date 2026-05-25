@@ -1,0 +1,23 @@
+{
+  "updatedAt": "2026-05-25T00:00:00Z",
+  "groups": [
+    {
+      "name": "A",
+      "teams": [
+        { "name": "Mexico", "played": 2, "won": 1, "drawn": 1, "lost": 0, "goalsFor": 3, "goalsAgainst": 1, "goalDifference": 2, "points": 4 },
+        { "name": "Canada", "played": 2, "won": 1, "drawn": 0, "lost": 1, "goalsFor": 2, "goalsAgainst": 2, "goalDifference": 0, "points": 3 },
+        { "name": "Japan", "played": 2, "won": 0, "drawn": 1, "lost": 1, "goalsFor": 1, "goalsAgainst": 2, "goalDifference": -1, "points": 1 },
+        { "name": "United States", "played": 2, "won": 0, "drawn": 0, "lost": 2, "goalsFor": 1, "goalsAgainst": 4, "goalDifference": -3, "points": 0 }
+      ]
+    },
+    {
+      "name": "B",
+      "teams": [
+        { "name": "Brazil", "played": 2, "won": 2, "drawn": 0, "lost": 0, "goalsFor": 5, "goalsAgainst": 1, "goalDifference": 4, "points": 6 },
+        { "name": "Germany", "played": 2, "won": 1, "drawn": 0, "lost": 1, "goalsFor": 3, "goalsAgainst": 3, "goalDifference": 0, "points": 3 },
+        { "name": "Nigeria", "played": 2, "won": 0, "drawn": 1, "lost": 1, "goalsFor": 2, "goalsAgainst": 3, "goalDifference": -1, "points": 1 },
+        { "name": "South Korea", "played": 2, "won": 0, "drawn": 1, "lost": 1, "goalsFor": 1, "goalsAgainst": 4, "goalDifference": -3, "points": 1 }
+      ]
+    }
+  ]
+}
