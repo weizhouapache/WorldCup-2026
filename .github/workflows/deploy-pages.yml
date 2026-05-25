@@ -35,6 +35,7 @@ jobs:
           rsync -av --delete \
             --exclude '.git/' \
             --exclude '.github/' \
+            --exclude '_site/' \
             ./ _site/
           touch _site/.nojekyll
 
