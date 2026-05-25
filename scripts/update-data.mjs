@@ -21,7 +21,12 @@ for (const [name, url] of Object.entries(sources)) {
     await writeFile(`data/raw/${name}.html`, html);
 
     const jsonPath = `data/${name}.json`;
-    const current = JSON.parse(await readFile(jsonPath, 'utf8'));
+    let current = {};
+    try {
+      current = JSON.parse(await readFile(jsonPath, 'utf8'));
+    } catch {
+      current = {};
+    }
     current.updatedAt = now;
     current.source = url;
     await writeFile(jsonPath, `${JSON.stringify(current, null, 2)}\n`);

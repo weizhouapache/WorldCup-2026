@@ -77,7 +77,7 @@ function renderSchedule() {
   });
 
   if (filtered.length === 0) {
-    scheduleEl.textContent = 'No matches match the selected filters.';
+    scheduleEl.textContent = 'No matches found for the selected filters.';
     return;
   }
 
