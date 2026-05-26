@@ -1,0 +1,39 @@
+{
+  "updatedAt": "2026-05-25T00:00:00Z",
+  "rounds": [
+    {
+      "name": "Round of 16",
+      "fixtures": [
+        {
+          "id": "r16-1",
+          "utcKickoff": "2026-07-02T20:00:00Z",
+          "homeTeam": "Mexico",
+          "awayTeam": "Germany",
+          "venue": "NRG Stadium, Houston",
+          "score": "-"
+        },
+        {
+          "id": "r16-2",
+          "utcKickoff": "2026-07-03T00:00:00Z",
+          "homeTeam": "Brazil",
+          "awayTeam": "Canada",
+          "venue": "Hard Rock Stadium, Miami",
+          "score": "-"
+        }
+      ]
+    },
+    {
+      "name": "Quarter-finals",
+      "fixtures": [
+        {
+          "id": "qf-1",
+          "utcKickoff": "2026-07-09T00:00:00Z",
+          "homeTeam": "Winner R16-1",
+          "awayTeam": "Winner R16-2",
+          "venue": "AT&T Stadium, Dallas",
+          "score": "-"
+        }
+      ]
+    }
+  ]
+}

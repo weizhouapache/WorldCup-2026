@@ -11,10 +11,18 @@ Static website for FIFA World Cup 2026 schedule, standings, and knockout stages.
 - Knockout stages page
 - GitHub Actions workflow to refresh data from FIFA sources
 
+## Project structure
+
+- `index.html` - schedule and filter UI
+- `standings.html` - group standings tables
+- `knockout.html` - knockout stage fixtures
+- `data/*.json` - generated data consumed by pages
+- `scripts/update-data.mjs` - data refresh script used in CI
+
 ## Local development
 
-Open `index.html` in a browser, or serve the repository with any static file server.
+Open `index.html` directly in a browser, or run a static file server from the repository root.
 
 ## Data refresh
 
-The workflow in `.github/workflows/update-data.yml` fetches FIFA schedule/results pages and updates generated JSON files.
+The workflow in `.github/workflows/update-data.yml` runs every 12 hours and on manual dispatch. It downloads FIFA source pages into `data/raw/` and updates metadata fields in generated JSON files.
