@@ -86,6 +86,24 @@ select {
   color: #4d5a7d;
 }
 
+.filter-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.schedule-group {
+  border: 1px solid #dfe5f5;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.schedule-group h3 {
+  margin-top: 0;
+}
+
 .match-card {
   display: grid;
   gap: 0.25rem;
