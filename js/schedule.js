@@ -1,6 +1,7 @@
 import { fetchJson, formatKickoff, getDefaultTimezone, timezoneOptions } from './common.js';
 
 const STORAGE_KEY = 'worldcup-2026-selected-teams';
+const STORAGE_CHECK_KEY = '__wc26-storage-check__';
 const storage = resolveStorage();
 
 const timezoneSelect = document.querySelector('#timezone');
@@ -158,16 +159,14 @@ function loadTeams() {
 
 function resolveStorage() {
   try {
-    const key = '__wc26-storage-check__';
-    localStorage.setItem(key, '1');
-    localStorage.removeItem(key);
+    localStorage.setItem(STORAGE_CHECK_KEY, '1');
+    localStorage.removeItem(STORAGE_CHECK_KEY);
     return localStorage;
   } catch {}
 
   try {
-    const key = '__wc26-storage-check__';
-    sessionStorage.setItem(key, '1');
-    sessionStorage.removeItem(key);
+    sessionStorage.setItem(STORAGE_CHECK_KEY, '1');
+    sessionStorage.removeItem(STORAGE_CHECK_KEY);
     return sessionStorage;
   } catch {}
 
