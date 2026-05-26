@@ -12,6 +12,7 @@ const clearSelectedEl = document.querySelector('#clear-selected');
 let timezone = getDefaultTimezone();
 let selectedTeams = new Set(loadTeams());
 let matches = [];
+let filtersInitialized = false;
 
 init().catch((error) => {
   scheduleEl.textContent = `Unable to load schedule: ${error.message}`;
@@ -23,6 +24,7 @@ async function init() {
 
   setupTimezone();
   setupFilters();
+  setupClearSelectedControl();
   renderSchedule();
 }
 
@@ -42,6 +44,10 @@ function setupTimezone() {
 }
 
 function setupFilters() {
+  if (filtersInitialized) {
+    return;
+  }
+
   teamFilterEl.innerHTML = '';
   const teams = [...new Set(matches.flatMap((match) => [match.homeTeam, match.awayTeam]))].sort();
 
@@ -67,7 +73,10 @@ function setupFilters() {
     label.append(checkbox, ` ${team}`);
     teamFilterEl.append(label);
   }
+  filtersInitialized = true;
+}
 
+function setupClearSelectedControl() {
   clearSelectedEl?.addEventListener('change', () => {
     if (!clearSelectedEl.checked) {
       return;
@@ -97,8 +106,9 @@ function renderSchedule() {
   });
 
   const now = Date.now();
-  const upcoming = filtered.filter((match) => new Date(match.utcKickoff).getTime() >= now);
-  const past = filtered.filter((match) => new Date(match.utcKickoff).getTime() < now).reverse();
+  const withKickoffTime = filtered.map((match) => ({ match, kickoffTime: new Date(match.utcKickoff).getTime() }));
+  const upcoming = withKickoffTime.filter(({ kickoffTime }) => kickoffTime >= now).map(({ match }) => match);
+  const past = withKickoffTime.filter(({ kickoffTime }) => kickoffTime < now).map(({ match }) => match).reverse();
 
   scheduleEl.append(
     renderSection('Upcoming matches', upcoming, 'No upcoming matches for the selected filters.'),
