@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-25T00:00:00Z",
+  "updatedAt": "2026-05-26T15:19:31.271Z",
   "rounds": [
     {
       "name": "Round of 16",
@@ -35,5 +35,6 @@
         }
       ]
     }
-  ]
+  ],
+  "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026"
 }
