@@ -1,40 +1,30 @@
 {
-  "updatedAt": "2026-05-27T15:35:30.583Z",
+  "updatedAt": "2026-05-27T22:41:00.804Z",
   "rounds": [
     {
+      "name": "Round of 32",
+      "fixtures": []
+    },
+    {
       "name": "Round of 16",
-      "fixtures": [
-        {
-          "id": "r16-1",
-          "utcKickoff": "2026-07-02T20:00:00Z",
-          "homeTeam": "Mexico",
-          "awayTeam": "Germany",
-          "venue": "NRG Stadium, Houston",
-          "score": "-"
-        },
-        {
-          "id": "r16-2",
-          "utcKickoff": "2026-07-03T00:00:00Z",
-          "homeTeam": "Brazil",
-          "awayTeam": "Canada",
-          "venue": "Hard Rock Stadium, Miami",
-          "score": "-"
-        }
-      ]
+      "fixtures": []
     },
     {
       "name": "Quarter-finals",
-      "fixtures": [
-        {
-          "id": "qf-1",
-          "utcKickoff": "2026-07-09T00:00:00Z",
-          "homeTeam": "Winner R16-1",
-          "awayTeam": "Winner R16-2",
-          "venue": "AT&T Stadium, Dallas",
-          "score": "-"
-        }
-      ]
+      "fixtures": []
+    },
+    {
+      "name": "Semi-finals",
+      "fixtures": []
+    },
+    {
+      "name": "Third place play-off",
+      "fixtures": []
+    },
+    {
+      "name": "Final",
+      "fixtures": []
     }
   ],
-  "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026"
+  "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/bracket"
 }
