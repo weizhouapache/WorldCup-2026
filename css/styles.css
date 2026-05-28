@@ -140,3 +140,74 @@ th {
 .round h3 {
   margin: 0;
 }
+
+.matchup-chart h3 {
+  margin: 0 0 0.75rem;
+}
+
+.matchup-table-wrapper {
+  overflow-x: auto;
+}
+
+.matchup-table {
+  min-width: 720px;
+}
+
+.bracket-chart h3 {
+  margin: 0 0 0.75rem;
+}
+
+.bracket-wrapper {
+  overflow-x: auto;
+}
+
+.bracket-svg {
+  width: 100%;
+  min-width: 1280px;
+  height: auto;
+  display: block;
+}
+
+.bracket-connector {
+  stroke: #9cb0df;
+  stroke-width: 2;
+  fill: none;
+}
+
+.bracket-connector-dashed {
+  stroke-dasharray: 5 4;
+}
+
+.bracket-match-card {
+  fill: #ffffff;
+  stroke: #d2dcf4;
+  stroke-width: 1.5;
+}
+
+.bracket-round-label {
+  font-size: 12px;
+  fill: #42507a;
+  font-weight: 600;
+}
+
+.bracket-match-id {
+  font-size: 10px;
+  font-weight: 700;
+  fill: #334b88;
+}
+
+.bracket-matchup {
+  font-size: 11px;
+  fill: #1f2c4a;
+}
+
+.bracket-score {
+  font-size: 10px;
+  fill: #516289;
+}
+
+.bracket-third-place-label {
+  font-size: 11px;
+  fill: #4a5983;
+  font-weight: 600;
+}
