@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-28T05:05:03Z",
+  "updatedAt": "2026-05-28T15:46:05.807Z",
   "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/fixtures",
   "matches": [
     {
@@ -178,7 +178,7 @@
       "group": "D",
       "utcKickoff": "2026-06-14T04:00:00Z",
       "homeTeam": "Australia",
-      "awayTeam": "T\u00fcrkiye",
+      "awayTeam": "Türkiye",
       "venue": "BC Place, Vancouver",
       "score": "-"
     },
@@ -195,7 +195,7 @@
       "id": "g-d-4",
       "group": "D",
       "utcKickoff": "2026-06-20T04:00:00Z",
-      "homeTeam": "T\u00fcrkiye",
+      "homeTeam": "Türkiye",
       "awayTeam": "Paraguay",
       "venue": "Levi's Stadium, San Francisco Bay Area",
       "score": "-"
@@ -204,7 +204,7 @@
       "id": "g-d-5",
       "group": "D",
       "utcKickoff": "2026-06-25T06:00:00Z",
-      "homeTeam": "T\u00fcrkiye",
+      "homeTeam": "Türkiye",
       "awayTeam": "United States",
       "venue": "SoFi Stadium, Los Angeles",
       "score": "-"
@@ -223,7 +223,7 @@
       "group": "E",
       "utcKickoff": "2026-06-14T17:00:00Z",
       "homeTeam": "Germany",
-      "awayTeam": "Cura\u00e7ao",
+      "awayTeam": "Curaçao",
       "venue": "NRG Stadium, Houston",
       "score": "-"
     },
@@ -231,7 +231,7 @@
       "id": "g-e-2",
       "group": "E",
       "utcKickoff": "2026-06-14T23:00:00Z",
-      "homeTeam": "C\u00f4te d'Ivoire",
+      "homeTeam": "Côte d'Ivoire",
       "awayTeam": "Ecuador",
       "venue": "Lincoln Financial Field, Philadelphia",
       "score": "-"
@@ -241,7 +241,7 @@
       "group": "E",
       "utcKickoff": "2026-06-21T20:00:00Z",
       "homeTeam": "Germany",
-      "awayTeam": "C\u00f4te d'Ivoire",
+      "awayTeam": "Côte d'Ivoire",
       "venue": "NRG Stadium, Houston",
       "score": "-"
     },
@@ -249,7 +249,7 @@
       "id": "g-e-4",
       "group": "E",
       "utcKickoff": "2026-06-21T23:00:00Z",
-      "homeTeam": "Cura\u00e7ao",
+      "homeTeam": "Curaçao",
       "awayTeam": "Ecuador",
       "venue": "Levi's Stadium, San Francisco Bay Area",
       "score": "-"
@@ -267,8 +267,8 @@
       "id": "g-e-6",
       "group": "E",
       "utcKickoff": "2026-06-27T19:00:00Z",
-      "homeTeam": "Cura\u00e7ao",
-      "awayTeam": "C\u00f4te d'Ivoire",
+      "homeTeam": "Curaçao",
+      "awayTeam": "Côte d'Ivoire",
       "venue": "Levi's Stadium, San Francisco Bay Area",
       "score": "-"
     },
