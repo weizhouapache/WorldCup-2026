@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-28T04:51:21Z",
+  "updatedAt": "2026-05-28T05:05:03Z",
   "groups": [
     {
       "name": "A",
@@ -16,67 +16,7 @@
           "points": 0
         },
         {
-          "name": "Canada",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "points": 0
-        },
-        {
-          "name": "Japan",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "points": 0
-        },
-        {
-          "name": "United States",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "points": 0
-        }
-      ]
-    },
-    {
-      "name": "B",
-      "teams": [
-        {
-          "name": "Germany",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "points": 0
-        },
-        {
-          "name": "Nigeria",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "points": 0
-        },
-        {
-          "name": "Brazil",
+          "name": "South Africa",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -96,47 +36,9 @@
           "goalsAgainst": 0,
           "goalDifference": 0,
           "points": 0
-        }
-      ]
-    },
-    {
-      "name": "C",
-      "teams": [
-        {
-          "name": "Argentina",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "points": 0
         },
         {
-          "name": "Netherlands",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "points": 0
-        },
-        {
-          "name": "Egypt",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "points": 0
-        },
-        {
-          "name": "Australia",
+          "name": "Czechia",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -149,10 +51,10 @@
       ]
     },
     {
-      "name": "D",
+      "name": "B",
       "teams": [
         {
-          "name": "France",
+          "name": "Canada",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -163,7 +65,7 @@
           "points": 0
         },
         {
-          "name": "Denmark",
+          "name": "Bosnia and Herzegovina",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -174,7 +76,7 @@
           "points": 0
         },
         {
-          "name": "Senegal",
+          "name": "Qatar",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -185,7 +87,7 @@
           "points": 0
         },
         {
-          "name": "Peru",
+          "name": "Switzerland",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -198,21 +100,10 @@
       ]
     },
     {
-      "name": "E",
+      "name": "C",
       "teams": [
         {
-          "name": "Spain",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "points": 0
-        },
-        {
-          "name": "Portugal",
+          "name": "Brazil",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -234,7 +125,116 @@
           "points": 0
         },
         {
-          "name": "Ukraine",
+          "name": "Haiti",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0
+        },
+        {
+          "name": "Scotland",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "name": "D",
+      "teams": [
+        {
+          "name": "United States",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0
+        },
+        {
+          "name": "Paraguay",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0
+        },
+        {
+          "name": "Australia",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0
+        },
+        {
+          "name": "T\u00fcrkiye",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "name": "E",
+      "teams": [
+        {
+          "name": "Germany",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0
+        },
+        {
+          "name": "Cura\u00e7ao",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0
+        },
+        {
+          "name": "C\u00f4te d'Ivoire",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0
+        },
+        {
+          "name": "Ecuador",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -250,7 +250,7 @@
       "name": "F",
       "teams": [
         {
-          "name": "England",
+          "name": "Netherlands",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -261,18 +261,7 @@
           "points": 0
         },
         {
-          "name": "Croatia",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "points": 0
-        },
-        {
-          "name": "Serbia",
+          "name": "Japan",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -284,6 +273,17 @@
         },
         {
           "name": "Sweden",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0
+        },
+        {
+          "name": "Tunisia",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -310,7 +310,7 @@
           "points": 0
         },
         {
-          "name": "Switzerland",
+          "name": "Egypt",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -321,7 +321,7 @@
           "points": 0
         },
         {
-          "name": "Cameroon",
+          "name": "IR Iran",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -332,7 +332,7 @@
           "points": 0
         },
         {
-          "name": "Algeria",
+          "name": "New Zealand",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -348,7 +348,7 @@
       "name": "H",
       "teams": [
         {
-          "name": "Uruguay",
+          "name": "Spain",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -359,143 +359,7 @@
           "points": 0
         },
         {
-          "name": "Colombia",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "points": 0
-        },
-        {
-          "name": "Ecuador",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "points": 0
-        },
-        {
-          "name": "Chile",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "points": 0
-        }
-      ]
-    },
-    {
-      "name": "I",
-      "teams": [
-        {
-          "name": "Italy",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "points": 0
-        },
-        {
-          "name": "Poland",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "points": 0
-        },
-        {
-          "name": "Czech Republic",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "points": 0
-        },
-        {
-          "name": "Austria",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "points": 0
-        }
-      ]
-    },
-    {
-      "name": "J",
-      "teams": [
-        {
-          "name": "Turkey",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "points": 0
-        },
-        {
-          "name": "Norway",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "points": 0
-        },
-        {
-          "name": "Greece",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "points": 0
-        },
-        {
-          "name": "Romania",
-          "played": 0,
-          "won": 0,
-          "drawn": 0,
-          "lost": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "points": 0
-        }
-      ]
-    },
-    {
-      "name": "K",
-      "teams": [
-        {
-          "name": "Iran",
+          "name": "Cabo Verde",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -517,7 +381,23 @@
           "points": 0
         },
         {
-          "name": "Qatar",
+          "name": "Uruguay",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "name": "I",
+      "teams": [
+        {
+          "name": "France",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -528,7 +408,127 @@
           "points": 0
         },
         {
-          "name": "United Arab Emirates",
+          "name": "Senegal",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0
+        },
+        {
+          "name": "Iraq",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0
+        },
+        {
+          "name": "Norway",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "name": "J",
+      "teams": [
+        {
+          "name": "Argentina",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0
+        },
+        {
+          "name": "Algeria",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0
+        },
+        {
+          "name": "Austria",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0
+        },
+        {
+          "name": "Jordan",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "name": "K",
+      "teams": [
+        {
+          "name": "Portugal",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0
+        },
+        {
+          "name": "DR Congo",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0
+        },
+        {
+          "name": "Uzbekistan",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0
+        },
+        {
+          "name": "Colombia",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -544,7 +544,7 @@
       "name": "L",
       "teams": [
         {
-          "name": "New Zealand",
+          "name": "England",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -555,7 +555,7 @@
           "points": 0
         },
         {
-          "name": "Costa Rica",
+          "name": "Croatia",
           "played": 0,
           "won": 0,
           "drawn": 0,
@@ -566,7 +566,7 @@
           "points": 0
         },
         {
-          "name": "Honduras",
+          "name": "Ghana",
           "played": 0,
           "won": 0,
           "drawn": 0,
