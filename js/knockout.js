@@ -2,9 +2,10 @@ import { fetchJson, formatKickoff, getDefaultTimezone } from './common.js';
 
 const knockoutEl = document.querySelector('#knockout');
 const timezone = getDefaultTimezone();
-const PROGRESSION_REF_PATTERN = /^(Winner|Loser)\s+([A-Z0-9-]+)$/i;
+const PROGRESSION_REF_PATTERN = /^(Winner|Loser)\s+([A-Za-z0-9-]+)$/i;
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const BRACKET_ROUND_NAMES = ['Round of 32', 'Round of 16', 'Quarter-finals', 'Semi-finals', 'Final'];
+const FINAL_TO_THIRD_PLACE_GAP = 120;
 
 init().catch((error) => {
   knockoutEl.textContent = `Unable to load knockout stages: ${error.message}`;
@@ -114,7 +115,7 @@ function buildBracketImage(rounds) {
   if (thirdPlaceRound?.fixtures?.[0]) {
     const fixture = thirdPlaceRound.fixtures[0];
     const x = paddingX + Math.max(0, stageRounds.length - 2) * (cardWidth + columnGap);
-    const y = Math.max(finalRoundCards[0].y + 120, baseHeight - cardHeight - paddingY);
+    const y = Math.max(finalRoundCards[0].y + FINAL_TO_THIRD_PLACE_GAP, baseHeight - cardHeight - paddingY);
     thirdPlaceCard = {
       fixture,
       roundName: thirdPlaceRound.name,
@@ -314,5 +315,5 @@ function appendMatchCard(svg, card, cardWidth, cardHeight) {
 function clampText(value, maxLength) {
   if (!value) return '';
   if (value.length <= maxLength) return value;
-  return `${value.slice(0, Math.max(0, maxLength - 1))}…`;
+  return `${value.slice(0, maxLength - 1)}…`;
 }
