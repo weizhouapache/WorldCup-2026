@@ -110,7 +110,7 @@ function buildReferenceMap(rounds) {
 
         const [, outcome, sourceFixtureRef] = match;
         const sourceFixtureId = sourceFixtureRef.toLowerCase();
-        const path = `${capitalize(outcome)} → ${formatFixtureId(fixture.id)} (${round.name})`;
+        const path = `${capitalize(outcome)} -> ${formatFixtureId(fixture.id)} (${round.name})`;
         const entries = references.get(sourceFixtureId) ?? [];
         entries.push(path);
         references.set(sourceFixtureId, entries);
