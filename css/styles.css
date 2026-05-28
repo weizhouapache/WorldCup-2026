@@ -140,3 +140,15 @@ th {
 .round h3 {
   margin: 0;
 }
+
+.matchup-chart h3 {
+  margin: 0 0 0.75rem;
+}
+
+.matchup-table-wrapper {
+  overflow-x: auto;
+}
+
+.matchup-table {
+  min-width: 720px;
+}
