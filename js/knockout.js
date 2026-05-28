@@ -252,7 +252,7 @@ function buildReferenceMap(rounds) {
 
         const [, outcome, sourceFixtureRef] = match;
         const sourceFixtureId = sourceFixtureRef.toLowerCase();
-        const path = `${capitalize(outcome)} -> ${formatFixtureId(fixture.id)} (${round.name})`;
+        const path = `${normalizeOutcomeLabel(outcome)} -> ${formatFixtureId(fixture.id)} (${round.name})`;
         const entries = references.get(sourceFixtureId) ?? [];
         entries.push(path);
         references.set(sourceFixtureId, entries);
@@ -263,7 +263,7 @@ function buildReferenceMap(rounds) {
   return references;
 }
 
-function capitalize(value) {
+function normalizeOutcomeLabel(value) {
   if (!value) return '';
   return `${value.charAt(0).toUpperCase()}${value.slice(1).toLowerCase()}`;
 }
@@ -284,6 +284,7 @@ function appendConnector(svg, topSource, bottomSource, target, dashed = false) {
   const laneX = (topSource.right + target.left) / 2;
   const className = dashed ? 'bracket-connector bracket-connector-dashed' : 'bracket-connector';
 
+  // Draw two incoming horizontal lines, one shared vertical lane, then one outgoing horizontal line.
   svg.append(
     createSvgElement('line', { x1: topSource.right, y1: topSource.cy, x2: laneX, y2: topSource.cy, class: className }),
     createSvgElement('line', { x1: bottomSource.right, y1: bottomSource.cy, x2: laneX, y2: bottomSource.cy, class: className }),
@@ -311,8 +312,7 @@ function appendMatchCard(svg, card, cardWidth, cardHeight) {
 }
 
 function clampText(value, maxLength) {
-  if (!value || value.length <= maxLength) {
-    return value ?? '';
-  }
+  if (!value) return '';
+  if (value.length <= maxLength) return value;
   return `${value.slice(0, Math.max(0, maxLength - 1))}…`;
 }
