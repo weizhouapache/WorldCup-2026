@@ -6,6 +6,7 @@ const PROGRESSION_REF_PATTERN = /^(Winner|Loser)\s+([A-Za-z0-9-]+)$/i;
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const BRACKET_ROUND_NAMES = ['Round of 32', 'Round of 16', 'Quarter-finals', 'Semi-finals', 'Final'];
 const FINAL_TO_THIRD_PLACE_GAP = 120;
+const MAX_MATCHUP_TEXT_LENGTH = 34;
 
 init().catch((error) => {
   knockoutEl.textContent = `Unable to load knockout stages: ${error.message}`;
@@ -107,6 +108,13 @@ function buildBracketImage(rounds) {
 
   const finalRoundCards = roundCards[roundCards.length - 1];
   const firstRoundCards = roundCards[0];
+  if (!firstRoundCards?.length || !finalRoundCards?.length) {
+    const fallback = document.createElement('p');
+    fallback.textContent = 'Bracket fixtures are unavailable.';
+    section.append(fallback);
+    return section;
+  }
+
   const baseHeight = firstRoundCards[firstRoundCards.length - 1].y + cardHeight + paddingY;
   let width = paddingX * 2 + stageRounds.length * cardWidth + (stageRounds.length - 1) * columnGap;
   let height = baseHeight;
@@ -304,7 +312,7 @@ function appendMatchCard(svg, card, cardWidth, cardHeight) {
   idText.textContent = fixtureId;
 
   const matchupText = createSvgElement('text', { x: card.x + 10, y: card.y + 29, class: 'bracket-matchup' });
-  matchupText.textContent = clampText(matchup, 34);
+  matchupText.textContent = clampText(matchup, MAX_MATCHUP_TEXT_LENGTH);
 
   const scoreText = createSvgElement('text', { x: card.x + 10, y: card.y + 40, class: 'bracket-score' });
   scoreText.textContent = card.fixture.score ?? '-';
