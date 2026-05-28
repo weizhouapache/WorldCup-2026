@@ -2,6 +2,7 @@ import { fetchJson, formatKickoff, getDefaultTimezone } from './common.js';
 
 const knockoutEl = document.querySelector('#knockout');
 const timezone = getDefaultTimezone();
+const PROGRESSION_REF_PATTERN = /^(Winner|Loser)\s+([A-Z0-9-]+)$/i;
 
 init().catch((error) => {
   knockoutEl.textContent = `Unable to load knockout stages: ${error.message}`;
@@ -76,11 +77,17 @@ function buildMatchupChart(rounds) {
       roundCell.textContent = round.name;
 
       const matchupCell = document.createElement('td');
-      matchupCell.textContent = `${fixture.id.toUpperCase()}: ${fixture.homeTeam} vs ${fixture.awayTeam}`;
+      matchupCell.textContent = `${formatFixtureId(fixture.id)}: ${fixture.homeTeam} vs ${fixture.awayTeam}`;
 
       const pathCell = document.createElement('td');
       const paths = references.get(fixture.id) ?? [];
-      pathCell.textContent = paths.length > 0 ? paths.join(' · ') : fixture.id === 'final' ? 'Champion decided' : 'Eliminated';
+      if (paths.length > 0) {
+        pathCell.textContent = paths.join(' · ');
+      } else if (fixture.id === 'final') {
+        pathCell.textContent = 'Champion decided';
+      } else {
+        pathCell.textContent = 'Eliminated';
+      }
 
       row.append(roundCell, matchupCell, pathCell);
       tbody.append(row);
@@ -98,11 +105,11 @@ function buildReferenceMap(rounds) {
   for (const round of rounds) {
     for (const fixture of round.fixtures) {
       for (const side of [fixture.homeTeam, fixture.awayTeam]) {
-        const match = side.match(/^(Winner|Loser)\s+([A-Z0-9-]+)$/i);
+        const match = side.match(PROGRESSION_REF_PATTERN);
         if (!match) continue;
 
         const sourceFixtureId = match[2].toLowerCase();
-        const path = `${capitalize(match[1])} → ${fixture.id.toUpperCase()} (${round.name})`;
+        const path = `${capitalize(match[1])} → ${formatFixtureId(fixture.id)} (${round.name})`;
         const entries = references.get(sourceFixtureId) ?? [];
         entries.push(path);
         references.set(sourceFixtureId, entries);
@@ -115,4 +122,8 @@ function buildReferenceMap(rounds) {
 
 function capitalize(value) {
   return `${value.charAt(0).toUpperCase()}${value.slice(1).toLowerCase()}`;
+}
+
+function formatFixtureId(fixtureId) {
+  return fixtureId.toUpperCase();
 }
