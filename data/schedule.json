@@ -347,37 +347,37 @@
     {
       "id": "g-g-3",
       "group": "G",
-      "utcKickoff": "2026-06-22T20:00:00Z",
+      "utcKickoff": "2026-06-21T19:00:00Z",
       "homeTeam": "Belgium",
       "awayTeam": "IR Iran",
-      "venue": "Lumen Field, Seattle",
+      "venue": "SoFi Stadium, Los Angeles",
       "score": "-"
     },
     {
       "id": "g-g-4",
       "group": "G",
-      "utcKickoff": "2026-06-22T23:00:00Z",
-      "homeTeam": "Egypt",
-      "awayTeam": "New Zealand",
-      "venue": "SoFi Stadium, Los Angeles",
+      "utcKickoff": "2026-06-22T01:00:00Z",
+      "homeTeam": "New Zealand",
+      "awayTeam": "Egypt",
+      "venue": "BC Place, Vancouver",
       "score": "-"
     },
     {
       "id": "g-g-5",
       "group": "G",
-      "utcKickoff": "2026-06-28T22:00:00Z",
-      "homeTeam": "Belgium",
-      "awayTeam": "New Zealand",
-      "venue": "Lumen Field, Seattle",
+      "utcKickoff": "2026-06-27T03:00:00Z",
+      "homeTeam": "New Zealand",
+      "awayTeam": "Belgium",
+      "venue": "BC Place, Vancouver",
       "score": "-"
     },
     {
       "id": "g-g-6",
       "group": "G",
-      "utcKickoff": "2026-06-28T22:00:00Z",
+      "utcKickoff": "2026-06-27T03:00:00Z",
       "homeTeam": "Egypt",
       "awayTeam": "IR Iran",
-      "venue": "SoFi Stadium, Los Angeles",
+      "venue": "Lumen Field, Seattle",
       "score": "-"
     },
     {
