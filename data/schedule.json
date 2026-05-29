@@ -68,7 +68,7 @@
     {
       "id": "g-b-2",
       "group": "B",
-      "utcKickoff": "2026-06-13T20:00:00Z",
+      "utcKickoff": "2026-06-13T19:00:00Z",
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "venue": "Levi's Stadium, San Francisco Bay Area",
@@ -140,7 +140,7 @@
     {
       "id": "g-c-4",
       "group": "C",
-      "utcKickoff": "2026-06-20T00:30:00Z",
+      "utcKickoff": "2026-06-20T01:00:00Z",
       "homeTeam": "Brazil",
       "awayTeam": "Haiti",
       "venue": "Lincoln Financial Field, Philadelphia",
@@ -194,7 +194,7 @@
     {
       "id": "g-d-4",
       "group": "D",
-      "utcKickoff": "2026-06-20T00:30:00Z",
+      "utcKickoff": "2026-06-20T03:00:00Z",
       "homeTeam": "Türkiye",
       "awayTeam": "Paraguay",
       "venue": "Levi's Stadium, San Francisco Bay Area",
@@ -258,8 +258,8 @@
       "id": "g-e-5",
       "group": "E",
       "utcKickoff": "2026-06-25T20:00:00Z",
-      "homeTeam": "Germany",
-      "awayTeam": "Ecuador",
+      "homeTeam": "Ecuador",
+      "awayTeam": "Germany",
       "venue": "MetLife Stadium, New York/New Jersey",
       "score": "-"
     },
@@ -636,8 +636,8 @@
       "id": "g-l-5",
       "group": "L",
       "utcKickoff": "2026-06-27T21:00:00Z",
-      "homeTeam": "England",
-      "awayTeam": "Panama",
+      "homeTeam": "Panama",
+      "awayTeam": "England",
       "venue": "MetLife Stadium, New York/New Jersey",
       "score": "-"
     },
