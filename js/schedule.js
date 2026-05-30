@@ -6,6 +6,23 @@ const MAX_SAVED_FILTERS = 10;
 const STORAGE_CHECK_KEY = '__wc26-storage-check__';
 const storage = resolveStorage();
 
+// Confederation → teams (static mapping based on 2026 World Cup draw)
+const CONFEDERATION_TEAMS = {
+  UEFA: [
+    'Czechia', 'Bosnia and Herzegovina', 'Switzerland', 'Scotland', 'Türkiye',
+    'Germany', 'Netherlands', 'Sweden', 'Belgium', 'Spain', 'France', 'Norway',
+    'Austria', 'Portugal', 'England', 'Croatia'
+  ],
+  CONMEBOL: ['Brazil', 'Paraguay', 'Ecuador', 'Uruguay', 'Argentina', 'Colombia'],
+  CONCACAF: ['Mexico', 'Canada', 'Haiti', 'United States', 'Curaçao', 'Panama'],
+  CAF: [
+    'South Africa', 'Morocco', "Côte d'Ivoire", 'Tunisia', 'Egypt',
+    'Senegal', 'Algeria', 'DR Congo', 'Ghana', 'Cabo Verde'
+  ],
+  AFC: ['South Korea', 'Qatar', 'Japan', 'IR Iran', 'Saudi Arabia', 'Iraq', 'Jordan', 'Uzbekistan', 'Australia'],
+  OFC: ['New Zealand']
+};
+
 const timezoneSelect = document.querySelector('#timezone');
 const teamFilterEl = document.querySelector('#team-filter');
 const scheduleEl = document.querySelector('#schedule');
@@ -13,6 +30,8 @@ const clearSelectedEl = document.querySelector('#clear-selected');
 const savedFiltersListEl = document.querySelector('#saved-filters-list');
 const filterNameEl = document.querySelector('#filter-name');
 const saveFilterBtn = document.querySelector('#save-filter');
+const predefinedGroupFiltersEl = document.querySelector('#predefined-group-filters');
+const predefinedConfederationFiltersEl = document.querySelector('#predefined-confederation-filters');
 
 let timezone = getDefaultTimezone();
 let selectedTeams = new Set(loadTeams());
@@ -28,6 +47,7 @@ async function init() {
   matches = [...schedule.matches].sort((a, b) => new Date(a.utcKickoff) - new Date(b.utcKickoff));
 
   setupTimezone();
+  setupPredefinedFilters();
   setupFilters();
   setupClearSelectedControl();
   setupSavedFilters();
@@ -47,6 +67,47 @@ function setupTimezone() {
     timezone = timezoneSelect.value;
     renderSchedule();
   });
+}
+
+function applyTeamFilter(teams) {
+  selectedTeams = new Set(teams);
+  saveTeams();
+  for (const checkbox of teamFilterEl.querySelectorAll('input[type="checkbox"]')) {
+    checkbox.checked = selectedTeams.has(checkbox.value);
+  }
+  renderSchedule();
+}
+
+function setupPredefinedFilters() {
+  // Build group → teams map from matches
+  const groupMap = new Map();
+  for (const match of matches) {
+    if (!match.group) continue;
+    if (!groupMap.has(match.group)) groupMap.set(match.group, new Set());
+    groupMap.get(match.group).add(match.homeTeam);
+    groupMap.get(match.group).add(match.awayTeam);
+  }
+
+  if (predefinedGroupFiltersEl) {
+    const sortedGroups = [...groupMap.keys()].sort();
+    for (const group of sortedGroups) {
+      const btn = document.createElement('button');
+      btn.className = 'predefined-filter-btn';
+      btn.textContent = `Group ${group}`;
+      btn.addEventListener('click', () => applyTeamFilter([...groupMap.get(group)]));
+      predefinedGroupFiltersEl.append(btn);
+    }
+  }
+
+  if (predefinedConfederationFiltersEl) {
+    for (const [conf, teams] of Object.entries(CONFEDERATION_TEAMS)) {
+      const btn = document.createElement('button');
+      btn.className = 'predefined-filter-btn';
+      btn.textContent = conf;
+      btn.addEventListener('click', () => applyTeamFilter(teams));
+      predefinedConfederationFiltersEl.append(btn);
+    }
+  }
 }
 
 function setupFilters() {
@@ -225,7 +286,6 @@ function renderSavedFilters() {
   }
 
   for (let i = 0; i < filters.length; i++) {
-    const index = i;
     const { name, teams } = filters[i];
 
     const pill = document.createElement('span');
@@ -236,12 +296,7 @@ function renderSavedFilters() {
     loadBtn.textContent = name;
     loadBtn.title = `Load filter: ${name}`;
     loadBtn.addEventListener('click', () => {
-      selectedTeams = new Set(teams);
-      saveTeams();
-      for (const checkbox of teamFilterEl.querySelectorAll('input[type="checkbox"]')) {
-        checkbox.checked = selectedTeams.has(checkbox.value);
-      }
-      renderSchedule();
+      applyTeamFilter(teams);
     });
 
     const removeBtn = document.createElement('button');
@@ -250,7 +305,8 @@ function renderSavedFilters() {
     removeBtn.title = `Remove filter: ${name}`;
     removeBtn.addEventListener('click', () => {
       const current = loadSavedFilters();
-      current.splice(index, 1);
+      const idx = current.findIndex((f, j) => f.name === name && j >= i);
+      if (idx !== -1) current.splice(idx, 1);
       persistSavedFilters(current);
       renderSavedFilters();
     });

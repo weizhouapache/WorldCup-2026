@@ -223,6 +223,44 @@ footer a {
   color: #4d5a7d;
 }
 
+/* ── Predefined filters ─────────────────────────────────────────────────────── */
+
+.predefined-filters-bar {
+  display: grid;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.predefined-filters-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.predefined-filters-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #4d5a7d;
+  white-space: nowrap;
+  min-width: 110px;
+}
+
+.predefined-filter-btn {
+  border: 1px solid #b5c3ea;
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.8rem;
+  background: #f7f9ff;
+  color: #172137;
+  cursor: pointer;
+}
+
+.predefined-filter-btn:hover {
+  background: #dce5ff;
+  border-color: #7a96d4;
+}
+
 /* ── Saved filters ──────────────────────────────────────────────────────────── */
 
 .saved-filters-bar {
