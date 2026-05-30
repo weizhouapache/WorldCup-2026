@@ -29,7 +29,7 @@ export function timezoneLabel(zone) {
     .formatToParts(now).find(p => p.type === 'timeZoneName')?.value ?? 'GMT';
   const utcOffset = gmtStr === 'GMT'
     ? 'UTC +0000'
-    : gmtStr.replace('GMT', 'UTC ').replace(':', '');
+    : gmtStr.replace(/GMT([+-])(\d{2}):(\d{2})/, 'UTC $1$2$3');
   return `${abbr} (${utcOffset})`;
 }
 
