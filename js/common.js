@@ -25,12 +25,8 @@ export function timezoneLabel(zone) {
   const now = new Date();
   const abbr = new Intl.DateTimeFormat('en', { timeZone: zone, timeZoneName: 'short' })
     .formatToParts(now).find(p => p.type === 'timeZoneName')?.value ?? zone;
-  const gmtStr = new Intl.DateTimeFormat('en', { timeZone: zone, timeZoneName: 'longOffset' })
-    .formatToParts(now).find(p => p.type === 'timeZoneName')?.value ?? 'GMT';
-  const utcOffset = gmtStr === 'GMT'
-    ? 'UTC +0000'
-    : gmtStr.replace(/GMT([+-])(\d{2}):(\d{2})/, 'UTC $1$2$3');
-  return `${abbr} (${utcOffset})`;
+  const utcOffset = formatUtcOffset(getZoneOffsetMinutes(zone, now));
+  return `${zone} (${abbr}, ${utcOffset})`;
 }
 
 export function timezoneOptions(defaultTimezone) {
@@ -98,5 +94,40 @@ export function timezoneOptions(defaultTimezone) {
     'Pacific/Auckland',
   ];
 
-  return [...new Set(candidates.filter(Boolean))];
+  const now = new Date();
+  return [...new Set(candidates.filter(Boolean))].sort((a, b) => {
+    const offsetDiff = getZoneOffsetMinutes(a, now) - getZoneOffsetMinutes(b, now);
+    if (offsetDiff !== 0) {
+      return offsetDiff;
+    }
+    if (a === 'UTC') {
+      return -1;
+    }
+    if (b === 'UTC') {
+      return 1;
+    }
+    return a.localeCompare(b);
+  });
+}
+
+function getZoneOffsetMinutes(zone, date) {
+  const gmtStr = new Intl.DateTimeFormat('en', { timeZone: zone, timeZoneName: 'longOffset' })
+    .formatToParts(date).find(p => p.type === 'timeZoneName')?.value ?? 'GMT';
+  if (gmtStr === 'GMT') {
+    return 0;
+  }
+  const [, sign, hours, minutes] = gmtStr.match(/^GMT([+-])(\d{2}):(\d{2})$/) || [];
+  if (!sign || !hours || !minutes) {
+    return 0;
+  }
+  const total = Number(hours) * 60 + Number(minutes);
+  return sign === '+' ? total : -total;
+}
+
+function formatUtcOffset(offsetMinutes) {
+  const sign = offsetMinutes >= 0 ? '+' : '-';
+  const absMinutes = Math.abs(offsetMinutes);
+  const hours = String(Math.floor(absMinutes / 60)).padStart(2, '0');
+  const minutes = String(absMinutes % 60).padStart(2, '0');
+  return `UTC${sign}${hours}${minutes}`;
 }
