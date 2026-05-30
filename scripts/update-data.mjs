@@ -18,7 +18,21 @@ for (const [name, url] of Object.entries(sources)) {
     }
 
     const html = await response.text();
-    await writeFile(`data/raw/${name}.html`, html);
+    const rawPath = `data/raw/${name}.html`;
+
+    let existingHtml = null;
+    try {
+      existingHtml = await readFile(rawPath, 'utf8');
+    } catch {
+      // File doesn't exist yet
+    }
+
+    if (existingHtml === html) {
+      console.log(`No changes for ${name}, skipping.`);
+      continue;
+    }
+
+    await writeFile(rawPath, html);
 
     const jsonPath = `data/${name}.json`;
     let current = {};

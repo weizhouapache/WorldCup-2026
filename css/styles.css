@@ -211,3 +211,14 @@ th {
   fill: #4a5983;
   font-weight: 600;
 }
+
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: #4d5a7d;
+  font-size: 0.875rem;
+}
+
+footer a {
+  color: #4d5a7d;
+}
