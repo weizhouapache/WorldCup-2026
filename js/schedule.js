@@ -1,6 +1,8 @@
 import { fetchJson, formatKickoff, getDefaultTimezone, timezoneOptions } from './common.js';
 
 const STORAGE_KEY = 'worldcup-2026-selected-teams';
+const SAVED_FILTERS_KEY = 'worldcup-2026-saved-filters';
+const MAX_SAVED_FILTERS = 10;
 const STORAGE_CHECK_KEY = '__wc26-storage-check__';
 const storage = resolveStorage();
 
@@ -8,6 +10,9 @@ const timezoneSelect = document.querySelector('#timezone');
 const teamFilterEl = document.querySelector('#team-filter');
 const scheduleEl = document.querySelector('#schedule');
 const clearSelectedEl = document.querySelector('#clear-selected');
+const savedFiltersListEl = document.querySelector('#saved-filters-list');
+const filterNameEl = document.querySelector('#filter-name');
+const saveFilterBtn = document.querySelector('#save-filter');
 
 let timezone = getDefaultTimezone();
 let selectedTeams = new Set(loadTeams());
@@ -25,6 +30,7 @@ async function init() {
   setupTimezone();
   setupFilters();
   setupClearSelectedControl();
+  setupSavedFilters();
   renderSchedule();
 }
 
@@ -164,6 +170,93 @@ function loadTeams() {
     return Array.isArray(parsed) ? parsed : [];
   } catch {
     return [];
+  }
+}
+
+// ── Saved filters ────────────────────────────────────────────────────────────
+
+function loadSavedFilters() {
+  try {
+    const parsed = JSON.parse(storage?.getItem(SAVED_FILTERS_KEY) || '[]');
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function persistSavedFilters(filters) {
+  storage?.setItem(SAVED_FILTERS_KEY, JSON.stringify(filters));
+}
+
+function setupSavedFilters() {
+  renderSavedFilters();
+
+  saveFilterBtn?.addEventListener('click', () => {
+    const name = filterNameEl?.value.trim();
+    if (!name) {
+      filterNameEl?.focus();
+      return;
+    }
+
+    const filters = loadSavedFilters();
+    if (filters.length >= MAX_SAVED_FILTERS) {
+      alert(`You can save at most ${MAX_SAVED_FILTERS} filters. Please remove one first.`);
+      return;
+    }
+
+    filters.push({ name, teams: [...selectedTeams] });
+    persistSavedFilters(filters);
+    if (filterNameEl) filterNameEl.value = '';
+    renderSavedFilters();
+  });
+}
+
+function renderSavedFilters() {
+  if (!savedFiltersListEl) return;
+  savedFiltersListEl.innerHTML = '';
+
+  const filters = loadSavedFilters();
+  if (filters.length === 0) {
+    const empty = document.createElement('span');
+    empty.className = 'saved-filters-empty';
+    empty.textContent = 'No saved filters yet.';
+    savedFiltersListEl.append(empty);
+    return;
+  }
+
+  for (let i = 0; i < filters.length; i++) {
+    const index = i;
+    const { name, teams } = filters[i];
+
+    const pill = document.createElement('span');
+    pill.className = 'saved-filter-pill';
+
+    const loadBtn = document.createElement('button');
+    loadBtn.className = 'saved-filter-load';
+    loadBtn.textContent = name;
+    loadBtn.title = `Load filter: ${name}`;
+    loadBtn.addEventListener('click', () => {
+      selectedTeams = new Set(teams);
+      saveTeams();
+      for (const checkbox of teamFilterEl.querySelectorAll('input[type="checkbox"]')) {
+        checkbox.checked = selectedTeams.has(checkbox.value);
+      }
+      renderSchedule();
+    });
+
+    const removeBtn = document.createElement('button');
+    removeBtn.className = 'saved-filter-remove';
+    removeBtn.textContent = '×';
+    removeBtn.title = `Remove filter: ${name}`;
+    removeBtn.addEventListener('click', () => {
+      const current = loadSavedFilters();
+      current.splice(index, 1);
+      persistSavedFilters(current);
+      renderSavedFilters();
+    });
+
+    pill.append(loadBtn, removeBtn);
+    savedFiltersListEl.append(pill);
   }
 }
 
