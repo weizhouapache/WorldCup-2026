@@ -96,17 +96,21 @@ export function timezoneOptions(defaultTimezone) {
 
   const now = new Date();
   return [...new Set(candidates.filter(Boolean))].sort((a, b) => {
-    const offsetA = getZoneOffsetMinutes(a, now);
-    const offsetB = getZoneOffsetMinutes(b, now);
-    const offsetDiff = sortOffset(offsetA) - sortOffset(offsetB);
-    if (offsetDiff !== 0) {
-      return offsetDiff;
+    if (a === 'UTC' && b === 'UTC') {
+      return 0;
     }
     if (a === 'UTC') {
       return -1;
     }
     if (b === 'UTC') {
       return 1;
+    }
+
+    const offsetA = getZoneOffsetMinutes(a, now);
+    const offsetB = getZoneOffsetMinutes(b, now);
+    const offsetDiff = sortOffset(offsetA) - sortOffset(offsetB);
+    if (offsetDiff !== 0) {
+      return offsetDiff;
     }
     return a.localeCompare(b);
   });
@@ -118,10 +122,11 @@ function getZoneOffsetMinutes(zone, date) {
   if (gmtStr === 'GMT') {
     return 0;
   }
-  const [, sign, hours, minutes] = gmtStr.match(/^GMT([+-])(\d{2}):(\d{2})$/) || [];
-  if (!sign || !hours || !minutes) {
+  const match = gmtStr.match(/^GMT([+-])(\d{2}):(\d{2})$/);
+  if (!match) {
     return 0;
   }
+  const [, sign, hours, minutes] = match;
   const total = Number(hours) * 60 + Number(minutes);
   return sign === '+' ? total : -total;
 }
@@ -134,9 +139,13 @@ function formatUtcOffset(offsetMinutes) {
   return `UTC${sign}${hours}${minutes}`;
 }
 
+// Larger than max real UTC offset in minutes (UTC+14:00 => 840), so negatives sort last.
+const NEGATIVE_OFFSET_SORT_BASE = 10000;
+
 function sortOffset(offsetMinutes) {
+  // UTC and positive offsets should appear first; negative offsets are shifted after them.
   if (offsetMinutes < 0) {
-    return 10000 + Math.abs(offsetMinutes);
+    return NEGATIVE_OFFSET_SORT_BASE + Math.abs(offsetMinutes);
   }
   return offsetMinutes;
 }
