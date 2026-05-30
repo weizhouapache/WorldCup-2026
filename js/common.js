@@ -96,7 +96,9 @@ export function timezoneOptions(defaultTimezone) {
 
   const now = new Date();
   return [...new Set(candidates.filter(Boolean))].sort((a, b) => {
-    const offsetDiff = getZoneOffsetMinutes(a, now) - getZoneOffsetMinutes(b, now);
+    const offsetA = getZoneOffsetMinutes(a, now);
+    const offsetB = getZoneOffsetMinutes(b, now);
+    const offsetDiff = sortOffset(offsetA) - sortOffset(offsetB);
     if (offsetDiff !== 0) {
       return offsetDiff;
     }
@@ -130,4 +132,11 @@ function formatUtcOffset(offsetMinutes) {
   const hours = String(Math.floor(absMinutes / 60)).padStart(2, '0');
   const minutes = String(absMinutes % 60).padStart(2, '0');
   return `UTC${sign}${hours}${minutes}`;
+}
+
+function sortOffset(offsetMinutes) {
+  if (offsetMinutes < 0) {
+    return 10000 + Math.abs(offsetMinutes);
+  }
+  return offsetMinutes;
 }
