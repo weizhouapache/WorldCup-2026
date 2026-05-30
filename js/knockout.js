@@ -1,4 +1,4 @@
-import { fetchJson, formatKickoff, getDefaultTimezone } from './common.js';
+import { fetchJson, formatKickoff, getDefaultTimezone, timezoneLabel } from './common.js';
 
 const knockoutEl = document.querySelector('#knockout');
 const timezone = getDefaultTimezone();
@@ -32,7 +32,7 @@ async function init() {
 
       const meta = document.createElement('div');
       meta.className = 'meta';
-      meta.textContent = `${formatKickoff(fixture.utcKickoff, timezone)} (${timezone}) · ${fixture.venue}`;
+      meta.textContent = `${formatKickoff(fixture.utcKickoff, timezone)} (${timezoneLabel(timezone)}) · ${fixture.venue}`;
 
       const score = document.createElement('div');
       score.className = 'meta';

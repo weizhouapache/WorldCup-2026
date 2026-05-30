@@ -1,4 +1,4 @@
-import { fetchJson, formatKickoff, getDefaultTimezone, timezoneOptions } from './common.js';
+import { fetchJson, formatKickoff, getDefaultTimezone, timezoneOptions, timezoneLabel } from './common.js';
 
 const STORAGE_KEY = 'worldcup-2026-selected-teams';
 const SAVED_FILTERS_KEY = 'worldcup-2026-saved-filters';
@@ -58,7 +58,7 @@ function setupTimezone() {
   timezoneOptions(timezone).forEach((zone) => {
     const option = document.createElement('option');
     option.value = zone;
-    option.textContent = zone;
+    option.textContent = timezoneLabel(zone);
     timezoneSelect.append(option);
   });
 
@@ -208,7 +208,7 @@ function renderSection(title, sectionMatches, emptyMessage) {
 
     const meta = document.createElement('div');
     meta.className = 'meta';
-    meta.textContent = `${formatKickoff(match.utcKickoff, timezone)} (${timezone}) · ${match.venue}`;
+    meta.textContent = `${formatKickoff(match.utcKickoff, timezone)} (${timezoneLabel(timezone)}) · ${match.venue}`;
 
     const score = document.createElement('div');
     score.className = 'meta';
