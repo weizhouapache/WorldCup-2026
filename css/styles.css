@@ -223,7 +223,43 @@ footer a {
   color: #4d5a7d;
 }
 
-/* ── Predefined filters ─────────────────────────────────────────────────────── */
+/* ── Team filter collapsible ────────────────────────────────────────────────── */
+
+.team-filter-details {
+  margin-bottom: 0.5rem;
+}
+
+.team-filter-summary {
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: #334d9c;
+  user-select: none;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0;
+}
+
+.team-filter-summary::-webkit-details-marker {
+  display: none;
+}
+
+.team-filter-summary::before {
+  content: '▶';
+  font-size: 0.65rem;
+  transition: transform 0.15s ease;
+}
+
+.team-filter-details[open] > .team-filter-summary::before {
+  transform: rotate(90deg);
+}
+
+.team-filter-details .chip-list {
+  margin-top: 0.5rem;
+}
+
+
 
 .predefined-filters-bar {
   display: grid;
