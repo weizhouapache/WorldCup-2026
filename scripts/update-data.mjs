@@ -41,6 +41,17 @@ for (const [name, url] of Object.entries(sources)) {
     } catch {
       current = {};
     }
+
+    // Only update updatedAt (and write the JSON) if non-metadata fields changed.
+    // updatedAt and source are metadata; everything else (matches, groups, rounds…) is data.
+    const { updatedAt: _existingAt, source: _existingSource, ...existingData } = current;
+    const sourceChanged = current.source !== url;
+
+    if (Object.keys(existingData).length > 0 && !sourceChanged) {
+      console.log(`No data changes for ${name}, skipping JSON update.`);
+      continue;
+    }
+
     current.updatedAt = now;
     current.source = url;
     await writeFile(jsonPath, `${JSON.stringify(current, null, 2)}\n`);
