@@ -2,7 +2,6 @@ import { fetchJson, formatKickoff, getDefaultTimezone } from './common.js';
 
 const knockoutEl = document.querySelector('#knockout');
 const timezone = getDefaultTimezone();
-const PROGRESSION_REF_PATTERN = /^(Winner|Loser)\s+([A-Za-z0-9-]+)$/i;
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const BRACKET_ROUND_NAMES = ['Round of 32', 'Round of 16', 'Quarter-finals', 'Semi-finals', 'Final'];
 const FINAL_TO_THIRD_PLACE_GAP = 120;
@@ -15,7 +14,6 @@ init().catch((error) => {
 async function init() {
   const data = await fetchJson('./data/knockout.json');
   knockoutEl.append(buildBracketImage(data.rounds));
-  knockoutEl.append(buildMatchupChart(data.rounds));
 
   for (const round of data.rounds) {
     const section = document.createElement('section');
@@ -192,89 +190,6 @@ function buildBracketImage(rounds) {
   wrapper.append(svg);
   section.append(wrapper);
   return section;
-}
-
-function buildMatchupChart(rounds) {
-  const section = document.createElement('section');
-  section.className = 'matchup-chart';
-
-  const title = document.createElement('h3');
-  title.textContent = 'Matchup chart';
-  section.append(title);
-
-  const wrapper = document.createElement('div');
-  wrapper.className = 'matchup-table-wrapper';
-
-  const table = document.createElement('table');
-  table.className = 'matchup-table';
-  table.innerHTML = `
-    <thead>
-      <tr>
-        <th scope="col">Round</th>
-        <th scope="col">Matchup</th>
-        <th scope="col">Advances to</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  `;
-  const tbody = table.querySelector('tbody');
-  const references = buildReferenceMap(rounds);
-
-  for (const round of rounds) {
-    for (const fixture of round.fixtures) {
-      const row = document.createElement('tr');
-
-      const roundCell = document.createElement('td');
-      roundCell.textContent = round.name;
-
-      const matchupCell = document.createElement('td');
-      matchupCell.textContent = `${formatFixtureId(fixture.id)}: ${fixture.homeTeam} vs ${fixture.awayTeam}`;
-
-      const pathCell = document.createElement('td');
-      const paths = references.get(fixture.id) ?? [];
-      if (paths.length > 0) {
-        pathCell.textContent = paths.join(' · ');
-      } else if (fixture.id === 'final') {
-        pathCell.textContent = 'Champion decided';
-      } else {
-        pathCell.textContent = 'Eliminated';
-      }
-
-      row.append(roundCell, matchupCell, pathCell);
-      tbody.append(row);
-    }
-  }
-
-  wrapper.append(table);
-  section.append(wrapper);
-  return section;
-}
-
-function buildReferenceMap(rounds) {
-  const references = new Map();
-
-  for (const round of rounds) {
-    for (const fixture of round.fixtures) {
-      for (const side of [fixture.homeTeam, fixture.awayTeam]) {
-        const match = side.match(PROGRESSION_REF_PATTERN);
-        if (!match) continue;
-
-        const [, outcome, sourceFixtureRef] = match;
-        const sourceFixtureId = sourceFixtureRef.toLowerCase();
-        const path = `${normalizeOutcomeLabel(outcome)} -> ${formatFixtureId(fixture.id)} (${round.name})`;
-        const entries = references.get(sourceFixtureId) ?? [];
-        entries.push(path);
-        references.set(sourceFixtureId, entries);
-      }
-    }
-  }
-
-  return references;
-}
-
-function normalizeOutcomeLabel(value) {
-  if (!value) return '';
-  return `${value.charAt(0).toUpperCase()}${value.slice(1).toLowerCase()}`;
 }
 
 function formatFixtureId(fixtureId) {

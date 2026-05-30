@@ -39,5 +39,15 @@
     </main>
 
     <script type="module" src="js/schedule.js"></script>
+    <script>
+      // Redirect to knockout stage as default page since 2026-06-28 06:00 CEST (04:00 UTC)
+      if (Date.now() >= 1782619200000) {
+        location.replace('knockout.html');
+      }
+    </script>
+
+    <footer>
+      <a href="https://github.com/weizhouapache/WorldCup-2026" target="_blank" rel="noopener">View on GitHub</a>
+    </footer>
   </body>
 </html>

@@ -2,7 +2,7 @@ name: Update World Cup Data
 
 on:
   schedule:
-    - cron: '0 */12 * * *'
+    - cron: '0 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -13,18 +13,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Check if data refresh period has started
+        run: |
+          START_EPOCH=1781211600  # 2026-06-11 21:00 UTC
+          NOW_EPOCH=$(date +%s)
+          if [ "$NOW_EPOCH" -lt "$START_EPOCH" ]; then
+            echo "Data refresh period has not started yet. Skipping."
+            exit 0
+          fi
+          echo "REFRESH_ENABLED=true" >> "$GITHUB_ENV"
+
       - name: Checkout
+        if: env.REFRESH_ENABLED == 'true'
         uses: actions/checkout@v4
 
       - name: Set up Node.js
+        if: env.REFRESH_ENABLED == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
       - name: Refresh data from FIFA pages
+        if: env.REFRESH_ENABLED == 'true'
         run: node scripts/update-data.mjs
 
       - name: Commit updated data
+        if: env.REFRESH_ENABLED == 'true'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 'chore(data): refresh world cup data'
