@@ -1,5 +1,5 @@
 import { fetchJson, formatKickoff, getDefaultTimezone, timezoneOptions, timezoneLabel } from './common.js';
-import { t, getLocale, initI18n, localizeContinent, localizeTeamName } from './i18n.js';
+import { t, getLocale, initI18n, localizeConfederation, localizeTeamName } from './i18n.js';
 
 const STORAGE_KEY = 'worldcup-2026-selected-teams';
 const SAVED_FILTERS_KEY = 'worldcup-2026-saved-filters';
@@ -7,21 +7,21 @@ const MAX_SAVED_FILTERS = 10;
 const STORAGE_CHECK_KEY = '__wc26-storage-check__';
 const storage = resolveStorage();
 
-// Continent → teams (static mapping based on 2026 World Cup draw)
-const CONTINENT_TEAMS = {
-  Europe: [
+// Confederation → teams (static mapping based on 2026 World Cup draw)
+const CONFEDERATION_TEAMS = {
+  UEFA: [
     'Czechia', 'Bosnia and Herzegovina', 'Switzerland', 'Scotland', 'Türkiye',
     'Germany', 'Netherlands', 'Sweden', 'Belgium', 'Spain', 'France', 'Norway',
     'Austria', 'Portugal', 'England', 'Croatia'
   ],
-  'South America': ['Brazil', 'Paraguay', 'Ecuador', 'Uruguay', 'Argentina', 'Colombia'],
-  'North America': ['Mexico', 'Canada', 'Haiti', 'United States', 'Curaçao', 'Panama'],
-  Africa: [
+  CONMEBOL: ['Brazil', 'Paraguay', 'Ecuador', 'Uruguay', 'Argentina', 'Colombia'],
+  CONCACAF: ['Mexico', 'Canada', 'Haiti', 'United States', 'Curaçao', 'Panama'],
+  CAF: [
     'South Africa', 'Morocco', "Côte d'Ivoire", 'Tunisia', 'Egypt',
     'Senegal', 'Algeria', 'DR Congo', 'Ghana', 'Cabo Verde'
   ],
-  Asia: ['South Korea', 'Qatar', 'Japan', 'IR Iran', 'Saudi Arabia', 'Iraq', 'Jordan', 'Uzbekistan', 'Australia'],
-  Oceania: ['New Zealand']
+  AFC: ['South Korea', 'Qatar', 'Japan', 'IR Iran', 'Saudi Arabia', 'Iraq', 'Jordan', 'Uzbekistan', 'Australia'],
+  OFC: ['New Zealand']
 };
 
 const timezoneSelect = document.querySelector('#timezone');
@@ -32,7 +32,7 @@ const savedFiltersListEl = document.querySelector('#saved-filters-list');
 const filterNameEl = document.querySelector('#filter-name');
 const saveFilterBtn = document.querySelector('#save-filter');
 const predefinedGroupFiltersEl = document.querySelector('#predefined-group-filters');
-const predefinedContinentFiltersEl = document.querySelector('#predefined-continent-filters');
+const predefinedConfederationFiltersEl = document.querySelector('#predefined-confederation-filters');
 
 let timezone = getDefaultTimezone();
 let selectedTeams = new Set(loadTeams());
@@ -106,13 +106,13 @@ function setupPredefinedFilters() {
     }
   }
 
-  if (predefinedContinentFiltersEl) {
-    for (const [continent, teams] of Object.entries(CONTINENT_TEAMS)) {
+  if (predefinedConfederationFiltersEl) {
+    for (const [confederation, teams] of Object.entries(CONFEDERATION_TEAMS)) {
       const btn = document.createElement('button');
       btn.className = 'predefined-filter-btn';
-      btn.textContent = localizeContinent(continent);
+      btn.textContent = localizeConfederation(confederation);
       btn.addEventListener('click', () => applyTeamFilter(teams));
-      predefinedContinentFiltersEl.append(btn);
+      predefinedConfederationFiltersEl.append(btn);
     }
   }
 }
