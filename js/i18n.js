@@ -125,7 +125,7 @@ export function t(key, ...args) {
 }
 
 export function getLocale() {
-  return currentLang === 'zh' ? 'zh-CN' : 'en';
+  return currentLang === 'zh' ? 'zh-CN' : 'en-US';
 }
 
 export function applyTranslations() {
