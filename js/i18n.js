@@ -1,63 +1,96 @@
 const LANG_KEY = 'worldcup-2026-lang';
 
-const TEAM_NAMES_ZH = {
-  Algeria: '阿尔及利亚',
-  Argentina: '阿根廷',
-  Australia: '澳大利亚',
-  Austria: '奥地利',
-  Belgium: '比利时',
-  'Bosnia and Herzegovina': '波黑',
-  Brazil: '巴西',
-  'Cabo Verde': '佛得角',
-  Canada: '加拿大',
-  Colombia: '哥伦比亚',
-  Croatia: '克罗地亚',
-  Curaçao: '库拉索',
-  Czechia: '捷克',
-  'Côte d\'Ivoire': '科特迪瓦',
-  'DR Congo': '刚果（金）',
-  Ecuador: '厄瓜多尔',
-  Egypt: '埃及',
-  England: '英格兰',
-  France: '法国',
-  Germany: '德国',
-  Ghana: '加纳',
-  Haiti: '海地',
-  'IR Iran': '伊朗',
-  Iraq: '伊拉克',
-  Japan: '日本',
-  Jordan: '约旦',
-  Mexico: '墨西哥',
-  Morocco: '摩洛哥',
-  Netherlands: '荷兰',
-  'New Zealand': '新西兰',
-  Norway: '挪威',
-  Panama: '巴拿马',
-  Paraguay: '巴拉圭',
-  Portugal: '葡萄牙',
-  Qatar: '卡塔尔',
-  'Saudi Arabia': '沙特阿拉伯',
-  Scotland: '苏格兰',
-  Senegal: '塞内加尔',
-  'South Africa': '南非',
-  'South Korea': '韩国',
-  Spain: '西班牙',
-  Sweden: '瑞典',
-  Switzerland: '瑞士',
-  Tunisia: '突尼斯',
-  Türkiye: '土耳其',
-  'United States': '美国',
-  Uruguay: '乌拉圭',
-  Uzbekistan: '乌兹别克斯坦',
-};
-
-const CONFEDERATION_NAMES_ZH = {
-  AFC: '亚洲（AFC）',
-  CAF: '非洲（CAF）',
-  CONCACAF: '中北美及加勒比海（CONCACAF）',
-  CONMEBOL: '南美洲（CONMEBOL）',
-  OFC: '大洋洲（OFC）',
-  UEFA: '欧洲（UEFA）',
+const LOCALIZED_ENTITIES = {
+  zh: {
+    teams: {
+      Algeria: '阿尔及利亚',
+      Argentina: '阿根廷',
+      Australia: '澳大利亚',
+      Austria: '奥地利',
+      Belgium: '比利时',
+      'Bosnia and Herzegovina': '波黑',
+      Brazil: '巴西',
+      'Cabo Verde': '佛得角',
+      Canada: '加拿大',
+      Colombia: '哥伦比亚',
+      Croatia: '克罗地亚',
+      Curaçao: '库拉索',
+      Czechia: '捷克',
+      'Côte d\'Ivoire': '科特迪瓦',
+      'DR Congo': '刚果（金）',
+      Ecuador: '厄瓜多尔',
+      Egypt: '埃及',
+      England: '英格兰',
+      France: '法国',
+      Germany: '德国',
+      Ghana: '加纳',
+      Haiti: '海地',
+      'IR Iran': '伊朗',
+      Iraq: '伊拉克',
+      Japan: '日本',
+      Jordan: '约旦',
+      Mexico: '墨西哥',
+      Morocco: '摩洛哥',
+      Netherlands: '荷兰',
+      'New Zealand': '新西兰',
+      Norway: '挪威',
+      Panama: '巴拿马',
+      Paraguay: '巴拉圭',
+      Portugal: '葡萄牙',
+      Qatar: '卡塔尔',
+      'Saudi Arabia': '沙特阿拉伯',
+      Scotland: '苏格兰',
+      Senegal: '塞内加尔',
+      'South Africa': '南非',
+      'South Korea': '韩国',
+      Spain: '西班牙',
+      Sweden: '瑞典',
+      Switzerland: '瑞士',
+      Tunisia: '突尼斯',
+      Türkiye: '土耳其',
+      'United States': '美国',
+      Uruguay: '乌拉圭',
+      Uzbekistan: '乌兹别克斯坦',
+    },
+    confederations: {
+      AFC: '亚洲',
+      CAF: '非洲',
+      CONCACAF: '中北美及加勒比海',
+      CONMEBOL: '南美洲',
+      OFC: '大洋洲',
+      UEFA: '欧洲',
+    },
+    teamPatterns: [
+      {
+        regex: /^Winner Group ([A-Z])$/,
+        format: (match) => `${match[1]}组第一`,
+      },
+      {
+        regex: /^Runner-up Group ([A-Z])$/,
+        format: (match) => `${match[1]}组第二`,
+      },
+      {
+        regex: /^Best Third-place (\d+)$/,
+        format: (match) => `最佳小组第三 ${match[1]}`,
+      },
+      {
+        regex: /^Winner (R32|R16|QF|SF)-(\d+)$/,
+        format: (match) => {
+          const roundLabel = {
+            R32: '32强赛',
+            R16: '16强赛',
+            QF: '四分之一决赛',
+            SF: '半决赛',
+          }[match[1]];
+          return `${roundLabel}胜者 ${match[2]}`;
+        },
+      },
+      {
+        regex: /^Loser SF-(\d+)$/,
+        format: (match) => `半决赛负者 ${match[1]}`,
+      },
+    ],
+  },
 };
 
 const TRANSLATIONS = {
@@ -189,52 +222,29 @@ export function getLocale() {
 }
 
 export function localizeTeamName(teamName) {
-  if (currentLang !== 'zh') {
-    return teamName;
-  }
-  if (TEAM_NAMES_ZH[teamName]) {
-    return TEAM_NAMES_ZH[teamName];
+  const mappedName = localizeEntity('teams', teamName);
+  if (mappedName !== teamName) {
+    return mappedName;
   }
 
-  const winnerGroup = teamName.match(/^Winner Group ([A-Z])$/);
-  if (winnerGroup) {
-    return `${winnerGroup[1]}组第一`;
-  }
-
-  const runnerUpGroup = teamName.match(/^Runner-up Group ([A-Z])$/);
-  if (runnerUpGroup) {
-    return `${runnerUpGroup[1]}组第二`;
-  }
-
-  const bestThird = teamName.match(/^Best Third-place (\d+)$/);
-  if (bestThird) {
-    return `最佳小组第三 ${bestThird[1]}`;
-  }
-
-  const winnerRound = teamName.match(/^Winner (R32|R16|QF|SF)-(\d+)$/);
-  if (winnerRound) {
-    const roundLabel = {
-      R32: '32强赛',
-      R16: '16强赛',
-      QF: '四分之一决赛',
-      SF: '半决赛',
-    }[winnerRound[1]];
-    return `${roundLabel}胜者 ${winnerRound[2]}`;
-  }
-
-  const loserSemi = teamName.match(/^Loser SF-(\d+)$/);
-  if (loserSemi) {
-    return `半决赛负者 ${loserSemi[1]}`;
+  const teamPatterns = LOCALIZED_ENTITIES[currentLang]?.teamPatterns ?? [];
+  for (const { regex, format } of teamPatterns) {
+    const match = teamName.match(regex);
+    if (match) {
+      return format(match);
+    }
   }
 
   return teamName;
 }
 
 export function localizeConfederation(confederation) {
-  if (currentLang !== 'zh') {
-    return confederation;
-  }
-  return CONFEDERATION_NAMES_ZH[confederation] ?? confederation;
+  return localizeEntity('confederations', confederation);
+}
+
+function localizeEntity(category, value) {
+  const map = LOCALIZED_ENTITIES[currentLang]?.[category];
+  return map?.[value] ?? value;
 }
 
 export function applyTranslations() {
