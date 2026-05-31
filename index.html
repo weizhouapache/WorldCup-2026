@@ -10,53 +10,57 @@
     <header>
       <h1>World Cup 2026 Tracker</h1>
       <nav>
-        <a href="index.html" aria-current="page">Schedule</a>
-        <a href="standings.html">Standings</a>
-        <a href="knockout.html">Knockout</a>
+        <a href="index.html" aria-current="page" data-i18n="nav_schedule">Schedule</a>
+        <a href="standings.html" data-i18n="nav_standings">Standings</a>
+        <a href="knockout.html" data-i18n="nav_knockout">Knockout</a>
+        <span class="lang-switcher">
+          <button class="lang-btn" data-set-lang="en">EN</button>
+          <button class="lang-btn" data-set-lang="zh">CN</button>
+        </span>
       </nav>
     </header>
 
     <main>
       <section class="controls">
-        <label for="timezone">Timezone</label>
+        <label for="timezone" data-i18n="timezone_label">Timezone</label>
         <select id="timezone"></select>
       </section>
 
       <section>
-        <h2>Team filter</h2>
-        <p class="hint">Select one or more teams to filter matches.</p>
+        <h2 data-i18n="team_filter_heading">Team filter</h2>
+        <p class="hint" data-i18n="team_filter_hint">Select one or more teams to filter matches.</p>
         <label class="filter-actions">
           <input id="clear-selected" type="checkbox" />
-          Clear all selected teams
+          <span data-i18n="clear_selected">Clear all selected teams</span>
         </label>
 
         <div class="predefined-filters-bar">
           <div class="predefined-filters-row">
-            <span class="predefined-filters-label">By group</span>
+            <span class="predefined-filters-label" data-i18n="by_group">By group</span>
             <div id="predefined-group-filters" class="predefined-filters-list"></div>
           </div>
           <div class="predefined-filters-row">
-            <span class="predefined-filters-label">By confederation</span>
+            <span class="predefined-filters-label" data-i18n="by_confederation">By confederation</span>
             <div id="predefined-confederation-filters" class="predefined-filters-list"></div>
           </div>
         </div>
 
         <details class="team-filter-details">
-          <summary class="team-filter-summary">Show / hide all teams</summary>
+          <summary class="team-filter-summary" data-i18n="show_hide_teams">Show / hide all teams</summary>
           <div id="team-filter" class="chip-list"></div>
         </details>
 
         <div class="saved-filters-bar">
           <div id="saved-filters-list" class="saved-filters-list"></div>
           <div class="saved-filters-add">
-            <input id="filter-name" type="text" placeholder="Filter name" maxlength="30" />
-            <button id="save-filter">Save filter</button>
+            <input id="filter-name" type="text" data-i18n="filter_name_placeholder" placeholder="Filter name" maxlength="30" />
+            <button id="save-filter" data-i18n="save_filter">Save filter</button>
           </div>
         </div>
       </section>
 
       <section>
-        <h2>Schedule</h2>
+        <h2 data-i18n="schedule_heading">Schedule</h2>
         <div id="schedule"></div>
       </section>
     </main>
@@ -70,7 +74,7 @@
     </script>
 
     <footer>
-      <a href="https://github.com/weizhouapache/WorldCup-2026" target="_blank" rel="noopener">View on GitHub</a>
+      <a href="https://github.com/weizhouapache/WorldCup-2026" target="_blank" rel="noopener" data-i18n="view_on_github">View on GitHub</a>
     </footer>
   </body>
 </html>
