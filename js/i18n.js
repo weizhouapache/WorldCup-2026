@@ -65,7 +65,7 @@ const LOCALIZED_ENTITIES = {
     confederations: {
       AFC: '亚洲',
       CAF: '非洲',
-      CONCACAF: '北美洲',
+      CONCACAF: '中北美及加勒比海',
       CONMEBOL: '南美洲',
       OFC: '大洋洲',
       UEFA: '欧洲',
