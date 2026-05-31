@@ -381,6 +381,33 @@ footer a {
   cursor: pointer;
 }
 
-.saved-filters-add button:hover {
-  background: #27408a;
+/* ── Language switcher ──────────────────────────────────────────────────────── */
+
+.lang-switcher {
+  margin-left: auto;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
 }
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid #c9dcff;
+  color: #c9dcff;
+  border-radius: 0.375rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.lang-btn.lang-btn-active {
+  background: #334d9c;
+  color: #fff;
+  border-color: #334d9c;
+}
+
+.lang-btn:hover:not(.lang-btn-active) {
+  background: rgba(255, 255, 255, 0.1);
+}
+

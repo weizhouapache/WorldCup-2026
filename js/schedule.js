@@ -1,4 +1,5 @@
 import { fetchJson, formatKickoff, getDefaultTimezone, timezoneOptions, timezoneLabel } from './common.js';
+import { t, getLocale, initI18n } from './i18n.js';
 
 const STORAGE_KEY = 'worldcup-2026-selected-teams';
 const SAVED_FILTERS_KEY = 'worldcup-2026-saved-filters';
@@ -39,13 +40,14 @@ let matches = [];
 let filtersInitialized = false;
 
 init().catch((error) => {
-  scheduleEl.textContent = `Unable to load schedule: ${error.message}`;
+  scheduleEl.textContent = t('load_error_schedule', error.message);
 });
 
 async function init() {
   const schedule = await fetchJson('./data/schedule.json');
   matches = [...schedule.matches].sort((a, b) => new Date(a.utcKickoff) - new Date(b.utcKickoff));
 
+  initI18n();
   setupTimezone();
   setupPredefinedFilters();
   setupFilters();
@@ -98,7 +100,7 @@ function setupPredefinedFilters() {
     for (const group of sortedGroups) {
       const btn = document.createElement('button');
       btn.className = 'predefined-filter-btn';
-      btn.textContent = `Group ${group}`;
+      btn.textContent = t('group_label', group);
       btn.addEventListener('click', () => applyTeamFilter([...groupMap.get(group)]));
       predefinedGroupFiltersEl.append(btn);
     }
@@ -183,8 +185,8 @@ function renderSchedule() {
   const past = withKickoffTime.filter(({ kickoffTime }) => kickoffTime < now).map(({ match }) => match).reverse();
 
   scheduleEl.append(
-    renderSection('Upcoming matches', upcoming, 'No upcoming matches for the selected filters.'),
-    renderSection('Past matches', past, 'No past matches for the selected filters.')
+    renderSection(t('upcoming_matches'), upcoming, t('no_upcoming')),
+    renderSection(t('past_matches'), past, t('no_past'))
   );
 }
 
@@ -213,11 +215,11 @@ function renderSection(title, sectionMatches, emptyMessage) {
 
     const meta = document.createElement('div');
     meta.className = 'meta';
-    meta.textContent = `${formatKickoff(match.utcKickoff, timezone)} (${timezoneLabel(timezone)}) · ${match.venue}`;
+    meta.textContent = `${formatKickoff(match.utcKickoff, timezone, getLocale())} (${timezoneLabel(timezone)}) · ${match.venue}`;
 
     const score = document.createElement('div');
     score.className = 'meta';
-    score.textContent = match.score ?? 'TBD';
+    score.textContent = match.score ?? t('tbd');
 
     article.append(teams, meta, score);
     section.append(article);
@@ -266,7 +268,7 @@ function setupSavedFilters() {
 
     const filters = loadSavedFilters();
     if (filters.length >= MAX_SAVED_FILTERS) {
-      alert(`You can save at most ${MAX_SAVED_FILTERS} filters. Please remove one first.`);
+      alert(t('max_filters', MAX_SAVED_FILTERS));
       return;
     }
 
@@ -285,7 +287,7 @@ function renderSavedFilters() {
   if (filters.length === 0) {
     const empty = document.createElement('span');
     empty.className = 'saved-filters-empty';
-    empty.textContent = 'No saved filters yet.';
+    empty.textContent = t('no_saved_filters');
     savedFiltersListEl.append(empty);
     return;
   }
@@ -299,7 +301,7 @@ function renderSavedFilters() {
     const loadBtn = document.createElement('button');
     loadBtn.className = 'saved-filter-load';
     loadBtn.textContent = name;
-    loadBtn.title = `Load filter: ${name}`;
+    loadBtn.title = t('load_filter', name);
     loadBtn.addEventListener('click', () => {
       applyTeamFilter(teams);
     });
@@ -307,7 +309,7 @@ function renderSavedFilters() {
     const removeBtn = document.createElement('button');
     removeBtn.className = 'saved-filter-remove';
     removeBtn.textContent = '×';
-    removeBtn.title = `Remove filter: ${name}`;
+    removeBtn.title = t('remove_filter', name);
     removeBtn.addEventListener('click', () => {
       const current = loadSavedFilters();
       const idx = current.findIndex((f, j) => f.name === name && j >= i);

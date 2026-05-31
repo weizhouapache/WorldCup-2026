@@ -6,8 +6,8 @@ export async function fetchJson(path) {
   return response.json();
 }
 
-export function formatKickoff(utcKickoff, timezone) {
-  return new Intl.DateTimeFormat(undefined, {
+export function formatKickoff(utcKickoff, timezone, locale = 'en') {
+  return new Intl.DateTimeFormat(locale, {
     timeZone: timezone,
     weekday: 'short',
     month: 'short',

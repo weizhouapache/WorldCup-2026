@@ -1,4 +1,5 @@
 import { fetchJson, formatKickoff, getDefaultTimezone, timezoneLabel } from './common.js';
+import { t, getLocale, initI18n } from './i18n.js';
 
 const knockoutEl = document.querySelector('#knockout');
 const timezone = getDefaultTimezone();
@@ -8,11 +9,13 @@ const FINAL_TO_THIRD_PLACE_GAP = 120;
 const MAX_MATCHUP_TEXT_LENGTH = 34;
 
 init().catch((error) => {
-  knockoutEl.textContent = `Unable to load knockout stages: ${error.message}`;
+  knockoutEl.textContent = t('load_error_knockout', error.message);
 });
 
 async function init() {
   const data = await fetchJson('./data/knockout.json');
+
+  initI18n();
   knockoutEl.append(buildBracketImage(data.rounds));
 
   for (const round of data.rounds) {
@@ -20,7 +23,7 @@ async function init() {
     section.className = 'round';
 
     const title = document.createElement('h3');
-    title.textContent = round.name;
+    title.textContent = t(round.name);
     section.append(title);
 
     for (const fixture of round.fixtures) {
@@ -32,11 +35,11 @@ async function init() {
 
       const meta = document.createElement('div');
       meta.className = 'meta';
-      meta.textContent = `${formatKickoff(fixture.utcKickoff, timezone)} (${timezoneLabel(timezone)}) · ${fixture.venue}`;
+      meta.textContent = `${formatKickoff(fixture.utcKickoff, timezone, getLocale())} (${timezoneLabel(timezone)}) · ${fixture.venue}`;
 
       const score = document.createElement('div');
       score.className = 'meta';
-      score.textContent = fixture.score ?? 'TBD';
+      score.textContent = fixture.score ?? t('tbd');
 
       card.append(teams, meta, score);
       section.append(card);
@@ -56,12 +59,12 @@ function buildBracketImage(rounds) {
   section.className = 'bracket-chart';
 
   const title = document.createElement('h3');
-  title.textContent = 'Bracket view';
+  title.textContent = t('bracket_view');
   section.append(title);
 
   if (stageRounds.length === 0) {
     const fallback = document.createElement('p');
-    fallback.textContent = 'Bracket data is unavailable.';
+    fallback.textContent = t('bracket_unavailable');
     section.append(fallback);
     return section;
   }
@@ -108,7 +111,7 @@ function buildBracketImage(rounds) {
   const firstRoundCards = roundCards[0];
   if (!firstRoundCards?.length || !finalRoundCards?.length) {
     const fallback = document.createElement('p');
-    fallback.textContent = 'Bracket fixtures are unavailable.';
+    fallback.textContent = t('bracket_fixtures_unavailable');
     section.append(fallback);
     return section;
   }
@@ -150,7 +153,7 @@ function buildBracketImage(rounds) {
       class: 'bracket-round-label',
       'text-anchor': 'middle',
     });
-    label.textContent = round.name;
+    label.textContent = t(round.name);
     svg.append(label);
   });
 
@@ -174,7 +177,7 @@ function buildBracketImage(rounds) {
         class: 'bracket-third-place-label',
         'text-anchor': 'middle',
       });
-      thirdLabel.textContent = 'Third-place play-off';
+      thirdLabel.textContent = t('Third-place play-off');
       svg.append(thirdLabel);
     }
   }

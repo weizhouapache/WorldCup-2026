@@ -1,33 +1,36 @@
 import { fetchJson } from './common.js';
+import { t, initI18n } from './i18n.js';
 
 const standingsEl = document.querySelector('#standings');
 
 init().catch((error) => {
-  standingsEl.textContent = `Unable to load standings: ${error.message}`;
+  standingsEl.textContent = t('load_error_standings', error.message);
 });
 
 async function init() {
   const data = await fetchJson('./data/standings.json');
+
+  initI18n();
 
   for (const group of data.groups) {
     const card = document.createElement('section');
     card.className = 'table-card';
 
     const title = document.createElement('h3');
-    title.textContent = `Group ${group.name}`;
+    title.textContent = t('group_label', group.name);
 
     const table = document.createElement('table');
     table.innerHTML = `
       <thead>
         <tr>
-          <th>Team</th>
-          <th>P</th>
-          <th>W</th>
-          <th>D</th>
-          <th>L</th>
-          <th>GF</th>
-          <th>GA</th>
-          <th>Pts</th>
+          <th>${t('col_team')}</th>
+          <th>${t('col_played')}</th>
+          <th>${t('col_won')}</th>
+          <th>${t('col_drawn')}</th>
+          <th>${t('col_lost')}</th>
+          <th>${t('col_gf')}</th>
+          <th>${t('col_ga')}</th>
+          <th>${t('col_pts')}</th>
         </tr>
       </thead>
       <tbody></tbody>
