@@ -1,5 +1,5 @@
 import { fetchJson, formatKickoff, getDefaultTimezone, timezoneLabel } from './common.js';
-import { t, getLocale, initI18n } from './i18n.js';
+import { t, getLocale, initI18n, localizeTeamName } from './i18n.js';
 
 const knockoutEl = document.querySelector('#knockout');
 const timezone = getDefaultTimezone();
@@ -31,7 +31,7 @@ async function init() {
       card.className = 'match-card';
 
       const teams = document.createElement('div');
-      teams.textContent = `${fixture.homeTeam} vs ${fixture.awayTeam}`;
+      teams.textContent = `${localizeTeamName(fixture.homeTeam)} vs ${localizeTeamName(fixture.awayTeam)}`;
 
       const meta = document.createElement('div');
       meta.className = 'meta';
@@ -222,7 +222,7 @@ function appendConnector(svg, topSource, bottomSource, target, dashed = false) {
 
 function appendMatchCard(svg, card, cardWidth, cardHeight) {
   const fixtureId = formatFixtureId(card.fixture.id);
-  const matchup = `${card.fixture.homeTeam} vs ${card.fixture.awayTeam}`;
+  const matchup = `${localizeTeamName(card.fixture.homeTeam)} vs ${localizeTeamName(card.fixture.awayTeam)}`;
 
   svg.append(createSvgElement('rect', { x: card.x, y: card.y, width: cardWidth, height: cardHeight, rx: 8, class: 'bracket-match-card' }));
 

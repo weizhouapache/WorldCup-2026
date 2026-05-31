@@ -1,5 +1,5 @@
 import { fetchJson } from './common.js';
-import { t, initI18n } from './i18n.js';
+import { t, initI18n, localizeTeamName } from './i18n.js';
 
 const standingsEl = document.querySelector('#standings');
 
@@ -42,7 +42,7 @@ async function init() {
     for (const team of sortedRows) {
       const row = document.createElement('tr');
       row.innerHTML = `
-        <td>${team.name}</td>
+        <td>${localizeTeamName(team.name)}</td>
         <td>${team.played}</td>
         <td>${team.won}</td>
         <td>${team.drawn}</td>
