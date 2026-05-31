@@ -235,7 +235,7 @@ const TRANSLATIONS = {
     col_team: 'Team',
     col_played: 'G',
     col_won: 'W',
-    col_drawn: 'GS',
+    col_drawn: 'G',
     col_lost: 'V',
     col_gf: 'DV',
     col_ga: 'DT',
