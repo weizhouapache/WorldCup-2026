@@ -1,6 +1,16 @@
 const LANG_KEY = 'worldcup-2026-lang';
 
 const LOCALIZED_ENTITIES = {
+  en: {
+    confederations: {
+      AFC: 'Asia',
+      CAF: 'Africa',
+      CONCACAF: 'North America',
+      CONMEBOL: 'South America',
+      OFC: 'Oceania',
+      UEFA: 'Europe',
+    },
+  },
   zh: {
     teams: {
       Algeria: '阿尔及利亚',
@@ -222,8 +232,8 @@ const TRANSLATIONS = {
     standings_heading: 'Stand',
     knockout_heading: 'Knock-outfase',
     bracket_view: 'Toernooischema',
-    bracket_unavailable: 'Toernooischemadata is niet beschikbaar.',
-    bracket_fixtures_unavailable: 'Toernooischemawedstrijden zijn niet beschikbaar.',
+    bracket_unavailable: 'Toernooischemagegevens zijn niet beschikbaar.',
+    bracket_fixtures_unavailable: 'Wedstrijden in het toernooischema zijn niet beschikbaar.',
     'Round of 32': '32e finales',
     'Round of 16': 'Achtste finales',
     'Quarter-finals': 'Kwartfinales',
