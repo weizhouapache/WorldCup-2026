@@ -192,7 +192,42 @@ export function localizeTeamName(teamName) {
   if (currentLang !== 'zh') {
     return teamName;
   }
-  return TEAM_NAMES_ZH[teamName] ?? teamName;
+  if (TEAM_NAMES_ZH[teamName]) {
+    return TEAM_NAMES_ZH[teamName];
+  }
+
+  const winnerGroup = teamName.match(/^Winner Group ([A-Z])$/);
+  if (winnerGroup) {
+    return `${winnerGroup[1]}组第一`;
+  }
+
+  const runnerUpGroup = teamName.match(/^Runner-up Group ([A-Z])$/);
+  if (runnerUpGroup) {
+    return `${runnerUpGroup[1]}组第二`;
+  }
+
+  const bestThird = teamName.match(/^Best Third-place (\d+)$/);
+  if (bestThird) {
+    return `最佳小组第三 ${bestThird[1]}`;
+  }
+
+  const winnerRound = teamName.match(/^Winner (R32|R16|QF|SF)-(\d+)$/);
+  if (winnerRound) {
+    const roundLabel = {
+      R32: '32强赛',
+      R16: '16强赛',
+      QF: '四分之一决赛',
+      SF: '半决赛',
+    }[winnerRound[1]];
+    return `${roundLabel}胜者 ${winnerRound[2]}`;
+  }
+
+  const loserSemi = teamName.match(/^Loser SF-(\d+)$/);
+  if (loserSemi) {
+    return `半决赛负者 ${loserSemi[1]}`;
+  }
+
+  return teamName;
 }
 
 export function localizeConfederation(confederation) {
