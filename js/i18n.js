@@ -36,8 +36,6 @@ const TEAM_NAMES_ZH = {
   Paraguay: '巴拉圭',
   Portugal: '葡萄牙',
   Qatar: '卡塔尔',
-  'Round of 32 Winner': '32强赛胜者',
-  'Round of 32 Runner-up': '32强赛败者',
   'Saudi Arabia': '沙特阿拉伯',
   Scotland: '苏格兰',
   Senegal: '塞内加尔',
