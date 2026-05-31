@@ -9,7 +9,7 @@ export async function fetchJson(path) {
 export function formatKickoff(utcKickoff, timezone, locale = 'en-US') {
   return new Intl.DateTimeFormat(locale, {
     timeZone: timezone,
-    weekday: 'short',
+    weekday: 'long',
     month: 'short',
     day: '2-digit',
     hour: '2-digit',
