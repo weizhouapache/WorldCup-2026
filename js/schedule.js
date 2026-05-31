@@ -1,5 +1,5 @@
 import { fetchJson, formatKickoff, getDefaultTimezone, timezoneOptions, timezoneLabel } from './common.js';
-import { t, getLocale, initI18n } from './i18n.js';
+import { t, getLocale, initI18n, localizeConfederation, localizeTeamName } from './i18n.js';
 
 const STORAGE_KEY = 'worldcup-2026-selected-teams';
 const SAVED_FILTERS_KEY = 'worldcup-2026-saved-filters';
@@ -110,7 +110,7 @@ function setupPredefinedFilters() {
     for (const [conf, teams] of Object.entries(CONFEDERATION_TEAMS)) {
       const btn = document.createElement('button');
       btn.className = 'predefined-filter-btn';
-      btn.textContent = conf;
+      btn.textContent = localizeConfederation(conf);
       btn.addEventListener('click', () => applyTeamFilter(teams));
       predefinedConfederationFiltersEl.append(btn);
     }
@@ -144,7 +144,7 @@ function setupFilters() {
       renderSchedule();
     });
 
-    label.append(checkbox, ` ${team}`);
+    label.append(checkbox, ` ${localizeTeamName(team)}`);
     teamFilterEl.append(label);
   }
   filtersInitialized = true;
@@ -211,7 +211,7 @@ function renderSection(title, sectionMatches, emptyMessage) {
     article.className = 'match-card';
 
     const teams = document.createElement('div');
-    teams.textContent = `${match.homeTeam} vs ${match.awayTeam}`;
+    teams.textContent = `${localizeTeamName(match.homeTeam)} vs ${localizeTeamName(match.awayTeam)}`;
 
     const meta = document.createElement('div');
     meta.className = 'meta';
