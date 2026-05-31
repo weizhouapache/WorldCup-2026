@@ -55,7 +55,12 @@ async function init() {
 }
 
 function setupTimezone() {
-  timezoneOptions(timezone).forEach((zone) => {
+  const zones = timezoneOptions(timezone);
+  if (!zones.includes(timezone)) {
+    zones.push(timezone);
+  }
+
+  zones.forEach((zone) => {
     const option = document.createElement('option');
     option.value = zone;
     option.textContent = timezoneLabel(zone);

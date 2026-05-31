@@ -25,78 +25,95 @@ export function timezoneLabel(zone) {
   const now = new Date();
   const abbr = new Intl.DateTimeFormat('en', { timeZone: zone, timeZoneName: 'short' })
     .formatToParts(now).find(p => p.type === 'timeZoneName')?.value ?? zone;
-  const gmtStr = new Intl.DateTimeFormat('en', { timeZone: zone, timeZoneName: 'longOffset' })
-    .formatToParts(now).find(p => p.type === 'timeZoneName')?.value ?? 'GMT';
-  const utcOffset = gmtStr === 'GMT'
-    ? 'UTC +0000'
-    : gmtStr.replace(/GMT([+-])(\d{2}):(\d{2})/, 'UTC $1$2$3');
-  return `${abbr} (${utcOffset})`;
+  const utcOffset = formatUtcOffset(getZoneOffsetMinutes(zone, now));
+  return `${zone} (${abbr}, ${utcOffset})`;
 }
 
 export function timezoneOptions(defaultTimezone) {
   const candidates = [
     defaultTimezone,
     'UTC',
-    // North America
+    // Host city timezones
     'America/New_York',
     'America/Toronto',
     'America/Chicago',
-    'America/Denver',
     'America/Los_Angeles',
     'America/Vancouver',
     'America/Mexico_City',
     'America/Monterrey',
-    'Pacific/Honolulu',
-    // South America
-    'America/Sao_Paulo',
-    'America/Argentina/Buenos_Aires',
-    'America/Bogota',
-    'America/Lima',
-    'America/Santiago',
-    'America/Caracas',
-    // Europe
+    // Western Europe capitals
     'Europe/London',
     'Europe/Lisbon',
+    'Europe/Dublin',
     'Europe/Paris',
     'Europe/Berlin',
     'Europe/Amsterdam',
     'Europe/Brussels',
-    'Europe/Zurich',
+    'Europe/Copenhagen',
+    'Europe/Vienna',
     'Europe/Madrid',
     'Europe/Rome',
-    'Europe/Warsaw',
+    'Europe/Oslo',
     'Europe/Stockholm',
-    'Europe/Helsinki',
-    'Europe/Athens',
-    'Europe/Bucharest',
-    'Europe/Kyiv',
-    'Europe/Istanbul',
-    'Europe/Moscow',
-    // Africa
-    'Africa/Casablanca',
-    'Africa/Lagos',
-    'Africa/Cairo',
-    'Africa/Johannesburg',
-    'Africa/Nairobi',
-    // Middle East & Asia
-    'Asia/Riyadh',
-    'Asia/Dubai',
-    'Asia/Karachi',
-    'Asia/Kolkata',
-    'Asia/Dhaka',
-    'Asia/Bangkok',
-    'Asia/Jakarta',
-    'Asia/Singapore',
-    'Asia/Hong_Kong',
+    // Asia-Pacific capitals
     'Asia/Shanghai',
     'Asia/Seoul',
     'Asia/Tokyo',
-    // Pacific
-    'Australia/Perth',
     'Australia/Sydney',
-    'Australia/Melbourne',
-    'Pacific/Auckland',
   ];
 
-  return [...new Set(candidates.filter(Boolean))];
+  const now = new Date();
+  return [...new Set(candidates.filter(Boolean))].sort((a, b) => {
+    if (a === 'UTC' && b === 'UTC') {
+      return 0;
+    }
+    if (a === 'UTC') {
+      return -1;
+    }
+    if (b === 'UTC') {
+      return 1;
+    }
+
+    const offsetA = getZoneOffsetMinutes(a, now);
+    const offsetB = getZoneOffsetMinutes(b, now);
+    const offsetDiff = sortOffset(offsetA) - sortOffset(offsetB);
+    if (offsetDiff !== 0) {
+      return offsetDiff;
+    }
+    return a.localeCompare(b);
+  });
+}
+
+function getZoneOffsetMinutes(zone, date) {
+  const gmtStr = new Intl.DateTimeFormat('en', { timeZone: zone, timeZoneName: 'longOffset' })
+    .formatToParts(date).find(p => p.type === 'timeZoneName')?.value ?? 'GMT';
+  if (gmtStr === 'GMT') {
+    return 0;
+  }
+  const match = gmtStr.match(/^GMT([+-])(\d{2}):(\d{2})$/);
+  if (!match) {
+    return 0;
+  }
+  const [, sign, hours, minutes] = match;
+  const total = Number(hours) * 60 + Number(minutes);
+  return sign === '+' ? total : -total;
+}
+
+function formatUtcOffset(offsetMinutes) {
+  const sign = offsetMinutes >= 0 ? '+' : '-';
+  const absMinutes = Math.abs(offsetMinutes);
+  const hours = String(Math.floor(absMinutes / 60)).padStart(2, '0');
+  const minutes = String(absMinutes % 60).padStart(2, '0');
+  return `UTC${sign}${hours}${minutes}`;
+}
+
+// Larger than max real UTC offset in minutes (UTC+14:00 => 840), so negatives sort last.
+const NEGATIVE_OFFSET_SORT_BASE = 10000;
+
+function sortOffset(offsetMinutes) {
+  // UTC and positive offsets should appear first; negative offsets are shifted after them.
+  if (offsetMinutes < 0) {
+    return NEGATIVE_OFFSET_SORT_BASE + Math.abs(offsetMinutes);
+  }
+  return offsetMinutes;
 }
