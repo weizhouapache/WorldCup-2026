@@ -203,7 +203,7 @@ const TRANSLATIONS = {
   nl: {
     nav_schedule: 'Schema',
     nav_standings: 'Stand',
-    nav_knockout: 'Knock-out',
+    nav_knockout: 'Knockout',
     timezone_label: 'Tijdzone',
     team_filter_heading: 'Teamfilter',
     team_filter_hint: 'Selecteer één of meer teams om wedstrijden te filteren.',
@@ -220,7 +220,7 @@ const TRANSLATIONS = {
     no_past: 'Geen afgelopen wedstrijden voor de gekozen filters.',
     no_saved_filters: 'Nog geen opgeslagen filters.',
     standings_heading: 'Stand',
-    knockout_heading: 'Knock-outfase',
+    knockout_heading: 'Knockoutfase',
     bracket_view: 'Toernooischema',
     bracket_unavailable: 'Toernooischemadata is niet beschikbaar.',
     bracket_fixtures_unavailable: 'Toernooischemawedstrijden zijn niet beschikbaar.',
@@ -235,7 +235,7 @@ const TRANSLATIONS = {
     col_team: 'Team',
     col_played: 'G',
     col_won: 'W',
-    col_drawn: 'G',
+    col_drawn: 'GS',
     col_lost: 'V',
     col_gf: 'DV',
     col_ga: 'DT',
@@ -246,7 +246,7 @@ const TRANSLATIONS = {
     max_filters: (max) => `Je kunt maximaal ${max} filters opslaan. Verwijder er eerst één.`,
     load_error_schedule: (msg) => `Schema kan niet worden geladen: ${msg}`,
     load_error_standings: (msg) => `Stand kan niet worden geladen: ${msg}`,
-    load_error_knockout: (msg) => `Knock-outfase kan niet worden geladen: ${msg}`,
+    load_error_knockout: (msg) => `Knockoutfase kan niet worden geladen: ${msg}`,
   },
 };
 
