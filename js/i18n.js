@@ -110,6 +110,36 @@ const LOCALIZED_ENTITIES = {
       OFC: 'Oceanië',
       UEFA: 'Europa',
     },
+    teamPatterns: [
+      {
+        regex: /^Winner Group ([A-Z])$/,
+        format: (match) => `Winnaar groep ${match[1]}`,
+      },
+      {
+        regex: /^Runner-up Group ([A-Z])$/,
+        format: (match) => `Nummer twee groep ${match[1]}`,
+      },
+      {
+        regex: /^Best Third-place (\d+)$/,
+        format: (match) => `Beste nummer drie ${match[1]}`,
+      },
+      {
+        regex: /^Winner (R32|R16|QF|SF)-(\d+)$/,
+        format: (match) => {
+          const roundLabel = {
+            R32: '32e finale',
+            R16: 'achtste finale',
+            QF: 'kwartfinale',
+            SF: 'halve finale',
+          }[match[1]];
+          return `Winnaar ${roundLabel} ${match[2]}`;
+        },
+      },
+      {
+        regex: /^Loser SF-(\d+)$/,
+        format: (match) => `Verliezer halve finale ${match[1]}`,
+      },
+    ],
   },
 };
 
