@@ -52,13 +52,13 @@ const LOCALIZED_ENTITIES = {
       Uruguay: '乌拉圭',
       Uzbekistan: '乌兹别克斯坦',
     },
-    confederations: {
-      AFC: '亚洲',
-      CAF: '非洲',
-      CONCACAF: '中北美及加勒比海',
-      CONMEBOL: '南美洲',
-      OFC: '大洋洲',
-      UEFA: '欧洲',
+    continents: {
+      Asia: '亚洲',
+      Africa: '非洲',
+      'North America': '北美洲',
+      'South America': '南美洲',
+      Oceania: '大洋洲',
+      Europe: '欧洲',
     },
     teamPatterns: [
       {
@@ -91,6 +91,16 @@ const LOCALIZED_ENTITIES = {
       },
     ],
   },
+  nl: {
+    continents: {
+      Asia: 'Azië',
+      Africa: 'Afrika',
+      'North America': 'Noord-Amerika',
+      'South America': 'Zuid-Amerika',
+      Oceania: 'Oceanië',
+      Europe: 'Europa',
+    },
+  },
 };
 
 const TRANSLATIONS = {
@@ -103,7 +113,7 @@ const TRANSLATIONS = {
     team_filter_hint: 'Select one or more teams to filter matches.',
     clear_selected: 'Clear all selected teams',
     by_group: 'By group',
-    by_confederation: 'By confederation',
+    by_continent: 'By continent',
     show_hide_teams: 'Show / hide all teams',
     filter_name_placeholder: 'Filter name',
     save_filter: 'Save filter',
@@ -151,7 +161,7 @@ const TRANSLATIONS = {
     team_filter_hint: '选择一支或多支球队来筛选比赛。',
     clear_selected: '清除所有已选球队',
     by_group: '按小组',
-    by_confederation: '按大区',
+    by_continent: '按大洲',
     show_hide_teams: '显示 / 隐藏所有球队',
     filter_name_placeholder: '筛选名称',
     save_filter: '保存筛选',
@@ -190,6 +200,54 @@ const TRANSLATIONS = {
     load_error_standings: (msg) => `无法加载积分榜：${msg}`,
     load_error_knockout: (msg) => `无法加载淘汰赛阶段：${msg}`,
   },
+  nl: {
+    nav_schedule: 'Schema',
+    nav_standings: 'Stand',
+    nav_knockout: 'Knock-out',
+    timezone_label: 'Tijdzone',
+    team_filter_heading: 'Teamfilter',
+    team_filter_hint: 'Selecteer één of meer teams om wedstrijden te filteren.',
+    clear_selected: 'Wis alle geselecteerde teams',
+    by_group: 'Per groep',
+    by_continent: 'Per continent',
+    show_hide_teams: 'Toon / verberg alle teams',
+    filter_name_placeholder: 'Filternaam',
+    save_filter: 'Filter opslaan',
+    schedule_heading: 'Schema',
+    upcoming_matches: 'Aankomende wedstrijden',
+    past_matches: 'Afgelopen wedstrijden',
+    no_upcoming: 'Geen aankomende wedstrijden voor de gekozen filters.',
+    no_past: 'Geen afgelopen wedstrijden voor de gekozen filters.',
+    no_saved_filters: 'Nog geen opgeslagen filters.',
+    standings_heading: 'Stand',
+    knockout_heading: 'Knock-outfase',
+    bracket_view: 'Toernooischema',
+    bracket_unavailable: 'Toernooischemadata is niet beschikbaar.',
+    bracket_fixtures_unavailable: 'Toernooischemawedstrijden zijn niet beschikbaar.',
+    'Round of 32': '32e finales',
+    'Round of 16': 'Achtste finales',
+    'Quarter-finals': 'Kwartfinales',
+    'Semi-finals': 'Halve finales',
+    'Final': 'Finale',
+    'Third-place play-off': 'Wedstrijd om de derde plaats',
+    view_on_github: 'Bekijk op GitHub',
+    tbd: 'N.t.b.',
+    col_team: 'Team',
+    col_played: 'G',
+    col_won: 'W',
+    col_drawn: 'G',
+    col_lost: 'V',
+    col_gf: 'DV',
+    col_ga: 'DT',
+    col_pts: 'Ptn',
+    group_label: (g) => `Groep ${g}`,
+    load_filter: (name) => `Filter laden: ${name}`,
+    remove_filter: (name) => `Filter verwijderen: ${name}`,
+    max_filters: (max) => `Je kunt maximaal ${max} filters opslaan. Verwijder er eerst één.`,
+    load_error_schedule: (msg) => `Schema kan niet worden geladen: ${msg}`,
+    load_error_standings: (msg) => `Stand kan niet worden geladen: ${msg}`,
+    load_error_knockout: (msg) => `Knock-outfase kan niet worden geladen: ${msg}`,
+  },
 };
 
 let currentLang = 'en';
@@ -218,7 +276,9 @@ export function t(key, ...args) {
 }
 
 export function getLocale() {
-  return currentLang === 'zh' ? 'zh-CN' : 'en-US';
+  if (currentLang === 'zh') return 'zh-CN';
+  if (currentLang === 'nl') return 'nl-NL';
+  return 'en-US';
 }
 
 export function localizeTeamName(teamName) {
@@ -238,8 +298,8 @@ export function localizeTeamName(teamName) {
   return teamName;
 }
 
-export function localizeConfederation(confederation) {
-  return localizeEntity('confederations', confederation);
+export function localizeContinent(continent) {
+  return localizeEntity('continents', continent);
 }
 
 function localizeEntity(category, value) {
@@ -257,7 +317,7 @@ export function applyTranslations() {
       el.textContent = translation;
     }
   });
-  document.documentElement.lang = currentLang === 'zh' ? 'zh' : 'en';
+  document.documentElement.lang = currentLang;
 }
 
 export function setupLangSwitcher() {
