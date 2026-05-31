@@ -107,10 +107,10 @@ function setupPredefinedFilters() {
   }
 
   if (predefinedConfederationFiltersEl) {
-    for (const [conf, teams] of Object.entries(CONFEDERATION_TEAMS)) {
+    for (const [confederation, teams] of Object.entries(CONFEDERATION_TEAMS)) {
       const btn = document.createElement('button');
       btn.className = 'predefined-filter-btn';
-      btn.textContent = localizeConfederation(conf);
+      btn.textContent = localizeConfederation(confederation);
       btn.addEventListener('click', () => applyTeamFilter(teams));
       predefinedConfederationFiltersEl.append(btn);
     }
