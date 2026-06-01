@@ -28,20 +28,12 @@ jobs:
             ./ _site/
           touch _site/.nojekyll
 
-      - name: Deploy to Surge
-        env:
-          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
-        run: |
-          npx surge --project _site \
-            --domain pr-${{ github.event.pull_request.number }}.cloudabc.eu \
-            --token "$SURGE_TOKEN"
-
       - name: Post preview URL comment
         uses: actions/github-script@v7
         with:
           script: |
             const pr = context.payload.pull_request.number;
-            const url = `https://pr-${pr}.cloudabc.eu`;
+            const url = `https://www.cloudabc.eu/WorldCup-2026/PR-${pr}/`;
             const sha = context.payload.pull_request.head.sha.slice(0, 7);
             const marker = '<!-- pr-preview-bot -->';
             const body = [
@@ -81,14 +73,6 @@ jobs:
     if: github.event.action == 'closed'
     runs-on: ubuntu-latest
     steps:
-      - name: Tear down Surge deployment
-        env:
-          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
-        run: |
-          npx surge teardown \
-            pr-${{ github.event.pull_request.number }}.cloudabc.eu \
-            --token "$SURGE_TOKEN"
-
       - name: Update PR comment
         uses: actions/github-script@v7
         with:
