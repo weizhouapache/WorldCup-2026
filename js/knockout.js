@@ -40,10 +40,7 @@ function setupTimezone() {
   timezoneSelect.addEventListener('change', () => {
     timezone = timezoneSelect.value;
     persistTimezone(timezone);
-    const container = document.querySelector('#knockout');
-    if (container) {
-      container.innerHTML = '';
-    }
+    knockoutEl.innerHTML = '';
     fetchJson('./data/knockout.json').then((data) => render(data.rounds));
   });
 }
