@@ -29,14 +29,10 @@ The workflow in `.github/workflows/update-data.yml` runs every 12 hours and on m
 
 ## PR previews
 
-Every pull request is automatically deployed to a temporary preview URL on `cloudabc.eu`:
+Every pull request gets a preview URL comment posted automatically:
 
 ```
-https://pr-<PR_NUMBER>.cloudabc.eu
+https://www.cloudabc.eu/WorldCup-2026/PR-<PR_NUMBER>/
 ```
 
-A comment is posted on the PR with the preview link and updated on every push. The deployment is torn down when the PR is closed.
-
-**Required setup:**
-1. Add a wildcard DNS record: `*.cloudabc.eu CNAME na-west1.surge.sh` (required once for all PR subdomains)
-2. Add a `SURGE_TOKEN` secret to the repository (Settings → Secrets and variables → Actions). Generate a token by running `npx surge token` locally after creating a free [Surge.sh](https://surge.sh) account.
+The comment is updated on every push and updated again when the PR is closed.
