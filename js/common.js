@@ -17,8 +17,26 @@ export function formatKickoff(utcKickoff, timezone, locale = 'en-US') {
   }).format(new Date(utcKickoff));
 }
 
+export const TIMEZONE_STORAGE_KEY = 'worldcup-2026-timezone';
+
 export function getDefaultTimezone() {
   return Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC';
+}
+
+export function getPersistedTimezone() {
+  try {
+    return localStorage.getItem(TIMEZONE_STORAGE_KEY) || getDefaultTimezone();
+  } catch {
+    return getDefaultTimezone();
+  }
+}
+
+export function persistTimezone(zone) {
+  try {
+    localStorage.setItem(TIMEZONE_STORAGE_KEY, zone);
+  } catch {
+    // storage not available
+  }
 }
 
 export function timezoneLabel(zone) {

@@ -1,4 +1,4 @@
-import { fetchJson, formatKickoff, getDefaultTimezone, timezoneOptions, timezoneLabel } from './common.js';
+import { fetchJson, formatKickoff, getPersistedTimezone, persistTimezone, timezoneOptions, timezoneLabel } from './common.js';
 import { t, getLocale, initI18n, localizeConfederation, localizeTeamName } from './i18n.js';
 
 const STORAGE_KEY = 'worldcup-2026-selected-teams';
@@ -34,7 +34,7 @@ const saveFilterBtn = document.querySelector('#save-filter');
 const predefinedGroupFiltersEl = document.querySelector('#predefined-group-filters');
 const predefinedConfederationFiltersEl = document.querySelector('#predefined-confederation-filters');
 
-let timezone = getDefaultTimezone();
+let timezone = getPersistedTimezone();
 let selectedTeams = new Set(loadTeams());
 let matches = [];
 let filtersInitialized = false;
@@ -72,6 +72,7 @@ function setupTimezone() {
   timezoneSelect.value = timezone;
   timezoneSelect.addEventListener('change', () => {
     timezone = timezoneSelect.value;
+    persistTimezone(timezone);
     renderSchedule();
   });
 }
