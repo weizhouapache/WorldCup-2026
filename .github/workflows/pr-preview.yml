@@ -33,7 +33,7 @@ jobs:
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
         run: |
           npx surge --project _site \
-            --domain worldcup-2026-pr-${{ github.event.pull_request.number }}.surge.sh \
+            --domain pr-${{ github.event.pull_request.number }}.cloudabc.eu \
             --token "$SURGE_TOKEN"
 
       - name: Post preview URL comment
@@ -41,7 +41,7 @@ jobs:
         with:
           script: |
             const pr = context.payload.pull_request.number;
-            const url = `https://worldcup-2026-pr-${pr}.surge.sh`;
+            const url = `https://pr-${pr}.cloudabc.eu`;
             const sha = context.payload.pull_request.head.sha.slice(0, 7);
             const marker = '<!-- pr-preview-bot -->';
             const body = [
@@ -86,7 +86,7 @@ jobs:
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
         run: |
           npx surge teardown \
-            worldcup-2026-pr-${{ github.event.pull_request.number }}.surge.sh \
+            pr-${{ github.event.pull_request.number }}.cloudabc.eu \
             --token "$SURGE_TOKEN"
 
       - name: Update PR comment
