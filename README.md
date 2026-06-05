@@ -26,3 +26,13 @@ Open `index.html` directly in a browser, or run a static file server from the re
 ## Data refresh
 
 The workflow in `.github/workflows/update-data.yml` runs every 12 hours and on manual dispatch. It downloads FIFA source pages into `data/raw/` and updates metadata fields in generated JSON files.
+
+## PR previews
+
+Every pull request gets a preview URL comment posted automatically:
+
+```
+https://www.cloudabc.eu/WorldCup-2026/PR-<PR_NUMBER>/
+```
+
+The comment is updated on every push and updated again when the PR is closed.
