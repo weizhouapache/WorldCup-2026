@@ -5,7 +5,7 @@ on:
     types: [opened, synchronize, reopened, closed]
 
 permissions:
-  contents: read
+  contents: write
   pull-requests: write
 
 jobs:
@@ -27,6 +27,14 @@ jobs:
             --exclude '_site/' \
             ./ _site/
           touch _site/.nojekyll
+
+      - name: Deploy preview to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: _site
+          target-folder: WorldCup-2026/PR-${{ github.event.pull_request.number }}
+          clean: false
 
       - name: Post preview URL comment
         uses: actions/github-script@v7
@@ -73,6 +81,20 @@ jobs:
     if: github.event.action == 'closed'
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Remove preview folder
+        run: |
+          rm -rf WorldCup-2026/PR-${{ github.event.pull_request.number }}
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Remove PR ${{ github.event.pull_request.number }} preview"
+          git push
+
       - name: Update PR comment
         uses: actions/github-script@v7
         with:
