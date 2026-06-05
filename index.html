@@ -30,10 +30,6 @@
       <section>
         <h2 data-i18n="team_filter_heading">Team filter</h2>
         <p class="hint" data-i18n="team_filter_hint">Select one or more teams to filter matches.</p>
-        <label class="filter-actions">
-          <input id="clear-selected" type="checkbox" />
-          <span data-i18n="clear_selected">Clear all selected teams</span>
-        </label>
 
         <div class="predefined-filters-bar">
           <div class="predefined-filters-row">
@@ -54,6 +50,10 @@
         <div class="saved-filters-bar">
           <div id="saved-filters-list" class="saved-filters-list"></div>
           <div class="saved-filters-add">
+            <label class="filter-actions">
+              <input id="clear-selected" type="checkbox" />
+              <span data-i18n="clear_selected">Clear all selected teams</span>
+            </label>
             <input id="filter-name" type="text" data-i18n="filter_name_placeholder" placeholder="Filter name" maxlength="30" />
             <button id="save-filter" data-i18n="save_filter">Save filter</button>
           </div>
