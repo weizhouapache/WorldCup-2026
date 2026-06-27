@@ -1,135 +1,136 @@
 {
-  "updatedAt": "2026-05-30T13:23:49.745Z",
+  "updatedAt": "2026-06-27T09:10:42.846760+00:00",
+  "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026",
   "rounds": [
     {
       "name": "Round of 32",
       "fixtures": [
         {
-          "id": "r32-1",
+          "id": "ko-400021518",
           "utcKickoff": "2026-06-28T19:00:00Z",
-          "homeTeam": "Runner-up Group A",
-          "awayTeam": "Runner-up Group B",
-          "venue": "SoFi Stadium, Los Angeles",
+          "homeTeam": "South Africa",
+          "awayTeam": "Canada",
+          "venue": "Los Angeles Stadium",
           "score": "-"
         },
         {
-          "id": "r32-2",
-          "utcKickoff": "2026-06-29T17:30:00Z",
-          "homeTeam": "Winner Group E",
-          "awayTeam": "Best Third-place 1",
-          "venue": "Gillette Stadium, Boston",
+          "id": "ko-400021516",
+          "utcKickoff": "2026-06-29T17:00:00Z",
+          "homeTeam": "Brazil",
+          "awayTeam": "Japan",
+          "venue": "Houston Stadium",
           "score": "-"
         },
         {
-          "id": "r32-3",
-          "utcKickoff": "2026-06-29T23:00:00Z",
-          "homeTeam": "Winner Group F",
-          "awayTeam": "Runner-up Group C",
-          "venue": "Estadio BBVA, Monterrey",
+          "id": "ko-400021513",
+          "utcKickoff": "2026-06-29T20:30:00Z",
+          "homeTeam": "Germany",
+          "awayTeam": "Paraguay",
+          "venue": "Boston Stadium",
           "score": "-"
         },
         {
-          "id": "r32-4",
-          "utcKickoff": "2026-06-29T15:00:00Z",
-          "homeTeam": "Winner Group C",
-          "awayTeam": "Runner-up Group F",
-          "venue": "NRG Stadium, Houston",
+          "id": "ko-400021522",
+          "utcKickoff": "2026-06-30T01:00:00Z",
+          "homeTeam": "Netherlands",
+          "awayTeam": "Morocco",
+          "venue": "Monterrey Stadium",
           "score": "-"
         },
         {
-          "id": "r32-5",
-          "utcKickoff": "2026-06-30T18:00:00Z",
-          "homeTeam": "Winner Group I",
-          "awayTeam": "Best Third-place 2",
-          "venue": "MetLife Stadium, New York/New Jersey",
+          "id": "ko-400021514",
+          "utcKickoff": "2026-06-30T17:00:00Z",
+          "homeTeam": "C\u00f4te d'Ivoire",
+          "awayTeam": "Norway",
+          "venue": "Dallas Stadium",
           "score": "-"
         },
         {
-          "id": "r32-6",
-          "utcKickoff": "2026-06-30T15:00:00Z",
-          "homeTeam": "Runner-up Group E",
-          "awayTeam": "Runner-up Group I",
-          "venue": "AT&T Stadium, Dallas",
+          "id": "ko-400021523",
+          "utcKickoff": "2026-06-30T21:00:00Z",
+          "homeTeam": "France",
+          "awayTeam": "Sweden",
+          "venue": "New York/New Jersey Stadium",
           "score": "-"
         },
         {
-          "id": "r32-7",
-          "utcKickoff": "2026-06-30T23:00:00Z",
-          "homeTeam": "Winner Group A",
-          "awayTeam": "Best Third-place 3",
-          "venue": "Estadio Azteca, Mexico City",
+          "id": "ko-400021520",
+          "utcKickoff": "2026-07-01T01:00:00Z",
+          "homeTeam": "Mexico",
+          "awayTeam": "Best 3rd (3CEFHI)",
+          "venue": "Mexico City Stadium",
           "score": "-"
         },
         {
-          "id": "r32-8",
-          "utcKickoff": "2026-07-01T13:00:00Z",
+          "id": "ko-400021512",
+          "utcKickoff": "2026-07-01T16:00:00Z",
           "homeTeam": "Winner Group L",
-          "awayTeam": "Best Third-place 4",
-          "venue": "Mercedes-Benz Stadium, Atlanta",
+          "awayTeam": "Best 3rd (3EHIJK)",
+          "venue": "Atlanta Stadium",
           "score": "-"
         },
         {
-          "id": "r32-9",
-          "utcKickoff": "2026-07-02T00:00:00Z",
-          "homeTeam": "Winner Group D",
-          "awayTeam": "Best Third-place 5",
-          "venue": "Levi's Stadium, San Francisco Bay Area",
-          "score": "-"
-        },
-        {
-          "id": "r32-10",
+          "id": "ko-400021525",
           "utcKickoff": "2026-07-01T20:00:00Z",
-          "homeTeam": "Winner Group G",
-          "awayTeam": "Best Third-place 6",
-          "venue": "Lumen Field, Seattle",
+          "homeTeam": "Belgium",
+          "awayTeam": "Best 3rd (3AEHIJ)",
+          "venue": "Seattle Stadium",
           "score": "-"
         },
         {
-          "id": "r32-11",
-          "utcKickoff": "2026-07-02T20:00:00Z",
+          "id": "ko-400021524",
+          "utcKickoff": "2026-07-02T00:00:00Z",
+          "homeTeam": "USA",
+          "awayTeam": "Bosnia and Herzegovina",
+          "venue": "San Francisco Bay Area Stadium",
+          "score": "-"
+        },
+        {
+          "id": "ko-400021519",
+          "utcKickoff": "2026-07-02T19:00:00Z",
+          "homeTeam": "Spain",
+          "awayTeam": "Runner-up Group J",
+          "venue": "Los Angeles Stadium",
+          "score": "-"
+        },
+        {
+          "id": "ko-400021526",
+          "utcKickoff": "2026-07-02T23:00:00Z",
           "homeTeam": "Runner-up Group K",
           "awayTeam": "Runner-up Group L",
-          "venue": "BMO Field, Toronto",
+          "venue": "Toronto Stadium",
           "score": "-"
         },
         {
-          "id": "r32-12",
-          "utcKickoff": "2026-07-02T19:00:00Z",
-          "homeTeam": "Winner Group H",
-          "awayTeam": "Runner-up Group J",
-          "venue": "SoFi Stadium, Los Angeles",
-          "score": "-"
-        },
-        {
-          "id": "r32-13",
+          "id": "ko-400021527",
           "utcKickoff": "2026-07-03T03:00:00Z",
-          "homeTeam": "Winner Group B",
-          "awayTeam": "Best Third-place 7",
-          "venue": "BC Place, Vancouver",
+          "homeTeam": "Switzerland",
+          "awayTeam": "Best 3rd (3EFGIJ)",
+          "venue": "BC Place Vancouver",
           "score": "-"
         },
         {
-          "id": "r32-14",
-          "utcKickoff": "2026-07-03T19:00:00Z",
-          "homeTeam": "Winner Group J",
-          "awayTeam": "Runner-up Group H",
-          "venue": "Hard Rock Stadium, Miami",
+          "id": "ko-400021515",
+          "utcKickoff": "2026-07-03T18:00:00Z",
+          "homeTeam": "Australia",
+          "awayTeam": "Egypt",
+          "venue": "Dallas Stadium",
           "score": "-"
         },
         {
-          "id": "r32-15",
-          "utcKickoff": "2026-07-03T16:00:00Z",
+          "id": "ko-400021521",
+          "utcKickoff": "2026-07-03T22:00:00Z",
+          "homeTeam": "Argentina",
+          "awayTeam": "Cabo Verde",
+          "venue": "Miami Stadium",
+          "score": "-"
+        },
+        {
+          "id": "ko-400021517",
+          "utcKickoff": "2026-07-04T01:30:00Z",
           "homeTeam": "Winner Group K",
-          "awayTeam": "Best Third-place 8",
-          "venue": "AT&T Stadium, Dallas",
-          "score": "-"
-        },
-        {
-          "id": "r32-16",
-          "utcKickoff": "2026-07-03T23:30:00Z",
-          "homeTeam": "Runner-up Group D",
-          "awayTeam": "Runner-up Group G",
-          "venue": "GEHA Field at Arrowhead Stadium, Kansas City",
+          "awayTeam": "Best 3rd (3DEIJL)",
+          "venue": "Kansas City Stadium",
           "score": "-"
         }
       ]
@@ -138,138 +139,138 @@
       "name": "Round of 16",
       "fixtures": [
         {
-          "id": "r16-1",
-          "utcKickoff": "2026-07-04T15:00:00Z",
-          "homeTeam": "Winner R32-2",
-          "awayTeam": "Winner R32-5",
-          "venue": "NRG Stadium, Houston",
+          "id": "ko-400021530",
+          "utcKickoff": "2026-07-04T17:00:00Z",
+          "homeTeam": "Winner Match 73",
+          "awayTeam": "Winner Match 75",
+          "venue": "Houston Stadium",
           "score": "-"
         },
         {
-          "id": "r16-2",
-          "utcKickoff": "2026-07-04T18:00:00Z",
-          "homeTeam": "Winner R32-1",
-          "awayTeam": "Winner R32-3",
-          "venue": "Lincoln Financial Field, Philadelphia",
+          "id": "ko-400021533",
+          "utcKickoff": "2026-07-04T21:00:00Z",
+          "homeTeam": "Winner Match 74",
+          "awayTeam": "Winner Match 77",
+          "venue": "Philadelphia Stadium",
           "score": "-"
         },
         {
-          "id": "r16-3",
-          "utcKickoff": "2026-07-05T17:00:00Z",
-          "homeTeam": "Winner R32-4",
-          "awayTeam": "Winner R32-6",
-          "venue": "MetLife Stadium, New York/New Jersey",
+          "id": "ko-400021532",
+          "utcKickoff": "2026-07-05T20:00:00Z",
+          "homeTeam": "Winner Match 76",
+          "awayTeam": "Winner Match 78",
+          "venue": "New York/New Jersey Stadium",
           "score": "-"
         },
         {
-          "id": "r16-4",
-          "utcKickoff": "2026-07-05T22:00:00Z",
-          "homeTeam": "Winner R32-7",
-          "awayTeam": "Winner R32-9",
-          "venue": "Estadio Azteca, Mexico City",
+          "id": "ko-400021531",
+          "utcKickoff": "2026-07-06T00:00:00Z",
+          "homeTeam": "Winner Match 79",
+          "awayTeam": "Winner Match 80",
+          "venue": "Mexico City Stadium",
           "score": "-"
         },
         {
-          "id": "r16-5",
-          "utcKickoff": "2026-07-06T17:00:00Z",
-          "homeTeam": "Winner R32-10",
-          "awayTeam": "Winner R32-12",
-          "venue": "AT&T Stadium, Dallas",
+          "id": "ko-400021529",
+          "utcKickoff": "2026-07-06T19:00:00Z",
+          "homeTeam": "Winner Match 83",
+          "awayTeam": "Winner Match 84",
+          "venue": "Dallas Stadium",
           "score": "-"
         },
         {
-          "id": "r16-6",
+          "id": "ko-400021534",
           "utcKickoff": "2026-07-07T00:00:00Z",
-          "homeTeam": "Winner R32-8",
-          "awayTeam": "Winner R32-11",
-          "venue": "Lumen Field, Seattle",
+          "homeTeam": "Winner Match 81",
+          "awayTeam": "Winner Match 82",
+          "venue": "Seattle Stadium",
           "score": "-"
         },
         {
-          "id": "r16-7",
-          "utcKickoff": "2026-07-07T13:00:00Z",
-          "homeTeam": "Winner R32-13",
-          "awayTeam": "Winner R32-15",
-          "venue": "Mercedes-Benz Stadium, Atlanta",
+          "id": "ko-400021528",
+          "utcKickoff": "2026-07-07T16:00:00Z",
+          "homeTeam": "Winner Match 86",
+          "awayTeam": "Winner Match 88",
+          "venue": "Atlanta Stadium",
           "score": "-"
         },
         {
-          "id": "r16-8",
+          "id": "ko-400021535",
           "utcKickoff": "2026-07-07T20:00:00Z",
-          "homeTeam": "Winner R32-14",
-          "awayTeam": "Winner R32-16",
-          "venue": "BC Place, Vancouver",
+          "homeTeam": "Winner Match 85",
+          "awayTeam": "Winner Match 87",
+          "venue": "BC Place Vancouver",
           "score": "-"
         }
       ]
     },
     {
-      "name": "Quarter-finals",
+      "name": "Quarter-final",
       "fixtures": [
         {
-          "id": "qf-1",
-          "utcKickoff": "2026-07-09T17:00:00Z",
-          "homeTeam": "Winner R16-1",
-          "awayTeam": "Winner R16-2",
-          "venue": "Gillette Stadium, Boston",
+          "id": "ko-400021536",
+          "utcKickoff": "2026-07-09T20:00:00Z",
+          "homeTeam": "Winner Match 89",
+          "awayTeam": "Winner Match 90",
+          "venue": "Boston Stadium",
           "score": "-"
         },
         {
-          "id": "qf-2",
+          "id": "ko-400021538",
           "utcKickoff": "2026-07-10T19:00:00Z",
-          "homeTeam": "Winner R16-3",
-          "awayTeam": "Winner R16-4",
-          "venue": "SoFi Stadium, Los Angeles",
+          "homeTeam": "Winner Match 93",
+          "awayTeam": "Winner Match 94",
+          "venue": "Los Angeles Stadium",
           "score": "-"
         },
         {
-          "id": "qf-3",
-          "utcKickoff": "2026-07-11T18:00:00Z",
-          "homeTeam": "Winner R16-5",
-          "awayTeam": "Winner R16-6",
-          "venue": "Hard Rock Stadium, Miami",
+          "id": "ko-400021539",
+          "utcKickoff": "2026-07-11T21:00:00Z",
+          "homeTeam": "Winner Match 91",
+          "awayTeam": "Winner Match 92",
+          "venue": "Miami Stadium",
           "score": "-"
         },
         {
-          "id": "qf-4",
-          "utcKickoff": "2026-07-11T23:00:00Z",
-          "homeTeam": "Winner R16-7",
-          "awayTeam": "Winner R16-8",
-          "venue": "GEHA Field at Arrowhead Stadium, Kansas City",
+          "id": "ko-400021537",
+          "utcKickoff": "2026-07-12T01:00:00Z",
+          "homeTeam": "Winner Match 95",
+          "awayTeam": "Winner Match 96",
+          "venue": "Kansas City Stadium",
           "score": "-"
         }
       ]
     },
     {
-      "name": "Semi-finals",
+      "name": "Semi-final",
       "fixtures": [
         {
-          "id": "sf-1",
-          "utcKickoff": "2026-07-14T17:00:00Z",
-          "homeTeam": "Winner QF-1",
-          "awayTeam": "Winner QF-2",
-          "venue": "AT&T Stadium, Dallas",
+          "id": "ko-400021541",
+          "utcKickoff": "2026-07-14T19:00:00Z",
+          "homeTeam": "Winner Match 97",
+          "awayTeam": "Winner Match 98",
+          "venue": "Dallas Stadium",
           "score": "-"
         },
         {
-          "id": "sf-2",
-          "utcKickoff": "2026-07-15T16:00:00Z",
-          "homeTeam": "Winner QF-3",
-          "awayTeam": "Winner QF-4",
-          "venue": "Mercedes-Benz Stadium, Atlanta",
+          "id": "ko-400021540",
+          "utcKickoff": "2026-07-15T19:00:00Z",
+          "homeTeam": "Winner Match 99",
+          "awayTeam": "Winner Match 100",
+          "venue": "Atlanta Stadium",
           "score": "-"
         }
       ]
     },
     {
-      "name": "Third-place play-off",
+      "name": "Play-off for third place",
       "fixtures": [
         {
-          "id": "third-place",
-          "utcKickoff": "2026-07-18T18:00:00Z",
-          "homeTeam": "Loser SF-1",
-          "awayTeam": "Loser SF-2",
-          "venue": "Hard Rock Stadium, Miami",
+          "id": "ko-400021542",
+          "utcKickoff": "2026-07-18T21:00:00Z",
+          "homeTeam": "Runner-up Match 101",
+          "awayTeam": "Runner-up Match 102",
+          "venue": "Miami Stadium",
           "score": "-"
         }
       ]
@@ -278,15 +279,14 @@
       "name": "Final",
       "fixtures": [
         {
-          "id": "final",
-          "utcKickoff": "2026-07-19T16:00:00Z",
-          "homeTeam": "Winner SF-1",
-          "awayTeam": "Winner SF-2",
-          "venue": "MetLife Stadium, New York/New Jersey",
+          "id": "ko-400021543",
+          "utcKickoff": "2026-07-19T19:00:00Z",
+          "homeTeam": "Winner Match 101",
+          "awayTeam": "Winner Match 102",
+          "venue": "New York/New Jersey Stadium",
           "score": "-"
         }
       ]
     }
-  ],
-  "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026"
+  ]
 }
