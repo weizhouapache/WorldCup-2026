@@ -5,7 +5,7 @@ const knockoutEl = document.querySelector('#knockout');
 const timezoneSelect = document.querySelector('#timezone');
 let timezone = getPersistedTimezone();
 const SVG_NS = 'http://www.w3.org/2000/svg';
-const BRACKET_ROUND_NAMES = ['Round of 32', 'Round of 16', 'Quarter-finals', 'Semi-finals', 'Final'];
+const BRACKET_ROUND_NAMES = ['Round of 32', 'Round of 16', 'Quarter-final', 'Semi-final', 'Final'];
 const FINAL_TO_THIRD_PLACE_GAP = 120;
 const MAX_MATCHUP_TEXT_LENGTH = 34;
 
@@ -148,7 +148,7 @@ function buildBracketImage(rounds) {
   const stageRounds = BRACKET_ROUND_NAMES
     .map((roundName) => rounds.find((round) => round.name === roundName))
     .filter(Boolean);
-  const thirdPlaceRound = rounds.find((round) => round.name === 'Third-place play-off');
+  const thirdPlaceRound = rounds.find((round) => round.name === 'Play-off for third place');
 
   const section = document.createElement('section');
   section.className = 'bracket-chart';
