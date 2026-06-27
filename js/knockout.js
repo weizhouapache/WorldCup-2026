@@ -319,20 +319,21 @@ function appendConnector(svg, topSource, bottomSource, target, dashed = false) {
 
 function appendMatchCard(svg, card, cardWidth, cardHeight) {
   const fixtureId = formatFixtureId(card.fixture.id);
-  const matchup = `${localizeTeamName(card.fixture.homeTeam)} vs ${localizeTeamName(card.fixture.awayTeam)}`;
+  const hasScore = card.fixture.score && card.fixture.score !== '-';
+  const scoreDisplay = hasScore ? card.fixture.score.replace('-', ':') : '';
+  const matchup = hasScore
+    ? `${localizeTeamName(card.fixture.homeTeam)} ${scoreDisplay} ${localizeTeamName(card.fixture.awayTeam)}`
+    : `${localizeTeamName(card.fixture.homeTeam)} vs ${localizeTeamName(card.fixture.awayTeam)}`;
 
   svg.append(createSvgElement('rect', { x: card.x, y: card.y, width: cardWidth, height: cardHeight, rx: 8, class: 'bracket-match-card' }));
 
   const idText = createSvgElement('text', { x: card.x + 10, y: card.y + 14, class: 'bracket-match-id' });
   idText.textContent = fixtureId;
 
-  const matchupText = createSvgElement('text', { x: card.x + 10, y: card.y + 29, class: 'bracket-matchup' });
+  const matchupText = createSvgElement('text', { x: card.x + 10, y: card.y + 34, class: 'bracket-matchup' });
   matchupText.textContent = clampText(matchup, MAX_MATCHUP_TEXT_LENGTH);
 
-  const scoreText = createSvgElement('text', { x: card.x + 10, y: card.y + 40, class: 'bracket-score' });
-  scoreText.textContent = card.fixture.score ?? '-';
-
-  svg.append(idText, matchupText, scoreText);
+  svg.append(idText, matchupText);
 }
 
 function clampText(value, maxLength) {
