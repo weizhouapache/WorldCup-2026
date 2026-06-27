@@ -61,8 +61,12 @@ function render(rounds) {
       card.className = 'match-card';
 
       const teams = document.createElement('div');
-      const teamsText = `${localizeTeamName(fixture.homeTeam)} vs ${localizeTeamName(fixture.awayTeam)}`;
-      if (fixture.link) {
+      const hasScore = fixture.score && fixture.score !== '-';
+      const scoreDisplay = hasScore ? fixture.score.replace('-', ':') : '';
+      const teamsText = hasScore
+        ? `${localizeTeamName(fixture.homeTeam)} ${scoreDisplay} ${localizeTeamName(fixture.awayTeam)}`
+        : `${localizeTeamName(fixture.homeTeam)} vs ${localizeTeamName(fixture.awayTeam)}`;
+      if (fixture.link && hasScore) {
         const link = document.createElement('a');
         link.href = fixture.link;
         link.target = '_blank';
@@ -77,11 +81,7 @@ function render(rounds) {
       meta.className = 'meta';
       meta.textContent = `${formatKickoff(fixture.utcKickoff, timezone, getLocale())} (${timezoneLabel(timezone)}) · ${fixture.venue}`;
 
-      const score = document.createElement('div');
-      score.className = 'meta';
-      score.textContent = fixture.score ?? t('tbd');
-
-      card.append(teams, meta, score);
+      card.append(teams, meta);
       section.append(card);
     }
 

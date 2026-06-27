@@ -212,8 +212,12 @@ function renderSection(title, sectionMatches, emptyMessage) {
     article.className = 'match-card';
 
     const teams = document.createElement('div');
-    const teamsText = `${localizeTeamName(match.homeTeam)} vs ${localizeTeamName(match.awayTeam)}`;
-    if (match.link) {
+    const hasScore = match.score && match.score !== '-';
+    const scoreDisplay = hasScore ? match.score.replace('-', ':') : '';
+    const teamsText = hasScore
+      ? `${localizeTeamName(match.homeTeam)} ${scoreDisplay} ${localizeTeamName(match.awayTeam)}`
+      : `${localizeTeamName(match.homeTeam)} vs ${localizeTeamName(match.awayTeam)}`;
+    if (match.link && hasScore) {
       const link = document.createElement('a');
       link.href = match.link;
       link.target = '_blank';
@@ -228,11 +232,7 @@ function renderSection(title, sectionMatches, emptyMessage) {
     meta.className = 'meta';
     meta.textContent = `${formatKickoff(match.utcKickoff, timezone, getLocale())} (${timezoneLabel(timezone)}) · ${match.venue}`;
 
-    const score = document.createElement('div');
-    score.className = 'meta';
-    score.textContent = match.score ?? t('tbd');
-
-    article.append(teams, meta, score);
+    article.append(teams, meta);
     section.append(article);
   }
 
