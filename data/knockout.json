@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-06-27T09:19:02.309834+00:00",
+  "updatedAt": "2026-06-27T09:47:23.318195+00:00",
   "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026",
   "rounds": [
     {
       "name": "Round of 32",
       "fixtures": [
         {
-          "id": "ko-400021518",
+          "id": "r32-1",
           "utcKickoff": "2026-06-28T19:00:00Z",
           "homeTeam": "South Africa",
           "awayTeam": "Canada",
@@ -15,7 +15,7 @@
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021518"
         },
         {
-          "id": "ko-400021516",
+          "id": "r32-2",
           "utcKickoff": "2026-06-29T17:00:00Z",
           "homeTeam": "Brazil",
           "awayTeam": "Japan",
@@ -24,7 +24,7 @@
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021516"
         },
         {
-          "id": "ko-400021513",
+          "id": "r32-3",
           "utcKickoff": "2026-06-29T20:30:00Z",
           "homeTeam": "Germany",
           "awayTeam": "Paraguay",
@@ -33,7 +33,7 @@
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021513"
         },
         {
-          "id": "ko-400021522",
+          "id": "r32-4",
           "utcKickoff": "2026-06-30T01:00:00Z",
           "homeTeam": "Netherlands",
           "awayTeam": "Morocco",
@@ -42,7 +42,7 @@
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021522"
         },
         {
-          "id": "ko-400021514",
+          "id": "r32-5",
           "utcKickoff": "2026-06-30T17:00:00Z",
           "homeTeam": "C\u00f4te d'Ivoire",
           "awayTeam": "Norway",
@@ -51,7 +51,7 @@
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021514"
         },
         {
-          "id": "ko-400021523",
+          "id": "r32-6",
           "utcKickoff": "2026-06-30T21:00:00Z",
           "homeTeam": "France",
           "awayTeam": "Sweden",
@@ -60,7 +60,7 @@
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021523"
         },
         {
-          "id": "ko-400021520",
+          "id": "r32-7",
           "utcKickoff": "2026-07-01T01:00:00Z",
           "homeTeam": "Mexico",
           "awayTeam": "Best 3rd (3CEFHI)",
@@ -69,7 +69,7 @@
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021520"
         },
         {
-          "id": "ko-400021512",
+          "id": "r32-8",
           "utcKickoff": "2026-07-01T16:00:00Z",
           "homeTeam": "Winner Group L",
           "awayTeam": "Best 3rd (3EHIJK)",
@@ -78,7 +78,7 @@
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021512"
         },
         {
-          "id": "ko-400021525",
+          "id": "r32-9",
           "utcKickoff": "2026-07-01T20:00:00Z",
           "homeTeam": "Belgium",
           "awayTeam": "Best 3rd (3AEHIJ)",
@@ -87,7 +87,7 @@
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021525"
         },
         {
-          "id": "ko-400021524",
+          "id": "r32-10",
           "utcKickoff": "2026-07-02T00:00:00Z",
           "homeTeam": "USA",
           "awayTeam": "Bosnia and Herzegovina",
@@ -96,7 +96,7 @@
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021524"
         },
         {
-          "id": "ko-400021519",
+          "id": "r32-11",
           "utcKickoff": "2026-07-02T19:00:00Z",
           "homeTeam": "Spain",
           "awayTeam": "Runner-up Group J",
@@ -105,7 +105,7 @@
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021519"
         },
         {
-          "id": "ko-400021526",
+          "id": "r32-12",
           "utcKickoff": "2026-07-02T23:00:00Z",
           "homeTeam": "Runner-up Group K",
           "awayTeam": "Runner-up Group L",
@@ -114,7 +114,7 @@
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021526"
         },
         {
-          "id": "ko-400021527",
+          "id": "r32-13",
           "utcKickoff": "2026-07-03T03:00:00Z",
           "homeTeam": "Switzerland",
           "awayTeam": "Best 3rd (3EFGIJ)",
@@ -123,7 +123,7 @@
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021527"
         },
         {
-          "id": "ko-400021515",
+          "id": "r32-14",
           "utcKickoff": "2026-07-03T18:00:00Z",
           "homeTeam": "Australia",
           "awayTeam": "Egypt",
@@ -132,7 +132,7 @@
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021515"
         },
         {
-          "id": "ko-400021521",
+          "id": "r32-15",
           "utcKickoff": "2026-07-03T22:00:00Z",
           "homeTeam": "Argentina",
           "awayTeam": "Cabo Verde",
@@ -141,7 +141,7 @@
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021521"
         },
         {
-          "id": "ko-400021517",
+          "id": "r32-16",
           "utcKickoff": "2026-07-04T01:30:00Z",
           "homeTeam": "Winner Group K",
           "awayTeam": "Best 3rd (3DEIJL)",
@@ -155,73 +155,73 @@
       "name": "Round of 16",
       "fixtures": [
         {
-          "id": "ko-400021530",
+          "id": "r16-1",
           "utcKickoff": "2026-07-04T17:00:00Z",
-          "homeTeam": "Winner Match 73",
-          "awayTeam": "Winner Match 75",
+          "homeTeam": "Winner r32-1",
+          "awayTeam": "Winner r32-3",
           "venue": "Houston Stadium",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021530"
         },
         {
-          "id": "ko-400021533",
+          "id": "r16-2",
           "utcKickoff": "2026-07-04T21:00:00Z",
-          "homeTeam": "Winner Match 74",
-          "awayTeam": "Winner Match 77",
+          "homeTeam": "Winner r32-2",
+          "awayTeam": "Winner r32-5",
           "venue": "Philadelphia Stadium",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021533"
         },
         {
-          "id": "ko-400021532",
+          "id": "r16-3",
           "utcKickoff": "2026-07-05T20:00:00Z",
-          "homeTeam": "Winner Match 76",
-          "awayTeam": "Winner Match 78",
+          "homeTeam": "Winner r32-4",
+          "awayTeam": "Winner r32-6",
           "venue": "New York/New Jersey Stadium",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021532"
         },
         {
-          "id": "ko-400021531",
+          "id": "r16-4",
           "utcKickoff": "2026-07-06T00:00:00Z",
-          "homeTeam": "Winner Match 79",
-          "awayTeam": "Winner Match 80",
+          "homeTeam": "Winner r32-7",
+          "awayTeam": "Winner r32-8",
           "venue": "Mexico City Stadium",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021531"
         },
         {
-          "id": "ko-400021529",
+          "id": "r16-5",
           "utcKickoff": "2026-07-06T19:00:00Z",
-          "homeTeam": "Winner Match 83",
-          "awayTeam": "Winner Match 84",
+          "homeTeam": "Winner r32-11",
+          "awayTeam": "Winner r32-12",
           "venue": "Dallas Stadium",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021529"
         },
         {
-          "id": "ko-400021534",
+          "id": "r16-6",
           "utcKickoff": "2026-07-07T00:00:00Z",
-          "homeTeam": "Winner Match 81",
-          "awayTeam": "Winner Match 82",
+          "homeTeam": "Winner r32-9",
+          "awayTeam": "Winner r32-10",
           "venue": "Seattle Stadium",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021534"
         },
         {
-          "id": "ko-400021528",
+          "id": "r16-7",
           "utcKickoff": "2026-07-07T16:00:00Z",
-          "homeTeam": "Winner Match 86",
-          "awayTeam": "Winner Match 88",
+          "homeTeam": "Winner r32-14",
+          "awayTeam": "Winner r32-16",
           "venue": "Atlanta Stadium",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021528"
         },
         {
-          "id": "ko-400021535",
+          "id": "r16-8",
           "utcKickoff": "2026-07-07T20:00:00Z",
-          "homeTeam": "Winner Match 85",
-          "awayTeam": "Winner Match 87",
+          "homeTeam": "Winner r32-13",
+          "awayTeam": "Winner r32-15",
           "venue": "BC Place Vancouver",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021535"
@@ -232,37 +232,37 @@
       "name": "Quarter-final",
       "fixtures": [
         {
-          "id": "ko-400021536",
+          "id": "qf-1",
           "utcKickoff": "2026-07-09T20:00:00Z",
-          "homeTeam": "Winner Match 89",
-          "awayTeam": "Winner Match 90",
+          "homeTeam": "Winner r16-1",
+          "awayTeam": "Winner r16-2",
           "venue": "Boston Stadium",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289289/400021536"
         },
         {
-          "id": "ko-400021538",
+          "id": "qf-2",
           "utcKickoff": "2026-07-10T19:00:00Z",
-          "homeTeam": "Winner Match 93",
-          "awayTeam": "Winner Match 94",
+          "homeTeam": "Winner r16-5",
+          "awayTeam": "Winner r16-6",
           "venue": "Los Angeles Stadium",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289289/400021538"
         },
         {
-          "id": "ko-400021539",
+          "id": "qf-3",
           "utcKickoff": "2026-07-11T21:00:00Z",
-          "homeTeam": "Winner Match 91",
-          "awayTeam": "Winner Match 92",
+          "homeTeam": "Winner r16-3",
+          "awayTeam": "Winner r16-4",
           "venue": "Miami Stadium",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289289/400021539"
         },
         {
-          "id": "ko-400021537",
+          "id": "qf-4",
           "utcKickoff": "2026-07-12T01:00:00Z",
-          "homeTeam": "Winner Match 95",
-          "awayTeam": "Winner Match 96",
+          "homeTeam": "Winner r16-7",
+          "awayTeam": "Winner r16-8",
           "venue": "Kansas City Stadium",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289289/400021537"
@@ -273,19 +273,19 @@
       "name": "Semi-final",
       "fixtures": [
         {
-          "id": "ko-400021541",
+          "id": "sf-1",
           "utcKickoff": "2026-07-14T19:00:00Z",
-          "homeTeam": "Winner Match 97",
-          "awayTeam": "Winner Match 98",
+          "homeTeam": "Winner qf-1",
+          "awayTeam": "Winner qf-2",
           "venue": "Dallas Stadium",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289290/400021541"
         },
         {
-          "id": "ko-400021540",
+          "id": "sf-2",
           "utcKickoff": "2026-07-15T19:00:00Z",
-          "homeTeam": "Winner Match 99",
-          "awayTeam": "Winner Match 100",
+          "homeTeam": "Winner qf-3",
+          "awayTeam": "Winner qf-4",
           "venue": "Atlanta Stadium",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289290/400021540"
@@ -296,10 +296,10 @@
       "name": "Play-off for third place",
       "fixtures": [
         {
-          "id": "ko-400021542",
+          "id": "3rd",
           "utcKickoff": "2026-07-18T21:00:00Z",
-          "homeTeam": "Runner-up Match 101",
-          "awayTeam": "Runner-up Match 102",
+          "homeTeam": "Loser sf-1",
+          "awayTeam": "Loser sf-2",
           "venue": "Miami Stadium",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289291/400021542"
@@ -310,10 +310,10 @@
       "name": "Final",
       "fixtures": [
         {
-          "id": "ko-400021543",
+          "id": "final",
           "utcKickoff": "2026-07-19T19:00:00Z",
-          "homeTeam": "Winner Match 101",
-          "awayTeam": "Winner Match 102",
+          "homeTeam": "Winner sf-1",
+          "awayTeam": "Winner sf-2",
           "venue": "New York/New Jersey Stadium",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289292/400021543"

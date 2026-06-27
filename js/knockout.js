@@ -90,7 +90,7 @@ function render(rounds) {
 }
 
 function parseSourceFixtureId(teamName) {
-  const match = teamName?.match(/Winner\s+([\w]+-\d+)/i);
+  const match = teamName?.match(/(?:Winner|Loser)\s+([\w]+-\d+)/i);
   return match ? match[1].toLowerCase() : null;
 }
 

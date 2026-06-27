@@ -99,15 +99,27 @@ const LOCALIZED_ENTITIES = {
         format: (match) => `最佳小组第三 ${match[1]}`,
       },
       {
-        regex: /^Winner (R32|R16|QF|SF)-(\d+)$/,
+        regex: /^Winner (R32|R16|QF|SF)-(\d+)$/i,
         format: (match) => {
           const roundLabel = {
             R32: '32强赛',
             R16: '16强赛',
             QF: '四分之一决赛',
             SF: '半决赛',
-          }[match[1]];
+          }[match[1].toUpperCase()];
           return `${roundLabel}胜者 ${match[2]}`;
+        },
+      },
+      {
+        regex: /^Loser (R32|R16|QF|SF)-(\d+)$/i,
+        format: (match) => {
+          const roundLabel = {
+            R32: '32强赛',
+            R16: '16强赛',
+            QF: '四分之一决赛',
+            SF: '半决赛',
+          }[match[1].toUpperCase()];
+          return `${roundLabel}负者 ${match[2]}`;
         },
       },
       {
@@ -151,15 +163,27 @@ const LOCALIZED_ENTITIES = {
         format: (match) => `Beste nummer drie ${match[1]}`,
       },
       {
-        regex: /^Winner (R32|R16|QF|SF)-(\d+)$/,
+        regex: /^Winner (R32|R16|QF|SF)-(\d+)$/i,
         format: (match) => {
           const roundLabel = {
             R32: '32e finale',
             R16: 'achtste finale',
             QF: 'kwartfinale',
             SF: 'halve finale',
-          }[match[1]];
+          }[match[1].toUpperCase()];
           return `Winnaar ${roundLabel} ${match[2]}`;
+        },
+      },
+      {
+        regex: /^Loser (R32|R16|QF|SF)-(\d+)$/i,
+        format: (match) => {
+          const roundLabel = {
+            R32: '32e finale',
+            R16: 'achtste finale',
+            QF: 'kwartfinale',
+            SF: 'halve finale',
+          }[match[1].toUpperCase()];
+          return `Verliezer ${roundLabel} ${match[2]}`;
         },
       },
       {
