@@ -66,7 +66,7 @@ function render(rounds) {
       const teamsText = hasScore
         ? `${localizeTeamName(fixture.homeTeam)} ${scoreDisplay} ${localizeTeamName(fixture.awayTeam)}`
         : `${localizeTeamName(fixture.homeTeam)} vs ${localizeTeamName(fixture.awayTeam)}`;
-      if (fixture.link && hasScore) {
+      if (fixture.link) {
         const link = document.createElement('a');
         link.href = fixture.link;
         link.target = '_blank';

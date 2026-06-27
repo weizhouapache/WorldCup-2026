@@ -217,7 +217,7 @@ function renderSection(title, sectionMatches, emptyMessage) {
     const teamsText = hasScore
       ? `${localizeTeamName(match.homeTeam)} ${scoreDisplay} ${localizeTeamName(match.awayTeam)}`
       : `${localizeTeamName(match.homeTeam)} vs ${localizeTeamName(match.awayTeam)}`;
-    if (match.link && hasScore) {
+    if (match.link) {
       const link = document.createElement('a');
       link.href = match.link;
       link.target = '_blank';
