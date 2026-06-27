@@ -21,6 +21,11 @@ jobs:
             echo "Data refresh period has not started yet. Skipping."
             exit 0
           fi
+          END_EPOCH=1781211601
+          if [ "$NOW_EPOCH" -gt "$END_EPOCH" ]; then
+            echo "Data refresh period has passed already. Skipping."
+            exit 0
+          fi
           echo "REFRESH_ENABLED=true" >> "$GITHUB_ENV"
 
       - name: Checkout
