@@ -61,7 +61,17 @@ function render(rounds) {
       card.className = 'match-card';
 
       const teams = document.createElement('div');
-      teams.textContent = `${localizeTeamName(fixture.homeTeam)} vs ${localizeTeamName(fixture.awayTeam)}`;
+      const teamsText = `${localizeTeamName(fixture.homeTeam)} vs ${localizeTeamName(fixture.awayTeam)}`;
+      if (fixture.link) {
+        const link = document.createElement('a');
+        link.href = fixture.link;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.textContent = teamsText;
+        teams.append(link);
+      } else {
+        teams.textContent = teamsText;
+      }
 
       const meta = document.createElement('div');
       meta.className = 'meta';

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T09:10:42.846760+00:00",
+  "updatedAt": "2026-06-27T09:19:02.309834+00:00",
   "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026",
   "rounds": [
     {
@@ -11,7 +11,8 @@
           "homeTeam": "South Africa",
           "awayTeam": "Canada",
           "venue": "Los Angeles Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021518"
         },
         {
           "id": "ko-400021516",
@@ -19,7 +20,8 @@
           "homeTeam": "Brazil",
           "awayTeam": "Japan",
           "venue": "Houston Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021516"
         },
         {
           "id": "ko-400021513",
@@ -27,7 +29,8 @@
           "homeTeam": "Germany",
           "awayTeam": "Paraguay",
           "venue": "Boston Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021513"
         },
         {
           "id": "ko-400021522",
@@ -35,7 +38,8 @@
           "homeTeam": "Netherlands",
           "awayTeam": "Morocco",
           "venue": "Monterrey Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021522"
         },
         {
           "id": "ko-400021514",
@@ -43,7 +47,8 @@
           "homeTeam": "C\u00f4te d'Ivoire",
           "awayTeam": "Norway",
           "venue": "Dallas Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021514"
         },
         {
           "id": "ko-400021523",
@@ -51,7 +56,8 @@
           "homeTeam": "France",
           "awayTeam": "Sweden",
           "venue": "New York/New Jersey Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021523"
         },
         {
           "id": "ko-400021520",
@@ -59,7 +65,8 @@
           "homeTeam": "Mexico",
           "awayTeam": "Best 3rd (3CEFHI)",
           "venue": "Mexico City Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021520"
         },
         {
           "id": "ko-400021512",
@@ -67,7 +74,8 @@
           "homeTeam": "Winner Group L",
           "awayTeam": "Best 3rd (3EHIJK)",
           "venue": "Atlanta Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021512"
         },
         {
           "id": "ko-400021525",
@@ -75,7 +83,8 @@
           "homeTeam": "Belgium",
           "awayTeam": "Best 3rd (3AEHIJ)",
           "venue": "Seattle Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021525"
         },
         {
           "id": "ko-400021524",
@@ -83,7 +92,8 @@
           "homeTeam": "USA",
           "awayTeam": "Bosnia and Herzegovina",
           "venue": "San Francisco Bay Area Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021524"
         },
         {
           "id": "ko-400021519",
@@ -91,7 +101,8 @@
           "homeTeam": "Spain",
           "awayTeam": "Runner-up Group J",
           "venue": "Los Angeles Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021519"
         },
         {
           "id": "ko-400021526",
@@ -99,7 +110,8 @@
           "homeTeam": "Runner-up Group K",
           "awayTeam": "Runner-up Group L",
           "venue": "Toronto Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021526"
         },
         {
           "id": "ko-400021527",
@@ -107,7 +119,8 @@
           "homeTeam": "Switzerland",
           "awayTeam": "Best 3rd (3EFGIJ)",
           "venue": "BC Place Vancouver",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021527"
         },
         {
           "id": "ko-400021515",
@@ -115,7 +128,8 @@
           "homeTeam": "Australia",
           "awayTeam": "Egypt",
           "venue": "Dallas Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021515"
         },
         {
           "id": "ko-400021521",
@@ -123,7 +137,8 @@
           "homeTeam": "Argentina",
           "awayTeam": "Cabo Verde",
           "venue": "Miami Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021521"
         },
         {
           "id": "ko-400021517",
@@ -131,7 +146,8 @@
           "homeTeam": "Winner Group K",
           "awayTeam": "Best 3rd (3DEIJL)",
           "venue": "Kansas City Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021517"
         }
       ]
     },
@@ -144,7 +160,8 @@
           "homeTeam": "Winner Match 73",
           "awayTeam": "Winner Match 75",
           "venue": "Houston Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021530"
         },
         {
           "id": "ko-400021533",
@@ -152,7 +169,8 @@
           "homeTeam": "Winner Match 74",
           "awayTeam": "Winner Match 77",
           "venue": "Philadelphia Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021533"
         },
         {
           "id": "ko-400021532",
@@ -160,7 +178,8 @@
           "homeTeam": "Winner Match 76",
           "awayTeam": "Winner Match 78",
           "venue": "New York/New Jersey Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021532"
         },
         {
           "id": "ko-400021531",
@@ -168,7 +187,8 @@
           "homeTeam": "Winner Match 79",
           "awayTeam": "Winner Match 80",
           "venue": "Mexico City Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021531"
         },
         {
           "id": "ko-400021529",
@@ -176,7 +196,8 @@
           "homeTeam": "Winner Match 83",
           "awayTeam": "Winner Match 84",
           "venue": "Dallas Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021529"
         },
         {
           "id": "ko-400021534",
@@ -184,7 +205,8 @@
           "homeTeam": "Winner Match 81",
           "awayTeam": "Winner Match 82",
           "venue": "Seattle Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021534"
         },
         {
           "id": "ko-400021528",
@@ -192,7 +214,8 @@
           "homeTeam": "Winner Match 86",
           "awayTeam": "Winner Match 88",
           "venue": "Atlanta Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021528"
         },
         {
           "id": "ko-400021535",
@@ -200,7 +223,8 @@
           "homeTeam": "Winner Match 85",
           "awayTeam": "Winner Match 87",
           "venue": "BC Place Vancouver",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021535"
         }
       ]
     },
@@ -213,7 +237,8 @@
           "homeTeam": "Winner Match 89",
           "awayTeam": "Winner Match 90",
           "venue": "Boston Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289289/400021536"
         },
         {
           "id": "ko-400021538",
@@ -221,7 +246,8 @@
           "homeTeam": "Winner Match 93",
           "awayTeam": "Winner Match 94",
           "venue": "Los Angeles Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289289/400021538"
         },
         {
           "id": "ko-400021539",
@@ -229,7 +255,8 @@
           "homeTeam": "Winner Match 91",
           "awayTeam": "Winner Match 92",
           "venue": "Miami Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289289/400021539"
         },
         {
           "id": "ko-400021537",
@@ -237,7 +264,8 @@
           "homeTeam": "Winner Match 95",
           "awayTeam": "Winner Match 96",
           "venue": "Kansas City Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289289/400021537"
         }
       ]
     },
@@ -250,7 +278,8 @@
           "homeTeam": "Winner Match 97",
           "awayTeam": "Winner Match 98",
           "venue": "Dallas Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289290/400021541"
         },
         {
           "id": "ko-400021540",
@@ -258,7 +287,8 @@
           "homeTeam": "Winner Match 99",
           "awayTeam": "Winner Match 100",
           "venue": "Atlanta Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289290/400021540"
         }
       ]
     },
@@ -271,7 +301,8 @@
           "homeTeam": "Runner-up Match 101",
           "awayTeam": "Runner-up Match 102",
           "venue": "Miami Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289291/400021542"
         }
       ]
     },
@@ -284,7 +315,8 @@
           "homeTeam": "Winner Match 101",
           "awayTeam": "Winner Match 102",
           "venue": "New York/New Jersey Stadium",
-          "score": "-"
+          "score": "-",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289292/400021543"
         }
       ]
     }

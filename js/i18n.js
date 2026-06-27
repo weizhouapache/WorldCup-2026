@@ -23,6 +23,7 @@ const LOCALIZED_ENTITIES = {
       'Cabo Verde': '佛得角',
       Canada: '加拿大',
       Colombia: '哥伦比亚',
+      'Congo DR': '刚果（金）',
       Croatia: '克罗地亚',
       Curaçao: '库拉索',
       Czechia: '捷克',
@@ -39,6 +40,7 @@ const LOCALIZED_ENTITIES = {
       Iraq: '伊拉克',
       Japan: '日本',
       Jordan: '约旦',
+      'Korea Republic': '韩国',
       Mexico: '墨西哥',
       Morocco: '摩洛哥',
       Netherlands: '荷兰',
@@ -60,6 +62,7 @@ const LOCALIZED_ENTITIES = {
       Türkiye: '土耳其',
       'United States': '美国',
       Uruguay: '乌拉圭',
+      USA: '美国',
       Uzbekistan: '乌兹别克斯坦',
     },
     confederations: {
@@ -78,6 +81,18 @@ const LOCALIZED_ENTITIES = {
       {
         regex: /^Runner-up Group ([A-Z])$/,
         format: (match) => `${match[1]}组第二`,
+      },
+      {
+        regex: /^Best 3rd \(([^)]+)\)$/,
+        format: (match) => `最佳小组第三 (${match[1]})`,
+      },
+      {
+        regex: /^Winner Match (\d+)$/,
+        format: (match) => `比赛${match[1]}胜者`,
+      },
+      {
+        regex: /^Runner-up Match (\d+)$/,
+        format: (match) => `比赛${match[1]}负者`,
       },
       {
         regex: /^Best Third-place (\d+)$/,
@@ -118,6 +133,18 @@ const LOCALIZED_ENTITIES = {
       {
         regex: /^Runner-up Group ([A-Z])$/,
         format: (match) => `Nummer twee groep ${match[1]}`,
+      },
+      {
+        regex: /^Best 3rd \(([^)]+)\)$/,
+        format: (match) => `Beste derde (${match[1]})`,
+      },
+      {
+        regex: /^Winner Match (\d+)$/,
+        format: (match) => `Winnaar wedstrijd ${match[1]}`,
+      },
+      {
+        regex: /^Runner-up Match (\d+)$/,
+        format: (match) => `Verliezer wedstrijd ${match[1]}`,
       },
       {
         regex: /^Best Third-place (\d+)$/,

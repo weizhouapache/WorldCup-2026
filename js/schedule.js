@@ -15,12 +15,12 @@ const CONFEDERATION_TEAMS = {
     'Austria', 'Portugal', 'England', 'Croatia'
   ],
   CONMEBOL: ['Brazil', 'Paraguay', 'Ecuador', 'Uruguay', 'Argentina', 'Colombia'],
-  CONCACAF: ['Mexico', 'Canada', 'Haiti', 'United States', 'Curaçao', 'Panama'],
+  CONCACAF: ['Mexico', 'Canada', 'Haiti', 'USA', 'Curaçao', 'Panama'],
   CAF: [
     'South Africa', 'Morocco', "Côte d'Ivoire", 'Tunisia', 'Egypt',
-    'Senegal', 'Algeria', 'DR Congo', 'Ghana', 'Cabo Verde'
+    'Senegal', 'Algeria', 'Congo DR', 'Ghana', 'Cabo Verde'
   ],
-  AFC: ['South Korea', 'Qatar', 'Japan', 'IR Iran', 'Saudi Arabia', 'Iraq', 'Jordan', 'Uzbekistan', 'Australia'],
+  AFC: ['Korea Republic', 'Qatar', 'Japan', 'IR Iran', 'Saudi Arabia', 'Iraq', 'Jordan', 'Uzbekistan', 'Australia'],
   OFC: ['New Zealand']
 };
 
@@ -212,7 +212,17 @@ function renderSection(title, sectionMatches, emptyMessage) {
     article.className = 'match-card';
 
     const teams = document.createElement('div');
-    teams.textContent = `${localizeTeamName(match.homeTeam)} vs ${localizeTeamName(match.awayTeam)}`;
+    const teamsText = `${localizeTeamName(match.homeTeam)} vs ${localizeTeamName(match.awayTeam)}`;
+    if (match.link) {
+      const link = document.createElement('a');
+      link.href = match.link;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.textContent = teamsText;
+      teams.append(link);
+    } else {
+      teams.textContent = teamsText;
+    }
 
     const meta = document.createElement('div');
     meta.className = 'meta';

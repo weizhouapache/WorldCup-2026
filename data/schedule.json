@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T09:09:21.675894+00:00",
+  "updatedAt": "2026-06-27T09:19:02.309834+00:00",
   "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   "matches": [
     {
@@ -9,7 +9,8 @@
       "homeTeam": "Mexico",
       "awayTeam": "South Africa",
       "venue": "Mexico City Stadium",
-      "score": "2-0"
+      "score": "2-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021443"
     },
     {
       "id": "g-a-2",
@@ -18,7 +19,8 @@
       "homeTeam": "Korea Republic",
       "awayTeam": "Czechia",
       "venue": "Guadalajara Stadium",
-      "score": "2-1"
+      "score": "2-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021441"
     },
     {
       "id": "g-b-1",
@@ -27,7 +29,8 @@
       "homeTeam": "Canada",
       "awayTeam": "Bosnia and Herzegovina",
       "venue": "Toronto Stadium",
-      "score": "1-1"
+      "score": "1-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021449"
     },
     {
       "id": "g-d-1",
@@ -36,7 +39,8 @@
       "homeTeam": "USA",
       "awayTeam": "Paraguay",
       "venue": "Los Angeles Stadium",
-      "score": "4-1"
+      "score": "4-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021458"
     },
     {
       "id": "g-b-2",
@@ -45,7 +49,8 @@
       "homeTeam": "Qatar",
       "awayTeam": "Switzerland",
       "venue": "San Francisco Bay Area Stadium",
-      "score": "1-1"
+      "score": "1-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021447"
     },
     {
       "id": "g-c-1",
@@ -54,7 +59,8 @@
       "homeTeam": "Brazil",
       "awayTeam": "Morocco",
       "venue": "New York/New Jersey Stadium",
-      "score": "1-1"
+      "score": "1-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021456"
     },
     {
       "id": "g-c-2",
@@ -63,7 +69,8 @@
       "homeTeam": "Haiti",
       "awayTeam": "Scotland",
       "venue": "Boston Stadium",
-      "score": "0-1"
+      "score": "0-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021453"
     },
     {
       "id": "g-d-2",
@@ -72,7 +79,8 @@
       "homeTeam": "Australia",
       "awayTeam": "T\u00fcrkiye",
       "venue": "BC Place Vancouver",
-      "score": "2-0"
+      "score": "2-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021463"
     },
     {
       "id": "g-e-1",
@@ -81,7 +89,8 @@
       "homeTeam": "Germany",
       "awayTeam": "Cura\u00e7ao",
       "venue": "Houston Stadium",
-      "score": "7-1"
+      "score": "7-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021464"
     },
     {
       "id": "g-f-1",
@@ -90,7 +99,8 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Japan",
       "venue": "Dallas Stadium",
-      "score": "2-2"
+      "score": "2-2",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021470"
     },
     {
       "id": "g-e-2",
@@ -99,7 +109,8 @@
       "homeTeam": "C\u00f4te d'Ivoire",
       "awayTeam": "Ecuador",
       "venue": "Philadelphia Stadium",
-      "score": "1-0"
+      "score": "1-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021467"
     },
     {
       "id": "g-f-2",
@@ -108,7 +119,8 @@
       "homeTeam": "Sweden",
       "awayTeam": "Tunisia",
       "venue": "Monterrey Stadium",
-      "score": "5-1"
+      "score": "5-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021474"
     },
     {
       "id": "g-h-1",
@@ -117,7 +129,8 @@
       "homeTeam": "Spain",
       "awayTeam": "Cabo Verde",
       "venue": "Atlanta Stadium",
-      "score": "0-0"
+      "score": "0-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021482"
     },
     {
       "id": "g-g-1",
@@ -126,7 +139,8 @@
       "homeTeam": "Belgium",
       "awayTeam": "Egypt",
       "venue": "Seattle Stadium",
-      "score": "1-1"
+      "score": "1-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021478"
     },
     {
       "id": "g-h-2",
@@ -135,7 +149,8 @@
       "homeTeam": "Saudi Arabia",
       "awayTeam": "Uruguay",
       "venue": "Miami Stadium",
-      "score": "1-1"
+      "score": "1-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021486"
     },
     {
       "id": "g-g-2",
@@ -144,7 +159,8 @@
       "homeTeam": "IR Iran",
       "awayTeam": "New Zealand",
       "venue": "Los Angeles Stadium",
-      "score": "2-2"
+      "score": "2-2",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021476"
     },
     {
       "id": "g-i-1",
@@ -153,7 +169,8 @@
       "homeTeam": "France",
       "awayTeam": "Senegal",
       "venue": "New York/New Jersey Stadium",
-      "score": "3-1"
+      "score": "3-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021490"
     },
     {
       "id": "g-i-2",
@@ -162,7 +179,8 @@
       "homeTeam": "Iraq",
       "awayTeam": "Norway",
       "venue": "Boston Stadium",
-      "score": "1-4"
+      "score": "1-4",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021488"
     },
     {
       "id": "g-j-1",
@@ -171,7 +189,8 @@
       "homeTeam": "Argentina",
       "awayTeam": "Algeria",
       "venue": "Kansas City Stadium",
-      "score": "3-0"
+      "score": "3-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021496"
     },
     {
       "id": "g-j-2",
@@ -180,7 +199,8 @@
       "homeTeam": "Austria",
       "awayTeam": "Jordan",
       "venue": "San Francisco Bay Area Stadium",
-      "score": "3-1"
+      "score": "3-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021498"
     },
     {
       "id": "g-k-1",
@@ -189,7 +209,8 @@
       "homeTeam": "Portugal",
       "awayTeam": "Congo DR",
       "venue": "Houston Stadium",
-      "score": "1-1"
+      "score": "1-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021502"
     },
     {
       "id": "g-l-1",
@@ -198,7 +219,8 @@
       "homeTeam": "England",
       "awayTeam": "Croatia",
       "venue": "Dallas Stadium",
-      "score": "4-2"
+      "score": "4-2",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021507"
     },
     {
       "id": "g-l-2",
@@ -207,7 +229,8 @@
       "homeTeam": "Ghana",
       "awayTeam": "Panama",
       "venue": "Toronto Stadium",
-      "score": "1-0"
+      "score": "1-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021510"
     },
     {
       "id": "g-k-2",
@@ -216,7 +239,8 @@
       "homeTeam": "Uzbekistan",
       "awayTeam": "Colombia",
       "venue": "Mexico City Stadium",
-      "score": "1-3"
+      "score": "1-3",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021504"
     },
     {
       "id": "g-a-3",
@@ -225,7 +249,8 @@
       "homeTeam": "Czechia",
       "awayTeam": "South Africa",
       "venue": "Atlanta Stadium",
-      "score": "1-1"
+      "score": "1-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021440"
     },
     {
       "id": "g-b-3",
@@ -234,7 +259,8 @@
       "homeTeam": "Switzerland",
       "awayTeam": "Bosnia and Herzegovina",
       "venue": "Los Angeles Stadium",
-      "score": "4-1"
+      "score": "4-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021446"
     },
     {
       "id": "g-b-4",
@@ -243,7 +269,8 @@
       "homeTeam": "Canada",
       "awayTeam": "Qatar",
       "venue": "BC Place Vancouver",
-      "score": "6-0"
+      "score": "6-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021450"
     },
     {
       "id": "g-a-4",
@@ -252,7 +279,8 @@
       "homeTeam": "Mexico",
       "awayTeam": "Korea Republic",
       "venue": "Guadalajara Stadium",
-      "score": "1-0"
+      "score": "1-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021442"
     },
     {
       "id": "g-d-3",
@@ -261,7 +289,8 @@
       "homeTeam": "USA",
       "awayTeam": "Australia",
       "venue": "Seattle Stadium",
-      "score": "2-0"
+      "score": "2-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021462"
     },
     {
       "id": "g-c-3",
@@ -270,7 +299,8 @@
       "homeTeam": "Scotland",
       "awayTeam": "Morocco",
       "venue": "Boston Stadium",
-      "score": "0-1"
+      "score": "0-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021454"
     },
     {
       "id": "g-c-4",
@@ -279,7 +309,8 @@
       "homeTeam": "Brazil",
       "awayTeam": "Haiti",
       "venue": "Philadelphia Stadium",
-      "score": "3-0"
+      "score": "3-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021457"
     },
     {
       "id": "g-d-4",
@@ -288,7 +319,8 @@
       "homeTeam": "T\u00fcrkiye",
       "awayTeam": "Paraguay",
       "venue": "San Francisco Bay Area Stadium",
-      "score": "0-1"
+      "score": "0-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021460"
     },
     {
       "id": "g-f-3",
@@ -297,7 +329,8 @@
       "homeTeam": "Netherlands",
       "awayTeam": "Sweden",
       "venue": "Houston Stadium",
-      "score": "5-1"
+      "score": "5-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021472"
     },
     {
       "id": "g-e-3",
@@ -306,7 +339,8 @@
       "homeTeam": "Germany",
       "awayTeam": "C\u00f4te d'Ivoire",
       "venue": "Toronto Stadium",
-      "score": "2-1"
+      "score": "2-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021469"
     },
     {
       "id": "g-e-4",
@@ -315,7 +349,8 @@
       "homeTeam": "Ecuador",
       "awayTeam": "Cura\u00e7ao",
       "venue": "Kansas City Stadium",
-      "score": "0-0"
+      "score": "0-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021465"
     },
     {
       "id": "g-f-4",
@@ -324,7 +359,8 @@
       "homeTeam": "Tunisia",
       "awayTeam": "Japan",
       "venue": "Monterrey Stadium",
-      "score": "0-4"
+      "score": "0-4",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021475"
     },
     {
       "id": "g-h-3",
@@ -333,7 +369,8 @@
       "homeTeam": "Spain",
       "awayTeam": "Saudi Arabia",
       "venue": "Atlanta Stadium",
-      "score": "4-0"
+      "score": "4-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021483"
     },
     {
       "id": "g-g-3",
@@ -342,7 +379,8 @@
       "homeTeam": "Belgium",
       "awayTeam": "IR Iran",
       "venue": "Los Angeles Stadium",
-      "score": "0-0"
+      "score": "0-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021477"
     },
     {
       "id": "g-h-4",
@@ -351,7 +389,8 @@
       "homeTeam": "Uruguay",
       "awayTeam": "Cabo Verde",
       "venue": "Miami Stadium",
-      "score": "2-2"
+      "score": "2-2",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021487"
     },
     {
       "id": "g-g-4",
@@ -360,7 +399,8 @@
       "homeTeam": "New Zealand",
       "awayTeam": "Egypt",
       "venue": "BC Place Vancouver",
-      "score": "1-3"
+      "score": "1-3",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021480"
     },
     {
       "id": "g-j-3",
@@ -369,7 +409,8 @@
       "homeTeam": "Argentina",
       "awayTeam": "Austria",
       "venue": "Dallas Stadium",
-      "score": "2-0"
+      "score": "2-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021494"
     },
     {
       "id": "g-i-3",
@@ -378,7 +419,8 @@
       "homeTeam": "France",
       "awayTeam": "Iraq",
       "venue": "Philadelphia Stadium",
-      "score": "3-0"
+      "score": "3-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021492"
     },
     {
       "id": "g-i-4",
@@ -387,7 +429,8 @@
       "homeTeam": "Norway",
       "awayTeam": "Senegal",
       "venue": "New York/New Jersey Stadium",
-      "score": "3-2"
+      "score": "3-2",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021491"
     },
     {
       "id": "g-j-4",
@@ -396,7 +439,8 @@
       "homeTeam": "Jordan",
       "awayTeam": "Algeria",
       "venue": "San Francisco Bay Area Stadium",
-      "score": "1-2"
+      "score": "1-2",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021499"
     },
     {
       "id": "g-k-3",
@@ -405,7 +449,8 @@
       "homeTeam": "Portugal",
       "awayTeam": "Uzbekistan",
       "venue": "Houston Stadium",
-      "score": "5-0"
+      "score": "5-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021503"
     },
     {
       "id": "g-l-3",
@@ -414,7 +459,8 @@
       "homeTeam": "England",
       "awayTeam": "Ghana",
       "venue": "Boston Stadium",
-      "score": "0-0"
+      "score": "0-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021506"
     },
     {
       "id": "g-l-4",
@@ -423,7 +469,8 @@
       "homeTeam": "Panama",
       "awayTeam": "Croatia",
       "venue": "Toronto Stadium",
-      "score": "0-1"
+      "score": "0-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021511"
     },
     {
       "id": "g-k-4",
@@ -432,7 +479,8 @@
       "homeTeam": "Colombia",
       "awayTeam": "Congo DR",
       "venue": "Guadalajara Stadium",
-      "score": "1-0"
+      "score": "1-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021501"
     },
     {
       "id": "g-b-5",
@@ -441,7 +489,8 @@
       "homeTeam": "Bosnia and Herzegovina",
       "awayTeam": "Qatar",
       "venue": "Seattle Stadium",
-      "score": "3-1"
+      "score": "3-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021448"
     },
     {
       "id": "g-b-6",
@@ -450,7 +499,8 @@
       "homeTeam": "Switzerland",
       "awayTeam": "Canada",
       "venue": "BC Place Vancouver",
-      "score": "2-1"
+      "score": "2-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021451"
     },
     {
       "id": "g-c-5",
@@ -459,7 +509,8 @@
       "homeTeam": "Morocco",
       "awayTeam": "Haiti",
       "venue": "Atlanta Stadium",
-      "score": "4-2"
+      "score": "4-2",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021452"
     },
     {
       "id": "g-c-6",
@@ -468,7 +519,8 @@
       "homeTeam": "Scotland",
       "awayTeam": "Brazil",
       "venue": "Miami Stadium",
-      "score": "0-3"
+      "score": "0-3",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021455"
     },
     {
       "id": "g-a-5",
@@ -477,7 +529,8 @@
       "homeTeam": "South Africa",
       "awayTeam": "Korea Republic",
       "venue": "Monterrey Stadium",
-      "score": "1-0"
+      "score": "1-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021445"
     },
     {
       "id": "g-a-6",
@@ -486,7 +539,8 @@
       "homeTeam": "Czechia",
       "awayTeam": "Mexico",
       "venue": "Mexico City Stadium",
-      "score": "0-3"
+      "score": "0-3",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021444"
     },
     {
       "id": "g-e-5",
@@ -495,7 +549,8 @@
       "homeTeam": "Cura\u00e7ao",
       "awayTeam": "C\u00f4te d'Ivoire",
       "venue": "Philadelphia Stadium",
-      "score": "0-2"
+      "score": "0-2",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021468"
     },
     {
       "id": "g-e-6",
@@ -504,7 +559,8 @@
       "homeTeam": "Ecuador",
       "awayTeam": "Germany",
       "venue": "New York/New Jersey Stadium",
-      "score": "2-1"
+      "score": "2-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021466"
     },
     {
       "id": "g-f-5",
@@ -513,7 +569,8 @@
       "homeTeam": "Tunisia",
       "awayTeam": "Netherlands",
       "venue": "Kansas City Stadium",
-      "score": "1-3"
+      "score": "1-3",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021473"
     },
     {
       "id": "g-f-6",
@@ -522,7 +579,8 @@
       "homeTeam": "Japan",
       "awayTeam": "Sweden",
       "venue": "Dallas Stadium",
-      "score": "1-1"
+      "score": "1-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021471"
     },
     {
       "id": "g-d-5",
@@ -531,7 +589,8 @@
       "homeTeam": "Paraguay",
       "awayTeam": "Australia",
       "venue": "San Francisco Bay Area Stadium",
-      "score": "0-0"
+      "score": "0-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021461"
     },
     {
       "id": "g-d-6",
@@ -540,7 +599,8 @@
       "homeTeam": "T\u00fcrkiye",
       "awayTeam": "USA",
       "venue": "Los Angeles Stadium",
-      "score": "3-2"
+      "score": "3-2",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021459"
     },
     {
       "id": "g-i-5",
@@ -549,7 +609,8 @@
       "homeTeam": "Senegal",
       "awayTeam": "Iraq",
       "venue": "Toronto Stadium",
-      "score": "5-0"
+      "score": "5-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021493"
     },
     {
       "id": "g-i-6",
@@ -558,7 +619,8 @@
       "homeTeam": "Norway",
       "awayTeam": "France",
       "venue": "Boston Stadium",
-      "score": "1-4"
+      "score": "1-4",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021489"
     },
     {
       "id": "g-h-5",
@@ -567,7 +629,8 @@
       "homeTeam": "Uruguay",
       "awayTeam": "Spain",
       "venue": "Guadalajara Stadium",
-      "score": "0-1"
+      "score": "0-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021484"
     },
     {
       "id": "g-h-6",
@@ -576,7 +639,8 @@
       "homeTeam": "Cabo Verde",
       "awayTeam": "Saudi Arabia",
       "venue": "Houston Stadium",
-      "score": "0-0"
+      "score": "0-0",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021485"
     },
     {
       "id": "g-g-5",
@@ -585,7 +649,8 @@
       "homeTeam": "New Zealand",
       "awayTeam": "Belgium",
       "venue": "BC Place Vancouver",
-      "score": "1-5"
+      "score": "1-5",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021481"
     },
     {
       "id": "g-g-6",
@@ -594,7 +659,8 @@
       "homeTeam": "Egypt",
       "awayTeam": "IR Iran",
       "venue": "Seattle Stadium",
-      "score": "1-1"
+      "score": "1-1",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021479"
     },
     {
       "id": "g-l-5",
@@ -603,7 +669,8 @@
       "homeTeam": "Panama",
       "awayTeam": "England",
       "venue": "New York/New Jersey Stadium",
-      "score": "-"
+      "score": "-",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021508"
     },
     {
       "id": "g-l-6",
@@ -612,7 +679,8 @@
       "homeTeam": "Croatia",
       "awayTeam": "Ghana",
       "venue": "Philadelphia Stadium",
-      "score": "-"
+      "score": "-",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021509"
     },
     {
       "id": "g-k-5",
@@ -621,7 +689,8 @@
       "homeTeam": "Congo DR",
       "awayTeam": "Uzbekistan",
       "venue": "Atlanta Stadium",
-      "score": "-"
+      "score": "-",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021500"
     },
     {
       "id": "g-k-6",
@@ -630,7 +699,8 @@
       "homeTeam": "Colombia",
       "awayTeam": "Portugal",
       "venue": "Miami Stadium",
-      "score": "-"
+      "score": "-",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021505"
     },
     {
       "id": "g-j-5",
@@ -639,7 +709,8 @@
       "homeTeam": "Algeria",
       "awayTeam": "Austria",
       "venue": "Kansas City Stadium",
-      "score": "-"
+      "score": "-",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021497"
     },
     {
       "id": "g-j-6",
@@ -648,7 +719,8 @@
       "homeTeam": "Jordan",
       "awayTeam": "Argentina",
       "venue": "Dallas Stadium",
-      "score": "-"
+      "score": "-",
+      "link": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021495"
     }
   ]
 }
