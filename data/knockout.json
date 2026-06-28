@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T11:20:50.914317+00:00",
+  "updatedAt": "2026-06-28T00:00:00.000000+00:00",
   "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026",
   "rounds": [
     {
@@ -63,7 +63,7 @@
           "id": "r32-7",
           "utcKickoff": "2026-07-01T01:00:00Z",
           "homeTeam": "Mexico",
-          "awayTeam": "Best 3rd (3CEFHI)",
+          "awayTeam": "Ecuador",
           "venue": "Mexico City Stadium",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021520"
@@ -71,8 +71,8 @@
         {
           "id": "r32-8",
           "utcKickoff": "2026-07-01T16:00:00Z",
-          "homeTeam": "Winner Group L",
-          "awayTeam": "Best 3rd (3EHIJK)",
+          "homeTeam": "England",
+          "awayTeam": "DR Congo",
           "venue": "Atlanta Stadium",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021512"
@@ -90,7 +90,7 @@
           "id": "r32-10",
           "utcKickoff": "2026-07-01T20:00:00Z",
           "homeTeam": "Belgium",
-          "awayTeam": "Best 3rd (3AEHIJ)",
+          "awayTeam": "Senegal",
           "venue": "Seattle Stadium",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021525"
@@ -98,8 +98,8 @@
         {
           "id": "r32-11",
           "utcKickoff": "2026-07-02T23:00:00Z",
-          "homeTeam": "Runner-up Group K",
-          "awayTeam": "Runner-up Group L",
+          "homeTeam": "Portugal",
+          "awayTeam": "Croatia",
           "venue": "Toronto Stadium",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021526"
@@ -108,7 +108,7 @@
           "id": "r32-12",
           "utcKickoff": "2026-07-02T19:00:00Z",
           "homeTeam": "Spain",
-          "awayTeam": "Runner-up Group J",
+          "awayTeam": "Austria",
           "venue": "Los Angeles Stadium",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021519"
@@ -117,7 +117,7 @@
           "id": "r32-13",
           "utcKickoff": "2026-07-03T03:00:00Z",
           "homeTeam": "Switzerland",
-          "awayTeam": "Best 3rd (3EFGIJ)",
+          "awayTeam": "Algeria",
           "venue": "BC Place Vancouver",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021527"
@@ -134,8 +134,8 @@
         {
           "id": "r32-15",
           "utcKickoff": "2026-07-04T01:30:00Z",
-          "homeTeam": "Winner Group K",
-          "awayTeam": "Best 3rd (3DEIJL)",
+          "homeTeam": "Colombia",
+          "awayTeam": "Ghana",
           "venue": "Kansas City Stadium",
           "score": "-",
           "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021517"

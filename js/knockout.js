@@ -327,13 +327,29 @@ function appendMatchCard(svg, card, cardWidth, cardHeight) {
 
   svg.append(createSvgElement('rect', { x: card.x, y: card.y, width: cardWidth, height: cardHeight, rx: 8, class: 'bracket-match-card' }));
 
+  const kickoffTime = formatBracketKickoff(card.fixture.utcKickoff);
   const idText = createSvgElement('text', { x: card.x + 10, y: card.y + 14, class: 'bracket-match-id' });
-  idText.textContent = fixtureId;
+  idText.textContent = `${fixtureId} · ${kickoffTime}`;
 
   const matchupText = createSvgElement('text', { x: card.x + 10, y: card.y + 34, class: 'bracket-matchup' });
   matchupText.textContent = clampText(matchup, MAX_MATCHUP_TEXT_LENGTH);
 
   svg.append(idText, matchupText);
+}
+
+function formatBracketKickoff(utcKickoff) {
+  const date = new Date(utcKickoff);
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: timezone,
+    month: 'short',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+  }).formatToParts(date);
+  const get = (type) => parts.find((p) => p.type === type)?.value ?? '';
+  return `${get('month')} ${get('day')} ${get('hour')}:${get('minute')}`;
 }
 
 function clampText(value, maxLength) {

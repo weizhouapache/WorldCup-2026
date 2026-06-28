@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Cup 2026 Tracker - Schedule</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>World Cup 2026 Tracker</h1>
+      <nav>
+        <a href="schedule.html" aria-current="page" data-i18n="nav_schedule">Schedule</a>
+        <a href="standings.html" data-i18n="nav_standings">Standings</a>
+        <a href="index.html" data-i18n="nav_knockout">Knockout</a>
+        <span class="lang-switcher">
+          <button class="lang-btn" data-set-lang="en">EN</button>
+          <button class="lang-btn" data-set-lang="zh">CN</button>
+          <button class="lang-btn" data-set-lang="nl">NL</button>
+        </span>
+      </nav>
+    </header>
+
+    <main>
+      <section class="controls">
+        <label for="timezone" data-i18n="timezone_label">Timezone</label>
+        <select id="timezone"></select>
+      </section>
+
+      <section>
+        <h2 data-i18n="team_filter_heading">Team filter</h2>
+        <p class="hint" data-i18n="team_filter_hint">Select one or more teams to filter matches.</p>
+
+        <div class="predefined-filters-bar">
+          <div class="predefined-filters-row">
+            <span class="predefined-filters-label" data-i18n="by_group">By group</span>
+            <div id="predefined-group-filters" class="predefined-filters-list"></div>
+          </div>
+          <div class="predefined-filters-row">
+            <span class="predefined-filters-label" data-i18n="by_confederation">By confederation</span>
+            <div id="predefined-confederation-filters" class="predefined-filters-list"></div>
+          </div>
+        </div>
+
+        <details class="team-filter-details">
+          <summary class="team-filter-summary" data-i18n="show_hide_teams">Show / hide all teams</summary>
+          <div id="team-filter" class="chip-list"></div>
+        </details>
+
+        <div class="saved-filters-bar">
+          <div id="saved-filters-list" class="saved-filters-list"></div>
+          <div class="saved-filters-add">
+            <label class="filter-actions">
+              <input id="clear-selected" type="checkbox" />
+              <span data-i18n="clear_selected">Clear all selected teams</span>
+            </label>
+            <input id="filter-name" type="text" data-i18n="filter_name_placeholder" placeholder="Filter name" maxlength="30" />
+            <button id="save-filter" data-i18n="save_filter">Save filter</button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 data-i18n="schedule_heading">Schedule</h2>
+        <div id="schedule"></div>
+      </section>
+    </main>
+
+    <script type="module" src="js/schedule.js"></script>
+
+    <footer>
+      <a href="https://github.com/weizhouapache/WorldCup-2026" target="_blank" rel="noopener" data-i18n="view_on_github">View on GitHub</a>
+    </footer>
+  </body>
+</html>
