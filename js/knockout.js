@@ -21,6 +21,62 @@ async function init() {
   render(data.rounds);
 }
 
+// ── Resolve "Winner r32-X" placeholders ─────────────────────────────────────
+
+function buildResultsMap(rounds) {
+  const results = new Map();
+
+  for (const round of rounds) {
+    for (const fixture of round.fixtures) {
+      // Use explicit winner field if present (handles penalties correctly)
+      if (fixture.winner) {
+        results.set(fixture.id, fixture.winner);
+        continue;
+      }
+
+      // Fall back to score comparison
+      const score = fixture.score;
+      if (!score || score === '-') continue;
+
+      const [homeScore, awayScore] = score.split('-').map(Number);
+      if (isNaN(homeScore) || isNaN(awayScore)) continue;
+
+      // Draw after 120 min with no penalty data → cannot resolve yet
+      if (homeScore === awayScore) continue;
+
+      const winner = homeScore > awayScore ? fixture.homeTeam : fixture.awayTeam;
+      results.set(fixture.id, winner);
+    }
+  }
+
+  return results;
+}
+
+function applyResults(rounds, results) {
+  for (const round of rounds) {
+    for (const fixture of round.fixtures) {
+      const resolve = (teamName) => {
+        const match = teamName?.match(/^(?:Winner|Loser)\s+([\w]+-\d+)$/i);
+        if (match) {
+          const sourceId = match[1].toLowerCase();
+          return results.get(sourceId) || teamName;
+        }
+        return teamName;
+      };
+      fixture.homeTeam = resolve(fixture.homeTeam);
+      fixture.awayTeam = resolve(fixture.awayTeam);
+    }
+  }
+}
+
+// ── Highlight helpers ───────────────────────────────────────────────────────
+
+function isWithinNext24Hours(utcKickoff) {
+  const now = Date.now();
+  const kickoff = new Date(utcKickoff).getTime();
+  return kickoff >= now && kickoff <= now + 24 * 60 * 60 * 1000;
+}
+
 function setupTimezone() {
   if (!timezoneSelect) return;
 
@@ -46,7 +102,10 @@ function setupTimezone() {
 }
 
 function render(rounds) {
-  knockoutEl.append(buildBracketImage(rounds));
+  const resultsMap = buildResultsMap(rounds);
+  knockoutEl.append(buildBracketImage(rounds, resultsMap));
+  // applyResults is called inside buildBracketImage after connectors are drawn;
+  // rounds fixtures are now resolved for the text sections below.
 
   for (const round of rounds) {
     const section = document.createElement('section');
@@ -59,12 +118,18 @@ function render(rounds) {
     for (const fixture of round.fixtures) {
       const card = document.createElement('article');
       card.className = 'match-card';
+      const hasScore = fixture.score && fixture.score !== '-';
+      if (hasScore) {
+        card.classList.add('match-completed');
+      } else if (isWithinNext24Hours(fixture.utcKickoff)) {
+        card.classList.add('match-upcoming-soon');
+      }
 
       const teams = document.createElement('div');
-      const hasScore = fixture.score && fixture.score !== '-';
       const scoreDisplay = hasScore ? fixture.score.replace('-', ':') : '';
+      const penDisplay = fixture.penalty ? ` (${fixture.penalty.replace('-', ':')} pens)` : '';
       const teamsText = hasScore
-        ? `${localizeTeamName(fixture.homeTeam)} ${scoreDisplay} ${localizeTeamName(fixture.awayTeam)}`
+        ? `${localizeTeamName(fixture.homeTeam)} ${scoreDisplay}${penDisplay} ${localizeTeamName(fixture.awayTeam)}`
         : `${localizeTeamName(fixture.homeTeam)} vs ${localizeTeamName(fixture.awayTeam)}`;
       if (fixture.link) {
         const link = document.createElement('a');
@@ -144,7 +209,7 @@ function buildOrderedRounds(stageRounds) {
   }));
 }
 
-function buildBracketImage(rounds) {
+function buildBracketImage(rounds, resultsMap) {
   const stageRounds = BRACKET_ROUND_NAMES
     .map((roundName) => rounds.find((round) => round.name === roundName))
     .filter(Boolean);
@@ -165,6 +230,10 @@ function buildBracketImage(rounds) {
   }
 
   const orderedStageRounds = buildOrderedRounds(stageRounds);
+
+  // Resolve winners AFTER ordering (which needs original placeholder names)
+  // but BEFORE rendering match cards (which should show resolved team names).
+  applyResults(rounds, resultsMap);
 
   const wrapper = document.createElement('div');
   wrapper.className = 'bracket-wrapper';
@@ -321,11 +390,18 @@ function appendMatchCard(svg, card, cardWidth, cardHeight) {
   const fixtureId = formatFixtureId(card.fixture.id);
   const hasScore = card.fixture.score && card.fixture.score !== '-';
   const scoreDisplay = hasScore ? card.fixture.score.replace('-', ':') : '';
+  const penDisplay = card.fixture.penalty ? ` (${card.fixture.penalty.replace('-', ':')} pens)` : '';
   const matchup = hasScore
-    ? `${localizeTeamName(card.fixture.homeTeam)} ${scoreDisplay} ${localizeTeamName(card.fixture.awayTeam)}`
+    ? `${localizeTeamName(card.fixture.homeTeam)} ${scoreDisplay}${penDisplay} ${localizeTeamName(card.fixture.awayTeam)}`
     : `${localizeTeamName(card.fixture.homeTeam)} vs ${localizeTeamName(card.fixture.awayTeam)}`;
 
-  svg.append(createSvgElement('rect', { x: card.x, y: card.y, width: cardWidth, height: cardHeight, rx: 8, class: 'bracket-match-card' }));
+  let rectClass = 'bracket-match-card';
+  if (hasScore) {
+    rectClass = 'bracket-match-card bracket-match-card--completed';
+  } else if (isWithinNext24Hours(card.fixture.utcKickoff)) {
+    rectClass = 'bracket-match-card bracket-match-card--upcoming';
+  }
+  svg.append(createSvgElement('rect', { x: card.x, y: card.y, width: cardWidth, height: cardHeight, rx: 8, class: rectClass }));
 
   const kickoffTime = formatBracketKickoff(card.fixture.utcKickoff);
   const idText = createSvgElement('text', { x: card.x + 10, y: card.y + 14, class: 'bracket-match-id' });
