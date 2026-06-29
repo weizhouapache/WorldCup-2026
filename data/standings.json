@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-29T12:46:17.205394+00:00",
-  "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/standings",
+  "updatedAt": "2026-06-29T20:07:35.495Z",
+  "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures",
   "groups": [
     {
       "name": "A",
@@ -186,7 +186,7 @@
           "points": 4
         },
         {
-          "name": "T\u00fcrkiye",
+          "name": "Türkiye",
           "played": 3,
           "won": 1,
           "drawn": 0,
@@ -213,7 +213,7 @@
           "points": 6
         },
         {
-          "name": "C\u00f4te d'Ivoire",
+          "name": "Côte d'Ivoire",
           "played": 3,
           "won": 2,
           "drawn": 0,
@@ -235,7 +235,7 @@
           "points": 4
         },
         {
-          "name": "Cura\u00e7ao",
+          "name": "Curaçao",
           "played": 3,
           "won": 0,
           "drawn": 1,

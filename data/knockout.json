@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-29T14:38:23.421894+00:00",
+  "updatedAt": "2026-06-29T20:07:35.495Z",
   "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026",
   "rounds": [
     {
@@ -39,8 +39,9 @@
           "homeTeam": "Brazil",
           "awayTeam": "Japan",
           "venue": "Houston Stadium",
-          "score": "-",
-          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021516"
+          "score": "2-1",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021516",
+          "winner": "Brazil"
         },
         {
           "id": "r32-5",
@@ -54,7 +55,7 @@
         {
           "id": "r32-6",
           "utcKickoff": "2026-06-30T17:00:00Z",
-          "homeTeam": "C\u00f4te d'Ivoire",
+          "homeTeam": "Côte d'Ivoire",
           "awayTeam": "Norway",
           "venue": "Dallas Stadium",
           "score": "-",
