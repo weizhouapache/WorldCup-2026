@@ -127,7 +127,7 @@ function render(rounds) {
 
       const teams = document.createElement('div');
       const scoreDisplay = hasScore ? fixture.score.replace('-', ':') : '';
-      const penDisplay = fixture.penalty ? ` (${fixture.penalty.replace('-', ':')} pens)` : '';
+      const penDisplay = fixture.penalty ? ` (${fixture.penalty.replace('-', ':')} p)` : '';
       const teamsText = hasScore
         ? `${localizeTeamName(fixture.homeTeam)} ${scoreDisplay}${penDisplay} ${localizeTeamName(fixture.awayTeam)}`
         : `${localizeTeamName(fixture.homeTeam)} vs ${localizeTeamName(fixture.awayTeam)}`;
@@ -390,7 +390,7 @@ function appendMatchCard(svg, card, cardWidth, cardHeight) {
   const fixtureId = formatFixtureId(card.fixture.id);
   const hasScore = card.fixture.score && card.fixture.score !== '-';
   const scoreDisplay = hasScore ? card.fixture.score.replace('-', ':') : '';
-  const penDisplay = card.fixture.penalty ? ` (${card.fixture.penalty.replace('-', ':')} pens)` : '';
+  const penDisplay = card.fixture.penalty ? ` (${card.fixture.penalty.replace('-', ':')} p)` : '';
   const matchup = hasScore
     ? `${localizeTeamName(card.fixture.homeTeam)} ${scoreDisplay}${penDisplay} ${localizeTeamName(card.fixture.awayTeam)}`
     : `${localizeTeamName(card.fixture.homeTeam)} vs ${localizeTeamName(card.fixture.awayTeam)}`;

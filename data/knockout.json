@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-29T20:07:35.495Z",
+  "updatedAt": "2026-06-30T07:52:13.831Z",
   "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026",
   "rounds": [
     {
@@ -21,8 +21,10 @@
           "homeTeam": "Germany",
           "awayTeam": "Paraguay",
           "venue": "Boston Stadium",
-          "score": "-",
-          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021513"
+          "score": "1-1",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021513",
+          "winner": "Paraguay",
+          "penalty": "3-4"
         },
         {
           "id": "r32-3",
@@ -30,8 +32,10 @@
           "homeTeam": "Netherlands",
           "awayTeam": "Morocco",
           "venue": "Monterrey Stadium",
-          "score": "-",
-          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021522"
+          "score": "1-1",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021522",
+          "winner": "Morocco",
+          "penalty": "2-3"
         },
         {
           "id": "r32-4",
