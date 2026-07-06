@@ -124,6 +124,12 @@ select {
   text-decoration: underline;
 }
 
+.match-card .winner,
+.match-card a .winner {
+  font-weight: 700;
+  color: #1b5e20;
+}
+
 .match-upcoming-soon {
   border-left: 4px solid #e57319;
   background: #fff8f2;
@@ -231,7 +237,10 @@ th {
   font-size: 15px;
   fill: #1f2c4a;
 }
-
+.bracket-winner {
+  font-weight: 700;
+  fill: #1b5e20;
+}
 .bracket-third-place-label {
   font-size: 15px;
   fill: #4a5983;

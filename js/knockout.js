@@ -128,18 +128,36 @@ function render(rounds) {
       const teams = document.createElement('div');
       const scoreDisplay = hasScore ? fixture.score.replace('-', ':') : '';
       const penDisplay = fixture.penalty ? ` (${fixture.penalty.replace('-', ':')} p)` : '';
-      const teamsText = hasScore
-        ? `${localizeTeamName(fixture.homeTeam)} ${scoreDisplay}${penDisplay} ${localizeTeamName(fixture.awayTeam)}`
-        : `${localizeTeamName(fixture.homeTeam)} vs ${localizeTeamName(fixture.awayTeam)}`;
-      if (fixture.link) {
-        const link = document.createElement('a');
-        link.href = fixture.link;
-        link.target = '_blank';
-        link.rel = 'noopener';
-        link.textContent = teamsText;
-        teams.append(link);
+
+      if (hasScore && fixture.winner) {
+        const isHomeWinner = fixture.winner === fixture.homeTeam;
+        const homeSpan = `<span class="${isHomeWinner ? 'winner' : ''}">${localizeTeamName(fixture.homeTeam)}</span>`;
+        const awaySpan = `<span class="${!isHomeWinner ? 'winner' : ''}">${localizeTeamName(fixture.awayTeam)}</span>`;
+        const html = `${homeSpan} ${scoreDisplay}${penDisplay} ${awaySpan}`;
+        if (fixture.link) {
+          const link = document.createElement('a');
+          link.href = fixture.link;
+          link.target = '_blank';
+          link.rel = 'noopener';
+          link.innerHTML = html;
+          teams.append(link);
+        } else {
+          teams.innerHTML = html;
+        }
       } else {
-        teams.textContent = teamsText;
+        const teamsText = hasScore
+          ? `${localizeTeamName(fixture.homeTeam)} ${scoreDisplay}${penDisplay} ${localizeTeamName(fixture.awayTeam)}`
+          : `${localizeTeamName(fixture.homeTeam)} vs ${localizeTeamName(fixture.awayTeam)}`;
+        if (fixture.link) {
+          const link = document.createElement('a');
+          link.href = fixture.link;
+          link.target = '_blank';
+          link.rel = 'noopener';
+          link.textContent = teamsText;
+          teams.append(link);
+        } else {
+          teams.textContent = teamsText;
+        }
       }
 
       const meta = document.createElement('div');
@@ -365,7 +383,7 @@ function formatFixtureId(fixtureId) {
   return fixtureId.toUpperCase();
 }
 
-function createSvgElement(tag, attributes) {
+function createSvgElement(tag, attributes = {}) {
   const element = document.createElementNS(SVG_NS, tag);
   Object.entries(attributes).forEach(([key, value]) => {
     element.setAttribute(key, value);
@@ -391,9 +409,6 @@ function appendMatchCard(svg, card, cardWidth, cardHeight) {
   const hasScore = card.fixture.score && card.fixture.score !== '-';
   const scoreDisplay = hasScore ? card.fixture.score.replace('-', ':') : '';
   const penDisplay = card.fixture.penalty ? ` (${card.fixture.penalty.replace('-', ':')} p)` : '';
-  const matchup = hasScore
-    ? `${localizeTeamName(card.fixture.homeTeam)} ${scoreDisplay}${penDisplay} ${localizeTeamName(card.fixture.awayTeam)}`
-    : `${localizeTeamName(card.fixture.homeTeam)} vs ${localizeTeamName(card.fixture.awayTeam)}`;
 
   let rectClass = 'bracket-match-card';
   if (hasScore) {
@@ -408,7 +423,22 @@ function appendMatchCard(svg, card, cardWidth, cardHeight) {
   idText.textContent = `${fixtureId} · ${kickoffTime}`;
 
   const matchupText = createSvgElement('text', { x: card.x + 10, y: card.y + 34, class: 'bracket-matchup' });
-  matchupText.textContent = clampText(matchup, MAX_MATCHUP_TEXT_LENGTH);
+
+  if (hasScore && card.fixture.winner) {
+    const isHomeWinner = card.fixture.winner === card.fixture.homeTeam;
+    const homeTspan = createSvgElement('tspan', { class: isHomeWinner ? 'bracket-winner' : '' });
+    homeTspan.textContent = localizeTeamName(card.fixture.homeTeam);
+    const scoreTspan = createSvgElement('tspan', {});
+    scoreTspan.textContent = ` ${scoreDisplay}${penDisplay} `;
+    const awayTspan = createSvgElement('tspan', { class: !isHomeWinner ? 'bracket-winner' : '' });
+    awayTspan.textContent = localizeTeamName(card.fixture.awayTeam);
+    matchupText.append(homeTspan, scoreTspan, awayTspan);
+  } else {
+    const matchup = hasScore
+      ? `${localizeTeamName(card.fixture.homeTeam)} ${scoreDisplay}${penDisplay} ${localizeTeamName(card.fixture.awayTeam)}`
+      : `${localizeTeamName(card.fixture.homeTeam)} vs ${localizeTeamName(card.fixture.awayTeam)}`;
+    matchupText.textContent = clampText(matchup, MAX_MATCHUP_TEXT_LENGTH);
+  }
 
   svg.append(idText, matchupText);
 }
