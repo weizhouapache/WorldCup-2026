@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T08:46:12.469Z",
+  "updatedAt": "2026-07-07T07:26:11.729Z",
   "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026",
   "rounds": [
     {
@@ -219,8 +219,9 @@
           "homeTeam": "Winner r32-11",
           "awayTeam": "Winner r32-12",
           "venue": "Dallas Stadium",
-          "score": "-",
-          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021529"
+          "score": "0-1",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021529",
+          "winner": "Spain"
         },
         {
           "id": "r16-6",
@@ -228,8 +229,9 @@
           "homeTeam": "Winner r32-9",
           "awayTeam": "Winner r32-10",
           "venue": "Seattle Stadium",
-          "score": "-",
-          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021534"
+          "score": "1-4",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021534",
+          "winner": "Belgium"
         },
         {
           "id": "r16-7",
