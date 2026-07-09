@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-07T07:26:11.729Z",
+  "updatedAt": "2026-07-09T08:58:03.075Z",
   "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026",
   "rounds": [
     {
@@ -239,8 +239,9 @@
           "homeTeam": "Winner r32-14",
           "awayTeam": "Winner r32-16",
           "venue": "Atlanta Stadium",
-          "score": "-",
-          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021528"
+          "score": "3-2",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021528",
+          "winner": "Argentina"
         },
         {
           "id": "r16-8",
@@ -248,8 +249,10 @@
           "homeTeam": "Winner r32-13",
           "awayTeam": "Winner r32-15",
           "venue": "BC Place Vancouver",
-          "score": "-",
-          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021535"
+          "score": "0-0",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021535",
+          "winner": "Switzerland",
+          "penalty": "4-3"
         }
       ]
     },
