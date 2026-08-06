@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-09T08:58:03.075Z",
+  "updatedAt": "2026-08-06T19:13:43.000Z",
   "source": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026",
   "rounds": [
     {
@@ -265,8 +265,9 @@
           "homeTeam": "Winner r16-1",
           "awayTeam": "Winner r16-2",
           "venue": "Boston Stadium",
-          "score": "-",
-          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289289/400021536"
+          "score": "2-0",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289289/400021536",
+          "winner": "France"
         },
         {
           "id": "qf-2",
@@ -274,8 +275,9 @@
           "homeTeam": "Winner r16-5",
           "awayTeam": "Winner r16-6",
           "venue": "Los Angeles Stadium",
-          "score": "-",
-          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289289/400021538"
+          "score": "2-1",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289289/400021538",
+          "winner": "Spain"
         },
         {
           "id": "qf-3",
@@ -283,8 +285,9 @@
           "homeTeam": "Winner r16-3",
           "awayTeam": "Winner r16-4",
           "venue": "Miami Stadium",
-          "score": "-",
-          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289289/400021539"
+          "score": "1-2",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289289/400021539",
+          "winner": "England"
         },
         {
           "id": "qf-4",
@@ -292,8 +295,9 @@
           "homeTeam": "Winner r16-7",
           "awayTeam": "Winner r16-8",
           "venue": "Kansas City Stadium",
-          "score": "-",
-          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289289/400021537"
+          "score": "3-1",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289289/400021537",
+          "winner": "Argentina"
         }
       ]
     },
@@ -306,8 +310,9 @@
           "homeTeam": "Winner qf-1",
           "awayTeam": "Winner qf-2",
           "venue": "Dallas Stadium",
-          "score": "-",
-          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289290/400021541"
+          "score": "0-2",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289290/400021541",
+          "winner": "Spain"
         },
         {
           "id": "sf-2",
@@ -315,8 +320,9 @@
           "homeTeam": "Winner qf-3",
           "awayTeam": "Winner qf-4",
           "venue": "Atlanta Stadium",
-          "score": "-",
-          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289290/400021540"
+          "score": "1-2",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289290/400021540",
+          "winner": "Argentina"
         }
       ]
     },
@@ -329,8 +335,9 @@
           "homeTeam": "Loser sf-1",
           "awayTeam": "Loser sf-2",
           "venue": "Miami Stadium",
-          "score": "-",
-          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289291/400021542"
+          "score": "4-6",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289291/400021542",
+          "winner": "England"
         }
       ]
     },
@@ -343,8 +350,9 @@
           "homeTeam": "Winner sf-1",
           "awayTeam": "Winner sf-2",
           "venue": "New York/New Jersey Stadium",
-          "score": "-",
-          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289292/400021543"
+          "score": "1-0",
+          "link": "https://www.fifa.com/en/match-centre/match/17/285023/289292/400021543",
+          "winner": "Spain"
         }
       ]
     }
